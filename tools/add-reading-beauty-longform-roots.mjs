@@ -19,6 +19,8 @@ const roots = [
   '      "https://www.caa.go.jp/policies/policy/consumer_policy/information/information_002"',
   '      "https://www.pmda.go.jp/pnavi-07.html"',
   '      "https://www.mhlw.go.jp/stf/newpage_04978.html"',
+  '      "https://www.mhlw.go.jp/stf/newpage_68162.html"',
+  '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9325&dataType=1&pageNo=1"',
 ];
 for (const root of roots) {
   if (discovery.includes(root.trim().replace(/,$/, ""))) continue;
