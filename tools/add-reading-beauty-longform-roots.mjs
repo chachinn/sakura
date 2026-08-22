@@ -21,6 +21,9 @@ const roots = [
   '      "https://www.mhlw.go.jp/stf/newpage_04978.html"',
   '      "https://www.mhlw.go.jp/stf/newpage_68162.html"',
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9325&dataType=1&pageNo=1"',
+  '      "https://www.mhlw.go.jp/web/t_doc?dataId=79081000"',
+  '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc1147&dataType=1&pageNo=1"',
+  '      "https://www.mhlw.go.jp/web/t_doc?dataId=00td0052&dataType=1&pageNo=1"',
 ];
 for (const root of roots) {
   if (discovery.includes(root.trim().replace(/,$/, ""))) continue;
