@@ -58,8 +58,8 @@ jobs:
     needs: plan
     if: needs.plan.result == 'success'
     strategy:
-      fail-fast: false
-      max-parallel: 3
+      fail-fast: true
+      max-parallel: 1
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -72,6 +72,8 @@ jobs:
           curl --fail --silent --show-error \
             -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
             "$URL" > oidc.json
+          SUB=$(node -e "const x=require('./oidc.json'); const p=JSON.parse(Buffer.from(x.value.split('.')[1],'base64url').toString('utf8')); process.stdout.write(String(p.sub||''))")
+          echo "OIDC subject: ${SUB}"
           TOKEN=$(node -e "const x=require('./oidc.json'); if(!x.value) process.exit(1); process.stdout.write(x.value)")
           echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
       - name: Generate and validate pack
