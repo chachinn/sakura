@@ -23,7 +23,8 @@ concurrency:
 
 jobs:
   plan:
-    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822'
+    # Temporarily serialize the 1,600-reading build behind the long-form Article pass.
+    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822' && false
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
@@ -58,8 +59,8 @@ jobs:
     needs: plan
     if: needs.plan.result == 'success'
     strategy:
-      fail-fast: false
-      max-parallel: 3
+      fail-fast: true
+      max-parallel: 1
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
