@@ -1,0 +1,244 @@
+name: Build Reading Garden long-form Articles
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: reading-longform-corpus-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.plan.outputs.ready }}
+    steps:
+      - name: Check out Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - id: plan
+        name: Check final source map
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p = JSON.parse(fs.readFileSync('data/reading/qa/article-rebuild-plan.json','utf8'));
+          const ready = p.pass === true && p.mode === 'longform-reservations' && p.articleSlots === 300 && ['N5','N4','N3','N2','N1'].every(level => p.byLevel?.[level] === 60);
+          console.log(JSON.stringify({ready, mode:p.mode, articleSlots:p.articleSlots, byLevel:p.byLevel}, null, 2));
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `ready=${ready ? 'true' : 'false'}\n`);
+          NODE
+
+  generate:
+    needs: gate
+    if: needs.gate.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        pack:
+          - n5.json
+          - n5-b.json
+          - n5-c.json
+          - n5-d.json
+          - n5-e.json
+          - n5-f.json
+          - n4.json
+          - n4-b.json
+          - n4-c.json
+          - n4-d.json
+          - n4-e.json
+          - n4-f.json
+          - n3.json
+          - n3-b.json
+          - n3-c.json
+          - n3-d.json
+          - n3-e.json
+          - n3-f.json
+          - n2.json
+          - n2-b.json
+          - n2-c.json
+          - n2-d.json
+          - n2-e.json
+          - n2-f.json
+          - n1.json
+          - n1-b.json
+          - n1-c.json
+          - n1-d.json
+          - n1-e.json
+          - n1-f.json
+    steps:
+      - name: Check out Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Request short-lived GitHub OIDC identity
+        id: oidc
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOKEN_JSON=$(curl --fail-with-body --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sakura-reading-corpus-builder")
+          ID_TOKEN=$(printf '%s' "$TOKEN_JSON" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>process.stdout.write(JSON.parse(s).value||''))")
+          test -n "$ID_TOKEN"
+          echo "::add-mask::$ID_TOKEN"
+          echo "token=$ID_TOKEN" >> "$GITHUB_OUTPUT"
+
+      - name: Generate and validate ${{ matrix.pack }}
+        env:
+          ID_TOKEN: ${{ steps.oidc.outputs.token }}
+          PACK: ${{ matrix.pack }}
+        run: |
+          set -euo pipefail
+          ENDPOINT="https://hrycfsekrvflrbwahgyh.supabase.co/functions/v1/sakura-reading-corpus-pack-generator"
+          STATUS=$(curl --silent --show-error --output response.json --write-out '%{http_code}' -H "Authorization: Bearer $ID_TOKEN" "$ENDPOINT?pack=$PACK")
+          OK=$(node -e "const r=require('./response.json');process.stdout.write(r.ok===true?'true':'false')")
+          if [ "$STATUS" != "200" ] || [ "$OK" != "true" ]; then
+            echo "First pass failed for $PACK; running one strict retry."
+            node -e "const r=require('./response.json');console.error(JSON.stringify({pack:r.pack,failures:r.failures},null,2))" || true
+            STATUS=$(curl --silent --show-error --output response.json --write-out '%{http_code}' -H "Authorization: Bearer $ID_TOKEN" "$ENDPOINT?pack=$PACK&retry=1")
+            OK=$(node -e "const r=require('./response.json');process.stdout.write(r.ok===true?'true':'false')")
+          fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const pack = process.env.PACK;
+          const r = JSON.parse(fs.readFileSync('response.json','utf8'));
+          if (r.ok !== true || r.recordCount !== 10 || !Array.isArray(r.records) || r.records.length !== 10) {
+            console.error(JSON.stringify({pack, error:r.error, failures:r.failures, detail:r.detail}, null, 2));
+            process.exit(1);
+          }
+          fs.mkdirSync('generated',{recursive:true});
+          fs.mkdirSync('generated-qa',{recursive:true});
+          fs.writeFileSync(`generated/${pack}`, `${JSON.stringify(r.records)}\n`);
+          fs.writeFileSync(`generated-qa/${pack}`, `${JSON.stringify({pack,retry:r.retry,qa:r.qa},null,2)}\n`);
+          console.log(JSON.stringify({pack, records:r.records.length, retry:r.retry, minimumChars:Math.min(...r.qa.map(x=>x.qa.japaneseCharacters)), maximumExpansion:Math.max(...r.qa.map(x=>x.qa.sourceExpansionRatio))}, null, 2));
+          NODE
+
+      - name: Upload validated Article shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: reading-pack-${{ matrix.pack }}
+          path: |
+            generated/${{ matrix.pack }}
+            generated-qa/${{ matrix.pack }}
+          if-no-files-found: error
+          retention-days: 2
+
+  publish:
+    needs: [gate, generate]
+    if: needs.gate.outputs.ready == 'true' && needs.generate.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out latest Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Download all validated shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reading-pack-*
+          path: build-artifacts
+          merge-multiple: true
+
+      - name: Install all 300 Articles and rebuild compact indexes
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const articleRoot='data/reading/articles';
+          const levels=['N5','N4','N3','N2','N1'];
+          const manifestPath=path.join(articleRoot,'manifest.json');
+          const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+          let installed=0;
+          for (const level of levels) {
+            const index=[];
+            for (const pack of manifest.levelFiles[level]) {
+              const source=path.join('build-artifacts','generated',pack);
+              if (!fs.existsSync(source)) throw new Error(`missing generated shard ${pack}`);
+              const rows=JSON.parse(fs.readFileSync(source,'utf8'));
+              if (!Array.isArray(rows) || rows.length!==10) throw new Error(`${pack}: expected 10 generated records`);
+              fs.writeFileSync(path.join(articleRoot,pack),`${JSON.stringify(rows)}\n`);
+              installed += rows.length;
+              for (const row of rows) index.push({
+                id:row.id,type:row.type,jlpt:row.jlpt,title:row.title,titleKana:row.titleKana,titleFurigana:row.titleFurigana,titleEnglish:row.titleEnglish,
+                topic:row.topic,topicLabel:row.topicLabel,topicIcon:row.topicIcon,subject:row.subject,subjectKana:row.subjectKana,estimatedMinutes:row.estimatedMinutes,
+                summary:row.summary,sourcePublisher:row.sourcePublisher,sourceYear:row.sourceYear,sourcePublishedDate:row.sourcePublishedDate,sourceDateLabel:row.sourceDateLabel,pack,
+              });
+            }
+            if (index.length!==60) throw new Error(`${level}: expected 60 index records`);
+            fs.writeFileSync(path.join(articleRoot,manifest.indexFiles[level]),`${JSON.stringify(index)}\n`);
+          }
+          if (installed!==300) throw new Error(`installed ${installed} Articles, expected 300`);
+          manifest.version = Math.max(12, Number(manifest.version||0)+1);
+          manifest.readyCount = 300;
+          manifest.finalDepthReadyCount = 300;
+          manifest.retrievedDate = new Date().toISOString().slice(0,10);
+          manifest.depthPolicy = 'Final Articles must pass level-specific substantial one-source floors: N5 >=350 Japanese characters/5 paragraphs; N4 >=450/5; N3 >=600/6; N2 >=800/6; N1 >=1000/7. These are minimum quality floors, never padding targets.';
+          manifest.qualityPolicy = 'All 300 learner-facing Articles are substantial one-source adaptations with deterministic source, depth, study-support, ruby, vocabulary, grammar, and comprehension QA.';
+          fs.writeFileSync(manifestPath,`${JSON.stringify(manifest,null,2)}\n`);
+
+          const libraryPath='data/reading/library/manifest.json';
+          const library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
+          library.generatedDate=new Date().toISOString().slice(0,10);
+          library.shelves.articles.learnerReadyCount=300;
+          library.shelves.articles.qualityStatus='long-form-complete';
+          library.shelves.articles.readyForFinal=true;
+          library.shelves.articles.note='All 300 Articles passed the final one-source substantial-depth quality pass with level-specific long-form floors and complete study support.';
+          fs.writeFileSync(libraryPath,`${JSON.stringify(library,null,2)}\n`);
+          console.log(JSON.stringify({installed,manifestVersion:manifest.version,articlesReadyForFinal:library.shelves.articles.readyForFinal},null,2));
+          NODE
+
+      - name: Run strict Article and Reading Garden QA
+        run: |
+          node tools/validate-reading-article-depth.mjs
+          node tools/validate-reading-library.mjs --allow-incomplete
+          node tools/audit-reading-article-source-mapping.mjs
+          node tools/plan-reading-article-rebuild.mjs
+          node tools/audit-reading-article-topic-seeds.mjs
+          git diff --check
+
+      - name: Bump PWA shell and Reading cache for refresh banner
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const file='service-worker.js';
+          let text=fs.readFileSync(file,'utf8');
+          const shell=text.match(/SHELL_CACHE_VERSION = "sakura-shell-v(\d+)"/)?.[1];
+          const reading=text.match(/READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v(\d+)"/)?.[1];
+          if (!shell || !reading) throw new Error('service-worker cache versions not found');
+          text=text.replace(`SHELL_CACHE_VERSION = "sakura-shell-v${shell}"`,`SHELL_CACHE_VERSION = "sakura-shell-v${Number(shell)+1}"`);
+          text=text.replace(`READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v${reading}"`,`READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v${Number(reading)+1}"`);
+          fs.writeFileSync(file,text);
+          console.log(JSON.stringify({shell:`v${Number(shell)+1}`,reading:`v${Number(reading)+1}`},null,2));
+          NODE
+          node --check service-worker.js
+          git diff --check
+
+      - name: Commit final long-form corpus without touching unrelated work
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/reading/articles data/reading/library/manifest.json data/reading/qa/article-depth-report.json data/reading/qa/article-rebuild-plan.json service-worker.js
+          if git diff --cached --quiet; then
+            echo "No long-form corpus changes to commit."
+            exit 0
+          fi
+          git commit -m "Complete 300 long-form Reading Garden Articles"
+          git pull --rebase origin complete-open-reading-garden-20260822
+          git push origin HEAD:complete-open-reading-garden-20260822
