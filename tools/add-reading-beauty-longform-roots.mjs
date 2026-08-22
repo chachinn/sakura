@@ -18,6 +18,7 @@ const roots = [
   '      "https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20240328/"',
   '      "https://www.caa.go.jp/policies/policy/consumer_policy/information/information_002"',
   '      "https://www.pmda.go.jp/pnavi-07.html"',
+  '      "https://www.mhlw.go.jp/stf/newpage_04978.html"',
 ];
 for (const root of roots) {
   if (discovery.includes(root.trim().replace(/,$/, ""))) continue;
@@ -27,6 +28,6 @@ fs.writeFileSync(discoveryPath, discovery);
 
 console.log(JSON.stringify({
   pass: true,
-  addedBeautyRoots: roots.map((line) => line.trim().replace(/[",]$/g, "").replace(/^"/, "")),
+  addedBeautyRoots: roots.map((line) => line.trim().replace(/[\",]$/g, "").replace(/^"/, "")),
   addedPmdaPathPattern: pmdaPattern,
 }, null, 2));
