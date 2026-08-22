@@ -567,7 +567,8 @@
         "^/safety/reports/mah/0005\\.html$",
         "^/safety/consultation-for-mah/",
         "^/review-services/f2f-pre/consultations/",
-        "^/review-services/symposia/0174\\.html$"
+        "^/review-services/symposia/0174\\.html$",
+        "^/pnavi-07\\.html$"
       ],
       "excludedContent": [
         "logos",
@@ -579,7 +580,42 @@
         "databases or services governed by separate terms",
         "content with a separate rights notice"
       ],
-      "notes": "PMDA site policy applies PDL 1.0 unless otherwise indicated. Reading Garden approval is restricted to PMDA-authored HTML cosmetics/quasi-drug guidance, consultation, safety and explanatory pages in the listed paths. PDF review reports, manufacturer-authored application materials, separately governed databases/services, and any item with contrary rights text are excluded.",
+      "notes": "PMDA site policy applies PDL 1.0 unless otherwise indicated. Reading Garden approval is restricted to PMDA-authored HTML cosmetics/quasi-drug guidance, consultation, safety and explanatory pages in the listed paths, including the quasi-drug navigation overview. PDF review reports, manufacturer-authored application materials, separately governed databases/services, and any item with contrary rights text are excluded.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-egov-law",
+      "name": "e-Gov Law Search",
+      "domain": "laws.e-gov.go.jp",
+      "publisher": "e-Gov法令検索・デジタル庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.e-gov.go.jp/en/term-of-use.html",
+      "licenseName": "Government of Japan Standard Terms of Use (Version 2.0), CC BY 4.0 compatible",
+      "licenseUrl": "https://www.e-gov.go.jp/en/term-of-use.html",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/law/",
+        "^/api/1/lawdata/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party assets",
+        "content with separate terms"
+      ],
+      "notes": "Restricted to official e-Gov Law Search statutory pages and Law API data. e-Gov terms permit reuse, translation and modification with attribution; statutory text is used without bundled third-party assets.",
       "verifiedDate": "2026-08-22"
     }
   ]

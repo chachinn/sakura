@@ -23,10 +23,10 @@ const TODAY = "2026-08-22";
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 const TOPICS = ["beauty", "food", "travel", "digital", "consumer", "health", "environment", "culture", "work", "society"];
 const TARGET_PER_TOPIC = 30;
-const MIN_JP = 320;
+const MIN_JP = 350;
 const MIN_TOPIC_SCORE = 12;
 const MAX_BEST_TOPIC_GAP = 10;
-const MAX_FETCHES_PER_TOPIC = 420;
+const MAX_FETCHES_PER_TOPIC = 900;
 const MAX_CANDIDATES_PER_TOPIC = 75;
 const MAX_BYTES = 2_200_000;
 const CONCURRENCY = 8;
@@ -53,6 +53,7 @@ const FAMILY_PRIORS = {
   "gov-caa": { beauty:4, food:5, consumer:10, health:2 },
   "gov-mhlw": { beauty:5, health:10, work:7, society:5, food:2 },
   "gov-pmda": { beauty:14, health:4 },
+  "gov-egov-law": { beauty:16 },
   "gov-maff": { food:10, environment:4, work:2, travel:2 },
   "gov-jta": { travel:12 },
   "gov-mlit": { travel:7, work:2 },
@@ -66,7 +67,7 @@ const FAMILY_PRIORS = {
 
 const TOPIC_CONFIG = {
   beauty: {
-    families:["gov-mhlw","gov-caa","gov-pmda"],
+    families:["gov-mhlw","gov-caa","gov-pmda","gov-egov-law"],
     roots:[
       "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/keshouhin/index.html",
       "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/index.html",
@@ -94,7 +95,18 @@ const TOPIC_CONFIG = {
       "https://www.pmda.go.jp/review-services/f2f-pre/consultations/0067.html",
       "https://www.pmda.go.jp/review-services/symposia/0174.html",
       "https://www.caa.go.jp/business/labeling/",
-      "https://www.caa.go.jp/policies/policy/representation/household_goods/"
+      "https://www.caa.go.jp/policies/policy/representation/household_goods/",
+      "https://laws.e-gov.go.jp/api/1/lawdata/332AC1000000163",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=00tb8904&dataType=1&pageNo=1",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=00td0052&dataType=1&pageNo=1",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc1147&dataType=1&pageNo=1",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=79081000",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9325&dataType=1&pageNo=1",
+      "https://www.mhlw.go.jp/stf/newpage_68162.html",
+      "https://www.mhlw.go.jp/stf/newpage_04978.html",
+      "https://www.pmda.go.jp/pnavi-07.html",
+      "https://www.caa.go.jp/policies/policy/consumer_policy/information/information_002",
+      "https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20240328/"
     ]
   },
   food: {
@@ -331,10 +343,10 @@ async function fetchPage(url, allowedFamilies) {
       if (!response.ok) return {ok:false,url:key,error:`http-${response.status}`};
       const finalUrl = normalizeUrl(response.url); const finalFamily = familyForUrl(finalUrl,allowedFamilies);
       if (!finalFamily) return {ok:false,url:key,error:"redirect-outside-approved-family"};
-      const type = response.headers.get("content-type") || ""; if (!/text\/html|application\/xhtml\+xml/i.test(type)) return {ok:false,url:finalUrl,error:"non-html"};
+      const type = response.headers.get("content-type") || ""; const egovXml = finalFamily.sourceFamilyId === "gov-egov-law" && /xml/i.test(type); if (!/text\/html|application\/xhtml\+xml/i.test(type) && !egovXml) return {ok:false,url:finalUrl,error:"non-html"};
       const length = Number(response.headers.get("content-length") || 0); if (length > MAX_BYTES) return {ok:false,url:finalUrl,error:"too-large"};
       const bytes = new Uint8Array(await response.arrayBuffer()); if (bytes.length > MAX_BYTES) return {ok:false,url:finalUrl,error:"too-large"};
-      const html = decodeHtml(bytes,response.headers); const body = extractBody(html); const title = titleFromHtml(html,new URL(finalUrl).pathname.split("/").filter(Boolean).at(-1)||finalFamily.name);
+      const html = decodeHtml(bytes,response.headers); const body = egovXml ? clean(html.replace(/<[^>]+>/g," ")) : extractBody(html); const title = egovXml ? clean((html.match(/<LawTitle[^>]*>([\s\S]*?)<\/LawTitle>/i)||[])[1] || "美容師法") : titleFromHtml(html,new URL(finalUrl).pathname.split("/").filter(Boolean).at(-1)||finalFamily.name);
       return {ok:true,url:finalUrl,family:finalFamily,title,body,html,publishedDate:dateFromHtml(html)};
     } catch (error) {
       return {ok:false,url:key,error:error instanceof DOMException && error.name==="AbortError"?"timeout":"fetch-failed"};
@@ -423,22 +435,49 @@ const candidates=[...candidateByUrl.values()].map((candidate)=>{
   return {...candidate,bestTopic:ranking[0]?.topic||null,bestScore:ranking[0]?.score||0,secondScore:ranking[1]?.score||0};
 });
 
-const capacity=Object.fromEntries(TOPICS.map((topic)=>[topic,TARGET_PER_TOPIC]));
+const LONGFORM_SOURCE_FLOORS = Object.freeze({N5:350,N4:450,N3:600,N2:800,N1:1000});
+const slotNeedsByTopic = Object.fromEntries(TOPICS.map((topic)=>[topic,articleRows
+  .filter((row)=>row.topic===topic)
+  .map((row)=>({level:row.jlpt,floor:LONGFORM_SOURCE_FLOORS[row.jlpt]||MIN_JP}))
+  .sort((a,b)=>b.floor-a.floor||LEVELS.indexOf(b.level)-LEVELS.indexOf(a.level))]));
 const selectedByTopic=Object.fromEntries(TOPICS.map((topic)=>[topic,[]]));
-const selectedUrls=new Set(); const selectedBodies=new Set(); const pairs=[];
+const selectedUrls=new Set(); const selectedBodies=new Set();
+const eligiblePairsByTopic=Object.fromEntries(TOPICS.map((topic)=>[topic,[]]));
 for(const candidate of candidates){
+  if(candidate.sourceTextCharacterCount<MIN_JP)continue;
   for(const topic of TOPICS){
     if(!TOPIC_CONFIG[topic].families.includes(candidate.family.sourceFamilyId))continue;
     const part=candidate.scores[topic]; if(!part||part.score<MIN_TOPIC_SCORE)continue;
     const seed=candidate.seedTopics.has(topic); const strong=topic!=="beauty"||beautyStrongEvidence(part,seed); if(!strong)continue;
     const bestGap=Math.max(0,candidate.bestScore-part.score); if(bestGap>MAX_BEST_TOPIC_GAP&&!seed&&!(topic==="beauty"&&strong))continue;
-    pairs.push({candidate,topic,score:part.score,bestGap,evidence:part.evidence,seed,strong});
+    eligiblePairsByTopic[topic].push({candidate,topic,score:part.score,bestGap,evidence:part.evidence,seed,strong});
   }
 }
-pairs.sort((a,b)=>Number(b.seed)-Number(a.seed)||b.score-a.score||a.bestGap-b.bestGap||b.candidate.sourceTextCharacterCount-a.candidate.sourceTextCharacterCount||a.candidate.url.localeCompare(b.candidate.url));
-for(const pair of pairs){
-  if(capacity[pair.topic]<=0||selectedUrls.has(pair.candidate.url)||selectedBodies.has(pair.candidate.sourceBodyFingerprint))continue;
-  selectedByTopic[pair.topic].push(pair);capacity[pair.topic]-=1;selectedUrls.add(pair.candidate.url);selectedBodies.add(pair.candidate.sourceBodyFingerprint);
+const topicOrder=[...TOPICS].sort((a,b)=>eligiblePairsByTopic[a].length-eligiblePairsByTopic[b].length||a.localeCompare(b));
+const longformSelectionErrors=[];
+for(const topic of topicOrder){
+  const needs=slotNeedsByTopic[topic];
+  for(const need of needs){
+    const pool=eligiblePairsByTopic[topic].filter((pair)=>
+      !selectedUrls.has(pair.candidate.url)
+      && !selectedBodies.has(pair.candidate.sourceBodyFingerprint)
+      && pair.candidate.sourceTextCharacterCount>=need.floor
+    ).sort((a,b)=>
+      Number(b.candidate.bestTopic===topic)-Number(a.candidate.bestTopic===topic)
+      || Number(b.seed)-Number(a.seed)
+      || b.score-a.score
+      || b.candidate.sourceTextCharacterCount-a.candidate.sourceTextCharacterCount
+      || a.bestGap-b.bestGap
+      || a.candidate.url.localeCompare(b.candidate.url)
+    );
+    const pair=pool[0];
+    if(!pair){
+      longformSelectionErrors.push(`${topic}: no unused source >= ${need.floor} Japanese characters for ${need.level} slot`);
+      continue;
+    }
+    selectedByTopic[topic].push({...pair,recommendedLevel:need.level,requiredFloor:need.floor});
+    selectedUrls.add(pair.candidate.url); selectedBodies.add(pair.candidate.sourceBodyFingerprint);
+  }
 }
 
 const selected=[];let inventoryPosition=1;
@@ -448,7 +487,7 @@ for(const topic of TOPICS){
     const item=pair.candidate;const family=item.family;
     selected.push({
       candidateId:`article-topic-${sha256(item.url).slice(0,16)}`,
-      targetShelf:"articles",articleTopic:topic,topicScore:pair.score,topicEvidence:pair.evidence,sourceBestTopic:item.bestTopic,sourceBestTopicScore:item.bestScore,
+      targetShelf:"articles",articleTopic:topic,recommendedArticleLevel:pair.recommendedLevel,longformSourceFloor:pair.requiredFloor,topicScore:pair.score,topicEvidence:pair.evidence,sourceBestTopic:item.bestTopic,sourceBestTopicScore:item.bestScore,
       sourceFamilyId:family.sourceFamilyId,sourceTitle:item.title,sourcePublisher:family.publisher,sourceUrl:item.url,sourcePublishedDate:item.publishedDate,sourceRetrievedDate:TODAY,
       rightsStatus:"adaptation-permitted",
       rightsBasis:{termsUrl:family.termsUrl,licenseName:family.licenseName,licenseUrl:family.licenseUrl,itemLevelCheck:"No contrary text-rights notice detected in the fetched page; excluded media remains excluded.",verifiedDate:TODAY},
@@ -467,13 +506,13 @@ const eligibleCounts=Object.fromEntries(TOPICS.map((topic)=>[topic,candidates.fi
   const seed=candidate.seedTopics.has(topic);const strong=topic!=="beauty"||beautyStrongEvidence(part,seed);if(!strong)return false;
   const bestGap=Math.max(0,candidate.bestScore-part.score);return bestGap<=MAX_BEST_TOPIC_GAP||seed||(topic==="beauty"&&strong);
 }).length]));
-const pass=selected.length===300&&selectedUrls.size===300&&selectedBodies.size===300&&Object.values(gaps).every((gap)=>gap===0);
+const pass=selected.length===300&&selectedUrls.size===300&&selectedBodies.size===300&&Object.values(gaps).every((gap)=>gap===0)&&longformSelectionErrors.length===0;
 const report={
-  version:2,generatedDate:TODAY,pass,
-  policy:"Exactly 30 unique, body-ready, semantically fitting official sources per Article topic. Every source is used once. Thin pages, contrary-rights signals, third-party media assets, duplicate URLs/bodies, weak topic matches, and forced cross-topic assignments are rejected. Beauty additionally requires title/URL-level beauty evidence or a pre-existing trusted Beauty seed so shared navigation cannot create false positives.",
-  thresholds:{minimumJapaneseCharacters:MIN_JP,minimumTopicScore:MIN_TOPIC_SCORE,maximumBestTopicGap:MAX_BEST_TOPIC_GAP,maxFetchesPerTopic:MAX_FETCHES_PER_TOPIC},
+  version:3,generatedDate:TODAY,pass,
+  policy:"Exactly 30 unique, semantically fitting official sources per Article topic, selected against the real N5–N1 Article slot mix. Sources must meet the long-form source floor for the specific level they are reserved to support. Thin pages, contrary-rights signals, third-party media assets, duplicate URLs/bodies, weak topic matches, forced cross-topic assignments, and source inflation are rejected. Beauty additionally requires title/URL-level beauty evidence or a trusted Beauty seed so shared navigation cannot create false positives.",
+  thresholds:{minimumJapaneseCharacters:MIN_JP,longformSourceFloors:LONGFORM_SOURCE_FLOORS,minimumTopicScore:MIN_TOPIC_SCORE,maximumBestTopicGap:MAX_BEST_TOPIC_GAP,maxFetchesPerTopic:MAX_FETCHES_PER_TOPIC},
   startingSeeds:{uniqueLegacyTopicUrls:seedTopicsByUrl.size,existingBodyReadyRecords:(existingBodyReady.records||[]).length},
-  crawl,discoveredUniqueCandidatePages:candidates.length,eligibleCounts,selectedCount:selected.length,uniqueSelectedUrls:selectedUrls.size,uniqueSelectedBodies:selectedBodies.size,gaps,
+  crawl,discoveredUniqueCandidatePages:candidates.length,eligibleCounts,selectedCount:selected.length,uniqueSelectedUrls:selectedUrls.size,uniqueSelectedBodies:selectedBodies.size,gaps,longformSelectionErrors,longformReservedLevels:Object.fromEntries(LEVELS.map((level)=>[level,selected.filter((row)=>row.recommendedArticleLevel===level).length])),
   selectedByTopic:Object.fromEntries(TOPICS.map((topic)=>[topic,selected.filter((row)=>row.articleTopic===topic).map(({sourceJapaneseSubstance,...row})=>row)])),
   rejectionSummary:Object.fromEntries(Object.entries(rejected.reduce((acc,row)=>{acc[row.reason]=(acc[row.reason]||0)+1;return acc;},{})).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]))),
   rejectedSample:rejected.slice(0,250),
@@ -484,4 +523,4 @@ const candidatePath=path.join(qaRoot,"article-topic-source-candidates.json");
 if(pass){
   fs.writeFileSync(candidatePath,`${JSON.stringify({version:1,shelf:"articles",targetCount:300,bodyReadyCount:300,topicCounts:Object.fromEntries(TOPICS.map((topic)=>[topic,30])),records:selected},null,2)}\n`);
 }else if(fs.existsSync(candidatePath)) fs.rmSync(candidatePath);
-console.log(JSON.stringify({pass,startingSeeds:report.startingSeeds,crawl,discoveredUniqueCandidatePages:candidates.length,eligibleCounts,selectedCount:selected.length,gaps,rejectionSummary:report.rejectionSummary},null,2));
+console.log(JSON.stringify({pass,startingSeeds:report.startingSeeds,crawl,discoveredUniqueCandidatePages:candidates.length,eligibleCounts,selectedCount:selected.length,gaps,longformSelectionErrors,longformReservedLevels:report.longformReservedLevels,rejectionSummary:report.rejectionSummary},null,2));
