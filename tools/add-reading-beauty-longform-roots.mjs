@@ -25,6 +25,7 @@ const roots = [
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=79081000"',
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc1147&dataType=1&pageNo=1"',
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00td0052&dataType=1&pageNo=1"',
+  '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tb8904&dataType=1&pageNo=1"',
 ];
 for (const root of roots) {
   if (discovery.includes(root.trim().replace(/,$/, ""))) continue;
