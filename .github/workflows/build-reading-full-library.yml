@@ -1,0 +1,155 @@
+name: Build Reading Garden full library
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/build-reading-full-library.yml
+      - tools/assemble-reading-full-library.mjs
+      - tools/build-reading-library.mjs
+      - tools/validate-reading-library.mjs
+      - data/reading/candidates/**
+      - data/reading/body-ready/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: reading-full-library-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822'
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - id: matrix
+        name: Build exact 1,600-record pack matrix
+        shell: bash
+        run: |
+          node <<'NODE' >> "$GITHUB_OUTPUT"
+          const counts = {
+            'short-stories': 150,
+            news: 300,
+            travel: 200,
+            folklore: 100,
+            essays: 150,
+            'school-work': 120,
+            recipes: 100,
+            interviews: 100,
+            documents: 200,
+            novels: 80,
+            micro: 100,
+          };
+          const include = [];
+          for (const [shelf, count] of Object.entries(counts)) {
+            for (let pack = 0; pack < count / 10; pack += 1) include.push({ shelf, pack });
+          }
+          if (include.length !== 160) throw new Error(`Expected 160 packs, got ${include.length}`);
+          console.log(`matrix=${JSON.stringify({ include })}`);
+          NODE
+
+  generate:
+    needs: plan
+    if: needs.plan.result == 'success'
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Get signed GitHub workflow identity
+        id: oidc
+        shell: bash
+        run: |
+          URL="${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sakura-reading-full-library"
+          curl --fail --silent --show-error \
+            -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "$URL" > oidc.json
+          TOKEN=$(node -e "const x=require('./oidc.json'); if(!x.value) process.exit(1); process.stdout.write(x.value)")
+          echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
+      - name: Generate and validate pack
+        env:
+          OIDC_TOKEN: ${{ steps.oidc.outputs.token }}
+          SHELF: ${{ matrix.shelf }}
+          PACK: ${{ matrix.pack }}
+        shell: bash
+        run: |
+          ENDPOINT="https://hrycfsekrvflrbwahgyh.supabase.co/functions/v1/sakura-reading-full-library-pack?shelf=${SHELF}&pack=${PACK}"
+          FILE="pack-${SHELF}-${PACK}.json"
+          success=0
+          for attempt in 1 2 3; do
+            code=$(curl --max-time 720 --silent --show-error -o "$FILE" -w '%{http_code}' \
+              -H "Authorization: Bearer ${OIDC_TOKEN}" "$ENDPOINT" || true)
+            if [ "$code" = "200" ] && node -e "const x=require('./$FILE'); process.exit(x.ok===true && x.recordCount===10 ? 0 : 1)"; then
+              success=1
+              break
+            fi
+            echo "Pack ${SHELF}/${PACK} attempt ${attempt} failed with HTTP ${code}"
+            cat "$FILE" || true
+            sleep 15
+          done
+          if [ "$success" != "1" ]; then
+            echo "Pack ${SHELF}/${PACK} failed all guarded attempts"
+            exit 1
+          fi
+          node -e "const x=require('./$FILE'); console.log(JSON.stringify({shelf:x.shelf,pack:x.pack,records:x.recordCount,qaPass:x.qa.every(q=>q.qa&&q.qa.pass)},null,2)); if(!x.qa.every(q=>q.qa&&q.qa.pass)) process.exit(1)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reading-pack-${{ matrix.shelf }}-${{ matrix.pack }}
+          path: pack-${{ matrix.shelf }}-${{ matrix.pack }}.json
+          if-no-files-found: error
+          retention-days: 2
+          compression-level: 6
+
+  assemble:
+    needs: generate
+    if: needs.generate.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out isolated Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          ref: complete-open-reading-garden-20260822
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download all validated packs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reading-pack-*
+          path: .reading-generated
+          merge-multiple: true
+      - name: Assemble runtime corpus
+        env:
+          READING_GENERATED_ROOT: ${{ github.workspace }}/.reading-generated
+        run: node tools/assemble-reading-full-library.mjs
+      - name: Validate 1,600 additions and runtime architecture
+        run: node tools/validate-reading-library.mjs --allow-incomplete
+      - name: Validate rights after Story expansion
+        run: node tools/validate-reading-rights.mjs
+      - name: Diff hygiene
+        run: git diff --check
+      - name: Commit generated static library
+        shell: bash
+        run: |
+          rm -rf .reading-generated
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/reading/library data/reading/stories data/reading/qa/reading-library-report.json data/reading/qa/source-rights-report.json
+          if git diff --cached --quiet; then
+            echo "No full-library corpus changes to commit."
+            exit 0
+          fi
+          git commit -m "Populate Reading Garden learner library"
+          git fetch origin complete-open-reading-garden-20260822
+          git rebase origin/complete-open-reading-garden-20260822
+          git push origin HEAD:complete-open-reading-garden-20260822
