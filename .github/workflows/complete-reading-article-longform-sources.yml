@@ -8,10 +8,15 @@ on:
       - .github/workflows/complete-reading-article-longform-sources.yml
       - tools/upgrade-reading-article-longform-source-selection.mjs
       - tools/add-reading-beauty-longform-roots.mjs
+      - tools/plan-reading-article-rebuild.mjs
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: reading-article-longform-sources-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   complete-longform-article-sources:
@@ -35,7 +40,7 @@ jobs:
       - name: Upgrade Article source selection policy
         run: node tools/upgrade-reading-article-longform-source-selection.mjs
 
-      - name: Check discovery syntax
+      - name: Check source-discovery syntax
         run: node --check tools/discover-reading-article-topic-sources.mjs
 
       - name: Discover long-form-capable Article sources
@@ -72,19 +77,37 @@ jobs:
       - name: Validate source rights
         run: node tools/validate-reading-rights.mjs
 
+      - name: Build stable 300-Article rebuild plan
+        run: node tools/plan-reading-article-rebuild.mjs
+
+      - name: Require final long-form mapping mode
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync('data/reading/qa/article-rebuild-plan.json','utf8'));
+          const errors = [];
+          if (report.pass !== true) errors.push('rebuild plan failed');
+          if (report.mode !== 'longform-reservations') errors.push(`mode=${report.mode}`);
+          if (report.articleSlots !== 300) errors.push(`articleSlots=${report.articleSlots}`);
+          for (const level of ['N5','N4','N3','N2','N1']) if (report.byLevel?.[level] !== 60) errors.push(`${level}=${report.byLevel?.[level] || 0}`);
+          console.log(JSON.stringify({mode: report.mode, articleSlots: report.articleSlots, byLevel: report.byLevel, errors}, null, 2));
+          if (errors.length) process.exit(1);
+          NODE
+
       - name: Check generated diff
         run: |
           git diff --check
           git status --short
 
-      - name: Commit long-form-capable Article source pack
+      - name: Rebase generated work onto current branch head
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/reading/source-registry.json tools/discover-reading-article-topic-sources.mjs data/reading/qa/article-topic-source-discovery.json data/reading/qa/article-topic-source-candidates.json data/reading/body-ready/articles.json data/reading/qa/body-ready-source-report.json data/reading/qa/source-rights-report.json
+          git add -- data/reading/source-registry.json tools/discover-reading-article-topic-sources.mjs data/reading/qa/article-topic-source-discovery.json data/reading/qa/article-topic-source-candidates.json data/reading/body-ready/articles.json data/reading/qa/body-ready-source-report.json data/reading/qa/source-rights-report.json data/reading/qa/article-rebuild-plan.json
           if git diff --cached --quiet; then
             echo "No Article source changes to commit."
-          else
-            git commit -m "Strengthen Article sources for long-form readings"
-            git push origin HEAD:complete-open-reading-garden-20260822
+            exit 0
           fi
+          git commit -m "Strengthen Article sources for long-form readings"
+          git pull --rebase origin complete-open-reading-garden-20260822
+          git push origin HEAD:complete-open-reading-garden-20260822
