@@ -10,8 +10,9 @@ const pmdaPattern = "^/pnavi-07\\.html$";
 if (!pmda.approvedPathPatterns.includes(pmdaPattern)) pmda.approvedPathPatterns.push(pmdaPattern);
 pmda.notes = "PMDA site policy applies PDL 1.0 unless otherwise indicated. Reading Garden approval is restricted to PMDA-authored HTML cosmetics/quasi-drug guidance, consultation, safety and explanatory pages in the listed paths, including the quasi-drug navigation overview. PDF review reports, manufacturer-authored application materials, separately governed databases/services, and any item with contrary rights text are excluded.";
 
-if (!registry.sourceFamilies.some((family) => family.sourceFamilyId === "gov-egov-law")) {
-  registry.sourceFamilies.push({
+let egov = registry.sourceFamilies.find((family) => family.sourceFamilyId === "gov-egov-law");
+if (!egov) {
+  egov = {
     sourceFamilyId: "gov-egov-law",
     name: "e-Gov Law Search",
     domain: "laws.e-gov.go.jp",
@@ -26,11 +27,14 @@ if (!registry.sourceFamilies.some((family) => family.sourceFamilyId === "gov-ego
     attributionRequired: true,
     modificationDisclosureRequired: true,
     thirdPartyAssetWarning: true,
-    approvedPathPatterns: ["^/law/"],
+    approvedPathPatterns: ["^/law/", "^/api/1/lawdata/"],
     excludedContent: ["logos", "symbols", "characters", "third-party assets", "content with separate terms"],
-    notes: "Restricted to official e-Gov Law Search statutory HTML under /law/. e-Gov terms permit reuse, translation and modification with attribution; statutory text is used without bundled third-party assets.",
+    notes: "Restricted to official e-Gov Law Search statutory pages and Law API data. e-Gov terms permit reuse, translation and modification with attribution; statutory text is used without bundled third-party assets.",
     verifiedDate: "2026-08-22"
-  });
+  };
+  registry.sourceFamilies.push(egov);
+} else {
+  for (const pattern of ["^/law/", "^/api/1/lawdata/"]) if (!egov.approvedPathPatterns.includes(pattern)) egov.approvedPathPatterns.push(pattern);
 }
 fs.writeFileSync(registryPath, `${JSON.stringify(registry, null, 2)}\n`);
 
@@ -44,6 +48,15 @@ if (!discovery.includes('families:["gov-mhlw","gov-caa","gov-pmda","gov-egov-law
   const familyAnchor = 'families:["gov-mhlw","gov-caa","gov-pmda"]';
   if (!discovery.includes(familyAnchor)) throw new Error("Beauty family anchor not found");
   discovery = discovery.replace(familyAnchor, 'families:["gov-mhlw","gov-caa","gov-pmda","gov-egov-law"]');
+}
+
+const typeAnchor = 'const type = response.headers.get("content-type") || ""; if (!/text\\/html|application\\/xhtml\\+xml/i.test(type)) return {ok:false,url:finalUrl,error:"non-html"};';
+if (discovery.includes(typeAnchor)) {
+  discovery = discovery.replace(typeAnchor, 'const type = response.headers.get("content-type") || ""; const egovXml = finalFamily.sourceFamilyId === "gov-egov-law" && /xml/i.test(type); if (!/text\\/html|application\\/xhtml\\+xml/i.test(type) && !egovXml) return {ok:false,url:finalUrl,error:"non-html"};');
+}
+const parseAnchor = 'const html = decodeHtml(bytes,response.headers); const body = extractBody(html); const title = titleFromHtml(html,new URL(finalUrl).pathname.split("/").filter(Boolean).at(-1)||finalFamily.name);';
+if (discovery.includes(parseAnchor)) {
+  discovery = discovery.replace(parseAnchor, 'const html = decodeHtml(bytes,response.headers); const body = egovXml ? clean(html.replace(/<[^>]+>/g," ")) : extractBody(html); const title = egovXml ? clean((html.match(/<LawTitle[^>]*>([\\s\\S]*?)<\\/LawTitle>/i)||[])[1] || "美容師法") : titleFromHtml(html,new URL(finalUrl).pathname.split("/").filter(Boolean).at(-1)||finalFamily.name);');
 }
 
 const anchor = '      "https://www.caa.go.jp/policies/policy/representation/household_goods/"';
@@ -60,7 +73,7 @@ const roots = [
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tc1147&dataType=1&pageNo=1"',
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00td0052&dataType=1&pageNo=1"',
   '      "https://www.mhlw.go.jp/web/t_doc?dataId=00tb8904&dataType=1&pageNo=1"',
-  '      "https://laws.e-gov.go.jp/law/332AC1000000163"',
+  '      "https://laws.e-gov.go.jp/api/1/lawdata/332AC1000000163"',
 ];
 for (const root of roots) {
   const exact = root.trim().replace(/,$/, "");
@@ -73,5 +86,6 @@ console.log(JSON.stringify({
   pass: true,
   addedBeautyRoots: roots.map((line) => line.trim().replace(/[\",]$/g, "").replace(/^"/, "")),
   addedPmdaPathPattern: pmdaPattern,
-  addedSourceFamily: "gov-egov-law"
+  addedSourceFamily: "gov-egov-law",
+  eGovMachineReadableLawData: true
 }, null, 2));
