@@ -113,8 +113,9 @@ manifest.shelves["short-stories"] = {
   note: "250 learner-facing public-domain Aozora Story records; original Japanese is not AI-rewritten.",
 };
 manifest.learnerReadyCount = Object.values(manifest.shelves).reduce((sum, shelf) => sum + Number(shelf?.learnerReadyCount || 0), 0);
-manifest.strictComplete = false;
+manifest.strictComplete = manifest.learnerReadyCount === manifest.totalTarget && Object.values(manifest.shelves).every((shelf) => shelf?.readyForFinal === true);
+if (!manifest.strictComplete) throw new Error(`Final learner library is not strictly complete: ${manifest.learnerReadyCount}/${manifest.totalTarget}`);
 write(libraryManifestPath, manifest);
 
 const summary = Object.fromEntries(Object.entries(EXPECTED).map(([shelf]) => [shelf, grouped[shelf].length]));
-console.log(JSON.stringify({ pass: true, generatedAdditions: summary, resultingStoryCount: 250, manifestLearnerReadyCount: manifest.learnerReadyCount }, null, 2));
+console.log(JSON.stringify({ pass: true, generatedAdditions: summary, resultingStoryCount: 250, manifestLearnerReadyCount: manifest.learnerReadyCount, strictComplete: manifest.strictComplete }, null, 2));
