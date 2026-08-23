@@ -78,7 +78,7 @@ jobs:
     if: needs.plan.outputs.ready == 'true'
     strategy:
       fail-fast: false
-      max-parallel: 6
+      max-parallel: 3
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
@@ -90,7 +90,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          BASE_ENDPOINT="https://hrycfsekrvflrbwahgyh.supabase.co/functions/v1/sakura-reading-full-library-pack?shelf=${SHELF}&pack=${PACK}"
+          case "$SHELF" in
+            short-stories|folklore|essays|novels|micro)
+              GENERATOR="sakura-reading-literary-pack"
+              ;;
+            *)
+              GENERATOR="sakura-reading-full-library-pack"
+              ;;
+          esac
+          BASE_ENDPOINT="https://hrycfsekrvflrbwahgyh.supabase.co/functions/v1/${GENERATOR}?shelf=${SHELF}&pack=${PACK}"
           OIDC_URL="${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sakura-reading-full-library"
           rm -f slot-*.json oidc-slot.json
           for SLOT in $(seq 0 9); do
