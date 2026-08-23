@@ -190,11 +190,25 @@ if (hasLongformReservations) {
   }
 }
 
+const reportPath = path.join(qaRoot, "article-rebuild-plan.json");
+let previousReport = null;
+try {
+  previousReport = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+} catch {
+  previousReport = null;
+}
+const mode = hasLongformReservations ? "longform-reservations" : "legacy-compatibility";
+const mappingUnchanged = previousReport?.mode === mode
+  && JSON.stringify(previousReport?.mappings || []) === JSON.stringify(mappings);
+const generatedDate = mappingUnchanged && typeof previousReport?.generatedDate === "string"
+  ? previousReport.generatedDate
+  : new Date().toISOString().slice(0, 10);
+
 const report = {
   version: 3,
-  generatedDate: new Date().toISOString().slice(0, 10),
+  generatedDate,
   pass: finalErrors.length === 0,
-  mode: hasLongformReservations ? "longform-reservations" : "legacy-compatibility",
+  mode,
   policy: hasLongformReservations
     ? "Final learner rewrite mapping preserves the 300 stable Article IDs while mapping each slot to one verified source explicitly reserved for the same topic and study-support level. Source length must meet the level's long-form floor so generation cannot inflate a thin page into a long Article."
     : "Compatibility planning for the pre-long-form source pack only. This mode is not sufficient for final learner corpus release.",
@@ -212,7 +226,7 @@ const report = {
   mappings,
 };
 fs.mkdirSync(qaRoot, { recursive: true });
-fs.writeFileSync(path.join(qaRoot, "article-rebuild-plan.json"), `${JSON.stringify(report, null, 2)}\n`);
+fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify({
   pass: report.pass,
   mode: report.mode,
