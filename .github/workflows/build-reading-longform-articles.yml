@@ -30,8 +30,11 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const p = JSON.parse(fs.readFileSync('data/reading/qa/article-rebuild-plan.json','utf8'));
-          const ready = p.pass === true && p.mode === 'longform-reservations' && p.articleSlots === 300 && ['N5','N4','N3','N2','N1'].every(level => p.byLevel?.[level] === 60);
-          console.log(JSON.stringify({ready, mode:p.mode, articleSlots:p.articleSlots, byLevel:p.byLevel}, null, 2));
+          const articleManifest = JSON.parse(fs.readFileSync('data/reading/articles/manifest.json','utf8'));
+          const sourceReady = p.pass === true && p.mode === 'longform-reservations' && p.articleSlots === 300 && ['N5','N4','N3','N2','N1'].every(level => p.byLevel?.[level] === 60);
+          const alreadyComplete = Number(articleManifest.finalDepthReadyCount || 0) === 300;
+          const ready = sourceReady && !alreadyComplete;
+          console.log(JSON.stringify({ready, sourceReady, alreadyComplete, finalDepthReadyCount:articleManifest.finalDepthReadyCount, mode:p.mode, articleSlots:p.articleSlots, byLevel:p.byLevel}, null, 2));
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `ready=${ready ? 'true' : 'false'}\n`);
           NODE
 
@@ -42,7 +45,7 @@ jobs:
     timeout-minutes: 15
     strategy:
       fail-fast: false
-      max-parallel: 1
+      max-parallel: 2
       matrix:
         pack:
           - n5.json
