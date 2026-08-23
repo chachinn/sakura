@@ -23,8 +23,8 @@ concurrency:
 
 jobs:
   plan:
-    # Temporarily serialize the 1,600-reading build behind the long-form Article pass.
-    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822' && false
+    # The 300-Article long-form pass is complete; enable the exact 1,600-reading build.
+    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822'
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
