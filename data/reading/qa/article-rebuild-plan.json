@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generatedDate": "2026-08-22",
+  "generatedDate": "2026-08-23",
   "pass": true,
   "mode": "longform-reservations",
   "policy": "Final learner rewrite mapping preserves the 300 stable Article IDs while mapping each slot to one verified source explicitly reserved for the same topic and study-support level. Source length must meet the level's long-form floor so generation cannot inflate a thin page into a long Article.",
