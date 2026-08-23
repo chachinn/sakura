@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "generatedDate": "2026-08-23",
+  "pass": true,
+  "policy": "Final Article QA requires substantial one-source long-form learner adaptations with level-specific minimum Japanese depth. Minimums are floors, not padding targets; unsupported or repetitive filler remains invalid.",
+  "longformMinimums": {
+    "N5": {
+      "characters": 350,
+      "paragraphs": 5
+    },
+    "N4": {
+      "characters": 450,
+      "paragraphs": 5
+    },
+    "N3": {
+      "characters": 600,
+      "paragraphs": 6
+    },
+    "N2": {
+      "characters": 800,
+      "paragraphs": 6
+    },
+    "N1": {
+      "characters": 1000,
+      "paragraphs": 7
+    }
+  },
+  "articleCount": 300,
+  "byLevel": {
+    "N5": {
+      "count": 60,
+      "requiredMinimumJapaneseCharacters": 350,
+      "requiredMinimumParagraphs": 5,
+      "characters": {
+        "minimum": 352,
+        "median": 418,
+        "average": 438.5,
+        "maximum": 797
+      },
+      "paragraphs": {
+        "minimum": 5,
+        "median": 5,
+        "average": 5,
+        "maximum": 5
+      },
+      "belowLongformMinimum": [],
+      "sampleLikeOutliers": []
+    },
+    "N4": {
+      "count": 60,
+      "requiredMinimumJapaneseCharacters": 450,
+      "requiredMinimumParagraphs": 5,
+      "characters": {
+        "minimum": 452,
+        "median": 568.5,
+        "average": 602.2,
+        "maximum": 891
+      },
+      "paragraphs": {
+        "minimum": 5,
+        "median": 5,
+        "average": 5,
+        "maximum": 5
+      },
+      "belowLongformMinimum": [],
+      "sampleLikeOutliers": []
+    },
+    "N3": {
+      "count": 60,
+      "requiredMinimumJapaneseCharacters": 600,
+      "requiredMinimumParagraphs": 6,
+      "characters": {
+        "minimum": 601,
+        "median": 819.5,
+        "average": 819.5,
+        "maximum": 1126
+      },
+      "paragraphs": {
+        "minimum": 6,
+        "median": 6,
+        "average": 6,
+        "maximum": 6
+      },
+      "belowLongformMinimum": [],
+      "sampleLikeOutliers": []
+    },
+    "N2": {
+      "count": 60,
+      "requiredMinimumJapaneseCharacters": 800,
+      "requiredMinimumParagraphs": 6,
+      "characters": {
+        "minimum": 824,
+        "median": 998.5,
+        "average": 1017.8,
+        "maximum": 1487
+      },
+      "paragraphs": {
+        "minimum": 6,
+        "median": 6,
+        "average": 6,
+        "maximum": 6
+      },
+      "belowLongformMinimum": [],
+      "sampleLikeOutliers": []
+    },
+    "N1": {
+      "count": 60,
+      "requiredMinimumJapaneseCharacters": 1000,
+      "requiredMinimumParagraphs": 7,
+      "characters": {
+        "minimum": 1012,
+        "median": 1261,
+        "average": 1271.1,
+        "maximum": 1756
+      },
+      "paragraphs": {
+        "minimum": 7,
+        "median": 7,
+        "average": 7,
+        "maximum": 7
+      },
+      "belowLongformMinimum": [],
+      "sampleLikeOutliers": []
+    }
+  },
+  "errors": []
+}

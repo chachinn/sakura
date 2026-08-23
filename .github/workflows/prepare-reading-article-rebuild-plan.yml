@@ -1,0 +1,61 @@
+name: Prepare Reading Garden Article rebuild plan
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/reading/body-ready/articles.json
+      - tools/plan-reading-article-rebuild.mjs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-article-rebuild-plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build stable 300-Article source mapping
+        run: node tools/plan-reading-article-rebuild.mjs
+
+      - name: Require long-form reservation mode
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync('data/reading/qa/article-rebuild-plan.json','utf8'));
+          const errors = [];
+          if (report.pass !== true) errors.push('rebuild plan did not pass');
+          if (report.mode !== 'longform-reservations') errors.push(`mode=${report.mode}`);
+          if (report.articleSlots !== 300) errors.push(`articleSlots=${report.articleSlots}`);
+          for (const level of ['N5','N4','N3','N2','N1']) if (report.byLevel?.[level] !== 60) errors.push(`${level}=${report.byLevel?.[level] || 0}`);
+          console.log(JSON.stringify({mode: report.mode, articleSlots: report.articleSlots, byLevel: report.byLevel, errors}, null, 2));
+          if (errors.length) process.exit(1);
+          NODE
+
+      - name: Check generated diff
+        run: git diff --check
+
+      - name: Commit rebuild plan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/reading/qa/article-rebuild-plan.json
+          if git diff --cached --quiet; then
+            echo "Article rebuild plan already current."
+          else
+            git commit -m "Prepare stable long-form Article rebuild plan"
+            git push origin HEAD:complete-open-reading-garden-20260822
+          fi

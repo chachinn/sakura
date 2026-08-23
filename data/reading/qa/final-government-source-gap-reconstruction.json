@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "generatedDate": "2026-08-22",
+  "pass": true,
+  "sourceSet": "final-government-gap-20260822",
+  "verifiedPages": 55,
+  "additionsByShelf": {
+    "travel-reading": 5,
+    "real-life-documents": 50
+  },
+  "additionsBySourceFamily": {
+    "gov-env": 5,
+    "gov-jma": 50
+  },
+  "bodyThresholdMinimumJapaneseCharacters": 320,
+  "jma": {
+    "count": 50,
+    "minimumJapaneseCharacters": 589,
+    "maximumJapaneseCharacters": 6681,
+    "uniqueUrls": 50,
+    "uniqueBodies": 50
+  },
+  "environmentNationalParks": {
+    "count": 5,
+    "minimumJapaneseCharacters": 1635,
+    "maximumJapaneseCharacters": 4341,
+    "uniqueUrls": 5,
+    "uniqueBodies": 5
+  },
+  "finalCounts": {
+    "travel-reading": 200,
+    "real-life-documents": 200
+  },
+  "rejectedSourceFamilies": {
+    "gov-mofa-safety": "Not persisted: direct source delivery produced only a thin shell rather than body-ready source text."
+  }
+}

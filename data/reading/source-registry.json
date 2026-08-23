@@ -1,0 +1,622 @@
+{
+  "version": 1,
+  "verifiedDate": "2026-08-22",
+  "allowedRightsStatuses": [
+    "public-domain",
+    "open-government",
+    "open-license",
+    "adaptation-permitted",
+    "full-text-permitted",
+    "link-only",
+    "needs-review"
+  ],
+  "sourceFamilies": [
+    {
+      "sourceFamilyId": "aozora-bunko",
+      "name": "Aozora Bunko",
+      "domain": "www.aozora.gr.jp",
+      "publisher": "青空文庫",
+      "sourceType": "public-domain-library",
+      "termsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "licenseName": "Aozora Bunko file handling standard (work-status dependent)",
+      "licenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "allowedUse": [
+        "public-domain-full-text",
+        "link-only",
+        "metadata-attribution"
+      ],
+      "fullTextAllowed": "conditional-public-domain-only",
+      "adaptationAllowed": "conditional-public-domain-only",
+      "attributionRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/cards/[0-9]{6}/card[0-9]+\\.html$",
+        "^/cards/[0-9]{6}/files/[A-Za-z0-9_./-]+\\.html$"
+      ],
+      "excludedContent": [
+        "copyright-active works without an explicit reuse license",
+        "translations whose translator rights are active or unclear",
+        "cover art",
+        "third-party images"
+      ],
+      "notes": "Automatic public-domain approval requires catalog work copyright flag 'なし', every credited author/translator role copyright flag 'なし', an Aozora card URL, and a readable text/HTML URL. Catalog/card metadata must be retained. Any conflict or missing role status requires manual review.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-caa",
+      "name": "Consumer Affairs Agency",
+      "domain": "www.caa.go.jp",
+      "publisher": "消費者庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.caa.go.jp/terms_of_use/",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "separately licensed content"
+      ],
+      "notes": "Applies where no contrary rights notice or separate terms appear on the item.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-mhlw",
+      "name": "Ministry of Health, Labour and Welfare",
+      "domain": "www.mhlw.go.jp",
+      "publisher": "厚生労働省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.mhlw.go.jp/chosakuken/",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "separately licensed systems or datasets"
+      ],
+      "notes": "Applies where no contrary rights notice or separate terms appear on the item.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-cfa",
+      "name": "Children and Families Agency",
+      "domain": "www.cfa.go.jp",
+      "publisher": "こども家庭庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.cfa.go.jp/copyright-policy/",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "content with separate terms"
+      ],
+      "notes": "Main cfa.go.jp copyright policy only; affiliated subdomains and systems need separate verification.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-digital",
+      "name": "Digital Agency",
+      "domain": "www.digital.go.jp",
+      "publisher": "デジタル庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.digital.go.jp/terms",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "content with separate terms"
+      ],
+      "notes": "Applies where no contrary rights notice or separate terms appear on the item.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-env",
+      "name": "Ministry of the Environment",
+      "domain": "www.env.go.jp",
+      "publisher": "環境省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.env.go.jp/mail.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "content with separate terms"
+      ],
+      "notes": "Applies where no contrary rights notice or separate terms appear on the item.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-jta",
+      "name": "Japan Tourism Agency",
+      "domain": "www.mlit.go.jp",
+      "publisher": "観光庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.mlit.go.jp/kankocho/site-policy.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/kankocho/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "content with separate terms"
+      ],
+      "notes": "Restricted to the Japan Tourism Agency path family, not every mlit.go.jp property.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-maff",
+      "name": "Ministry of Agriculture, Forestry and Fisheries",
+      "domain": "www.maff.go.jp",
+      "publisher": "農林水産省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.maff.go.jp/j/use/link.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/j/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "Cooking Self-Sufficiency content",
+        "Food Balance Guide",
+        "content with separate terms"
+      ],
+      "notes": "The MAFF exclusions/third-party examples page must also be checked for each candidate.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-meti",
+      "name": "Ministry of Economy, Trade and Industry",
+      "domain": "www.meti.go.jp",
+      "publisher": "経済産業省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.meti.go.jp/main/rules.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "legally restricted marks",
+        "content with separate terms"
+      ],
+      "notes": "Includes current records attributed jointly to METI and the Small and Medium Enterprise Agency only when hosted on www.meti.go.jp.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-moj-isa",
+      "name": "Immigration Services Agency / Ministry of Justice",
+      "domain": "www.moj.go.jp",
+      "publisher": "出入国在留管理庁・法務省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.moj.go.jp/hisho06_00280.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/isa/applications/",
+        "^/isa/immigration/procedures/",
+        "^/isa/consultation/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "foreign-law translations with separate rules",
+        "content with separate terms"
+      ],
+      "notes": "PDL 1.0 applies where no separate rights statement appears. Restricted to Immigration Services Agency procedure, residency, and public consultation guidance.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-fdma",
+      "name": "Fire and Disaster Management Agency",
+      "domain": "www.fdma.go.jp",
+      "publisher": "総務省消防庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.fdma.go.jp/about/others/post3.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/relocation/e-college/",
+        "^/publication/database/",
+        "^/about/question/",
+        "^/mission/prevention/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party works",
+        "content with separate terms"
+      ],
+      "notes": "PDL 1.0 applies where no separate rights notice appears. Restricted to public safety, evacuation, FAQ, and prevention guidance paths.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-nta",
+      "name": "National Tax Agency",
+      "domain": "www.nta.go.jp",
+      "publisher": "国税庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.nta.go.jp/chuijiko/copy.htm",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/taxes/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party works",
+        "content with separate terms"
+      ],
+      "notes": "The NTA terms apply PDL 1.0 where no separate rights statement appears. Restricted to learner-relevant tax procedure and guidance paths.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-bunka",
+      "name": "Agency for Cultural Affairs",
+      "domain": "www.bunka.go.jp",
+      "publisher": "文化庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.mext.go.jp/b_menu/1351168.htm",
+      "licenseName": "Government of Japan Standard Terms of Use 2.0 / CC BY 4.0 compatible",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party artworks",
+        "content with separate terms"
+      ],
+      "notes": "The MEXT policy expressly includes bunka.go.jp unless a more specific policy is stated.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-mext",
+      "name": "Ministry of Education, Culture, Sports, Science and Technology",
+      "domain": "www.mext.go.jp",
+      "publisher": "文部科学省",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.mext.go.jp/b_menu/1351168.htm",
+      "licenseName": "Government of Japan Standard Terms of Use 2.0 / CC BY 4.0 compatible",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party artworks",
+        "content with separate terms"
+      ],
+      "notes": "Applies where no contrary rights notice or separate terms appear on the item.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-jma",
+      "name": "Japan Meteorological Agency",
+      "domain": "www.jma.go.jp",
+      "publisher": "気象庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.jma.go.jp/jma/kishou/info/coment.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/jma/kishou/know/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "content with a separate rights notice"
+      ],
+      "notes": "PDL 1.0 applies where no separate rights statement appears. This Reading Garden approval is restricted to public-information and disaster/weather guidance under /jma/kishou/know/; media assets are excluded.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-pmda",
+      "name": "Pharmaceuticals and Medical Devices Agency",
+      "domain": "www.pmda.go.jp",
+      "publisher": "独立行政法人医薬品医療機器総合機構",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.pmda.go.jp/0048.html",
+      "licenseName": "Public Data License 1.0",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/review-services/drug-reviews/about-reviews/q-drugs/",
+        "^/safety/info-services/qdrugs-cosmetics/",
+        "^/safety/reports/mah/0005\\.html$",
+        "^/safety/consultation-for-mah/",
+        "^/review-services/f2f-pre/consultations/",
+        "^/review-services/symposia/0174\\.html$",
+        "^/pnavi-07\\.html$"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party photographs",
+        "third-party videos",
+        "manufacturer-authored application summaries and review-report content",
+        "databases or services governed by separate terms",
+        "content with a separate rights notice"
+      ],
+      "notes": "PMDA site policy applies PDL 1.0 unless otherwise indicated. Reading Garden approval is restricted to PMDA-authored HTML cosmetics/quasi-drug guidance, consultation, safety and explanatory pages in the listed paths, including the quasi-drug navigation overview. PDF review reports, manufacturer-authored application materials, separately governed databases/services, and any item with contrary rights text are excluded.",
+      "verifiedDate": "2026-08-22"
+    },
+    {
+      "sourceFamilyId": "gov-egov-law",
+      "name": "e-Gov Law Search",
+      "domain": "laws.e-gov.go.jp",
+      "publisher": "e-Gov法令検索・デジタル庁",
+      "sourceType": "open-government",
+      "termsUrl": "https://www.e-gov.go.jp/en/term-of-use.html",
+      "licenseName": "Government of Japan Standard Terms of Use (Version 2.0), CC BY 4.0 compatible",
+      "licenseUrl": "https://www.e-gov.go.jp/en/term-of-use.html",
+      "allowedUse": [
+        "copy",
+        "public-transmission",
+        "translation",
+        "adaptation",
+        "commercial-use"
+      ],
+      "fullTextAllowed": true,
+      "adaptationAllowed": true,
+      "attributionRequired": true,
+      "modificationDisclosureRequired": true,
+      "thirdPartyAssetWarning": true,
+      "approvedPathPatterns": [
+        "^/law/",
+        "^/api/1/lawdata/"
+      ],
+      "excludedContent": [
+        "logos",
+        "symbols",
+        "characters",
+        "third-party assets",
+        "content with separate terms"
+      ],
+      "notes": "Restricted to official e-Gov Law Search statutory pages and Law API data. e-Gov terms permit reuse, translation and modification with attribution; statutory text is used without bundled third-party assets.",
+      "verifiedDate": "2026-08-22"
+    }
+  ]
+}

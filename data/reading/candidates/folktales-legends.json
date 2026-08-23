@@ -1,0 +1,3398 @@
+{
+  "version": 1,
+  "shelf": "folktales-legends",
+  "targetCount": 100,
+  "candidateCount": 100,
+  "candidates": [
+    {
+      "candidateId": "aozora-046658",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "スリーピー・ホローの伝説",
+      "sourceAuthor": "アーヴィング ワシントン",
+      "sourceTranslator": "吉田 甲子太郎",
+      "workId": "046658",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001257/files/46658_44767.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001257/card46658.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「スリーピー・ホローの伝説」アーヴィング ワシントン、吉田 甲子太郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アーヴィング ワシントン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "吉田 甲子太郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 933",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042378",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤いくつ",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042378",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42378_18502.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42378.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤いくつ」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-045183",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一本足の兵隊",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン / 鈴木 三重吉",
+      "sourceTranslator": null,
+      "workId": "045183",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/45183_23822.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card45183.html",
+      "sourcePublishedDate": "「赤い鳥」1919（大正8）年5月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一本足の兵隊」アンデルセン ハンス・クリスチャン、鈴木 三重吉",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "著者",
+            "name": "鈴木 三重吉",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-058861",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "影",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "058861",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/58861_72476.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card58861.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「影」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042380",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "幸福のうわおいぐつ",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042380",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42380_21523.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42380.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「幸福のうわおいぐつ」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042381",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "小夜啼鳥",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042381",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42381_18753.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42381.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「小夜啼鳥」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042379",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "しっかり者のすずの兵隊",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042379",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42379_21528.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42379.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「しっかり者のすずの兵隊」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042382",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "旅なかま",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042382",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42382_21525.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42382.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「旅なかま」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042383",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "人魚のひいさま",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042383",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42383_21527.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42383.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「人魚のひいさま」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042384",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "野のはくちょう",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042384",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42384_21526.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42384.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「野のはくちょう」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042385",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ひこうかばん",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042385",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42385_21524.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42385.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ひこうかばん」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-044423",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "もみの木",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "044423",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/44423_21529.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card44423.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「もみの木」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-042387",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "雪の女王",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "楠山 正雄",
+      "workId": "042387",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/42387_20568.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card42387.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「雪の女王」アンデルセン ハンス・クリスチャン、楠山 正雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "楠山 正雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-060151",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "わるい王さま（伝説）",
+      "sourceAuthor": "アンデルセン ハンス・クリスチャン",
+      "sourceTranslator": "矢崎 源九郎",
+      "workId": "060151",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000019/files/60151_73482.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000019/card60151.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「わるい王さま（伝説）」アンデルセン ハンス・クリスチャン、矢崎 源九郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "アンデルセン ハンス・クリスチャン",
+            "flag": "なし"
+          },
+          {
+            "role": "翻訳者",
+            "name": "矢崎 源九郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K949",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-060788",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "三次実録物語",
+      "sourceAuthor": "稲生  武太夫 / 稲生 正令",
+      "sourceTranslator": null,
+      "workId": "060788",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/002176/files/60788_75889.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/002176/card60788.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「三次実録物語」稲生  武太夫、稲生 正令",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "稲生  武太夫",
+            "flag": "なし"
+          },
+          {
+            "role": "著者",
+            "name": "稲生 正令",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 388",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-001530",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "古事記物語",
+      "sourceAuthor": "鈴木 三重吉",
+      "sourceTranslator": null,
+      "workId": "001530",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000107/files/1530_54106.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000107/card1530.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「古事記物語」太 安万侶、鈴木 三重吉",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "編者",
+            "name": "太 安万侶",
+            "flag": "なし"
+          },
+          {
+            "role": "著者",
+            "name": "鈴木 三重吉",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048036",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "小坂部伝説",
+      "sourceAuthor": "岡本 綺堂",
+      "sourceTranslator": null,
+      "workId": "048036",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000082/files/48036_33013.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000082/card48036.html",
+      "sourcePublishedDate": "「演芸画報」1925（大正14）年2月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「小坂部伝説」岡本 綺堂",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "岡本 綺堂",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 775 912",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-001304",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "三浦老人昔話",
+      "sourceAuthor": "岡本 綺堂",
+      "sourceTranslator": null,
+      "workId": "001304",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000082/files/1304_18858.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000082/card1304.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「三浦老人昔話」岡本 綺堂",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "岡本 綺堂",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051772",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "愛に就ての問題",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051772",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51772_46423.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51772.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「愛に就ての問題」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052606",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "愛は不思議なもの",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052606",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52606_67750.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52606.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「愛は不思議なもの」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052533",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い石とメダル",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052533",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52533_57894.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52533.html",
+      "sourcePublishedDate": "「婦人倶楽部」1932（昭和7）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い石とメダル」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051495",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い草",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051495",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51495_61238.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51495.html",
+      "sourcePublishedDate": "「教育行童話研究」1938（昭和13）年4月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い草」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051496",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い玉と銀色のふえ",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051496",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51496_63364.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51496.html",
+      "sourcePublishedDate": "「たのしい三年生」1957（昭和32）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い玉と銀色のふえ」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050982",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い時計台",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "050982",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/50982_46237.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card50982.html",
+      "sourcePublishedDate": "「処女」1914（大正3）年6月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い時計台」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051101",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い花の香り",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051101",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51101_48255.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51101.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い花の香り」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052034",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青い星の国へ",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052034",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52034_47136.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52034.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青い星の国へ」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053452",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青いボタン",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053452",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53452_50576.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53452.html",
+      "sourcePublishedDate": "「赤い鳥」1925（大正14）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青いボタン」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052607",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青いランプ",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052607",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52607_72131.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52607.html",
+      "sourcePublishedDate": "「週刊朝日　17巻7号」1930（昭和5）年2月9日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青いランプ」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051497",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "青葉の下",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051497",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51497_60026.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51497.html",
+      "sourcePublishedDate": "「せうがく三年生」1938（昭和13）年5月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「青葉の下」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052608",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤いえり巻き",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052608",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52608_69355.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52608.html",
+      "sourcePublishedDate": "「童話研究」1928（昭和3）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤いえり巻き」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052609",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤いガラスの宮殿",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052609",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52609_57432.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52609.html",
+      "sourcePublishedDate": "「赤い鳥」1929（昭和4）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤いガラスの宮殿」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051093",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い魚と子供",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051093",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51093_48257.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51093.html",
+      "sourcePublishedDate": "「金の塔」1922（大正11）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い魚と子供」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051011",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い手袋",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051011",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51011_50577.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51011.html",
+      "sourcePublishedDate": "「小学男生」1921（大正10）年3月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い手袋」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051066",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い姫と黒い皇子",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051066",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51066_48258.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51066.html",
+      "sourcePublishedDate": "「童話」1922（大正11）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い姫と黒い皇子」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050975",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い船",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "050975",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/50975_46238.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card50975.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い船」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052922",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い船とつばめ",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052922",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52922_48560.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52922.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い船とつばめ」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052960",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い船のお客",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052960",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52960_46827.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52960.html",
+      "sourcePublishedDate": "「童話」1924（大正13）年5月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い船のお客」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052035",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い実",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052035",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52035_46613.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52035.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い実」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054372",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤い蝋燭と人魚",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "054372",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/54372_46225.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card54372.html",
+      "sourcePublishedDate": "「東京朝日新聞」1921（大正10）年2月16日～20日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤い蝋燭と人魚」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051498",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "赤土へくる子供たち",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051498",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51498_60132.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51498.html",
+      "sourcePublishedDate": "「せうがく三年生」1939（昭和14）年6～12月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「赤土へくる子供たち」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051080",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "明るき世界へ",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051080",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51080_48559.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51080.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「明るき世界へ」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051528",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "秋が　きました",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051528",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51528_48265.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51528.html",
+      "sourcePublishedDate": "「コドモノクニ」1938（昭和13）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「秋が　きました」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052610",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "秋のお約束",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052610",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52610_65759.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52610.html",
+      "sourcePublishedDate": "「子供之友」1930（昭和5）年11月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「秋のお約束」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053141",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "悪魔",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053141",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53141_73017.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53141.html",
+      "sourcePublishedDate": "「新文藝」1910（明治43）年5月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「悪魔」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052036",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "朝の公園",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052036",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52036_56877.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52036.html",
+      "sourcePublishedDate": "「台湾日日新報」1935（昭和10）年12月28日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「朝の公園」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052613",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "頭をはなれた帽子",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052613",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52613_72646.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52613.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「頭をはなれた帽子」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-055054",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "新しい町",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "055054",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/55054_72666.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card55054.html",
+      "sourcePublishedDate": "「童話」1925（大正14）年11月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「新しい町」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051499",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "新しい町",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051499",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51499_65734.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51499.html",
+      "sourcePublishedDate": "「幼年クラブ」1947（昭和22）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「新しい町」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051500",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "兄と魚",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051500",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51500_64962.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51500.html",
+      "sourcePublishedDate": "「こくみん三年生」1940（昭和15）年12月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「兄と魚」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051501",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "兄の声",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051501",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51501_64933.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51501.html",
+      "sourcePublishedDate": "「子供の広場」1946（昭和21）年4月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「兄の声」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051721",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "アパートで聞いた話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051721",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51721_65733.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51721.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「アパートで聞いた話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051078",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "あほう鳥の鳴く日",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051078",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51078_49009.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51078.html",
+      "sourcePublishedDate": "「童話」1923（大正12）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「あほう鳥の鳴く日」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051076",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "飴チョコの天使",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051076",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51076_48534.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51076.html",
+      "sourcePublishedDate": "「赤い鳥」1923（大正12）年3月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「飴チョコの天使」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052961",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "あらしの前の木と鳥の会話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052961",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52961_46828.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52961.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「あらしの前の木と鳥の会話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053142",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "嵐の夜",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053142",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53142_59537.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53142.html",
+      "sourcePublishedDate": "「宗教界」1906（明治39）年11月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「嵐の夜」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052990",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある男と無花果",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052990",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52990_46829.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52990.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある男と無花果」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053014",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある男と牛の話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053014",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53014_50578.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53014.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある男と牛の話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051754",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある少年の正月の日記",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051754",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51754_63528.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51754.html",
+      "sourcePublishedDate": "「朝日新聞」1932（昭和7）年1月3日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある少年の正月の日記」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051502",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある夏の日のこと",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051502",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51502_62003.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51502.html",
+      "sourcePublishedDate": "「女子青年　24巻8号」1941（昭和16）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある夏の日のこと」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051757",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある日の午後",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051757",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51757_46424.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51757.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある日の午後」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052962",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある日の先生と子供",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052962",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52962_46830.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52962.html",
+      "sourcePublishedDate": "「童話」1924（大正13）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある日の先生と子供」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053122",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある冬の晩のこと",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053122",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53122_72645.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53122.html",
+      "sourcePublishedDate": "「婦人倶楽部」1928（昭和3）年4月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある冬の晩のこと」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052963",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "あるまりの一生",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052963",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52963_46831.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52963.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「あるまりの一生」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051503",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある夜の姉と弟",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051503",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51503_63082.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51503.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある夜の姉と弟」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052964",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ある夜の星たちの話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052964",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52964_46832.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52964.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ある夜の星たちの話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053453",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "いいおじいさんの話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053453",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53453_50584.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53453.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「いいおじいさんの話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052615",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "生きた人形",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052615",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52615_57433.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52615.html",
+      "sourcePublishedDate": "「サンデー毎日　7巻49号」1928（昭和3）年10月28日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「生きた人形」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053454",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "生きている看板",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053454",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53454_51932.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53454.html",
+      "sourcePublishedDate": "「早稲田文学」1927（昭和2）年11月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「生きている看板」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051504",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "生きぬく力",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051504",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51504_63101.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51504.html",
+      "sourcePublishedDate": "「新児童文化　第1冊」1940（昭和15）年12月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「生きぬく力」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051085",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "幾年もたった後",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051085",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51085_49013.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51085.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「幾年もたった後」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053022",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "石段に鉄管",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053022",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53022_50585.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53022.html",
+      "sourcePublishedDate": "「文芸戦線」1924（大正13）年12月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「石段に鉄管」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051072",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "石をのせた車",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051072",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51072_49014.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51072.html",
+      "sourcePublishedDate": "「婦人之友」1921（大正10）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「石をのせた車」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052037",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "いちじゅくの木",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052037",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52037_48260.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52037.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「いちじゅくの木」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052038",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "いちょうの葉",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052038",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52038_56878.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52038.html",
+      "sourcePublishedDate": "「台湾日日新報」1935（昭和10）年10月10日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「いちょうの葉」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051505",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一銭銅貨",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051505",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51505_66071.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51505.html",
+      "sourcePublishedDate": "「週刊朝日　23巻17号」1933（昭和8）年4月2日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一銭銅貨」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051063",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一本のかきの木",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051063",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51063_50579.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51063.html",
+      "sourcePublishedDate": "「赤い鳥」1921（大正10）年9月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一本のかきの木」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053455",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一本の銀の針",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053455",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53455_53050.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53455.html",
+      "sourcePublishedDate": "「少年倶楽部」1927（昭和2）年2月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一本の銀の針」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051028",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一本の釣りざお",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051028",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51028_50580.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51028.html",
+      "sourcePublishedDate": "「読売新聞」1921（大正10）年4月30日、5月2日～4日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一本の釣りざお」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052039",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "田舎のお母さん",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052039",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52039_56890.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52039.html",
+      "sourcePublishedDate": "「台湾日日新報」1936（昭和11）年3月24日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「田舎のお母さん」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050994",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "犬と人と花",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "050994",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/50994_46239.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card50994.html",
+      "sourcePublishedDate": "「黒煙」1919（大正8）年5月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「犬と人と花」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052040",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "犬と古洋傘",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052040",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52040_60133.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52040.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「犬と古洋傘」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051020",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "いろいろな花",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051020",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51020_47953.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51020.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「いろいろな花」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052965",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "魚と白鳥",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052965",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52965_46833.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52965.html",
+      "sourcePublishedDate": "「童話」1924（大正13）年3月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「魚と白鳥」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051758",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "動く絵と新しき夢幻",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051758",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51758_46425.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51758.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「動く絵と新しき夢幻」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052923",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "うさぎと二人のおじいさん",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052923",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52923_53051.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52923.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「うさぎと二人のおじいさん」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050993",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "牛女",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "050993",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/50993_46240.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card50993.html",
+      "sourcePublishedDate": "「おとぎの世界」1919（大正8）年5月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「牛女」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051506",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "うずめられた鏡",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051506",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51506_66072.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51506.html",
+      "sourcePublishedDate": "「女学生の友」1953（昭和28）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「うずめられた鏡」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052618",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "美しく生まれたばかりに",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052618",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52618_69356.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52618.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「美しく生まれたばかりに」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050992",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "馬を殺したからす",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "050992",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/50992_46241.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card50992.html",
+      "sourcePublishedDate": "「おとぎの世界」1919（大正8）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「馬を殺したからす」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051507",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海が呼んだ話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051507",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51507_59482.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51507.html",
+      "sourcePublishedDate": "「日本の子供」1939（昭和14）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海が呼んだ話」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054192",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海からきた使い",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "054192",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/54192_46834.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card54192.html",
+      "sourcePublishedDate": "「少女倶楽部」1925（大正14）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海からきた使い」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052041",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海と少年",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052041",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52041_59483.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52041.html",
+      "sourcePublishedDate": "「セウガク二年生臨時増刊「夏休み読者号」　12巻7号」1936（昭和11）年8月5日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海と少年」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053123",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海の踊り",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "053123",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/53123_74812.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card53123.html",
+      "sourcePublishedDate": "「少女画報」1929（昭和4）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海の踊り」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052042",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海のおばあさん",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052042",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52042_59474.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52042.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海のおばあさん」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052966",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "海のかなた",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052966",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52966_46835.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52966.html",
+      "sourcePublishedDate": "「週刊朝日」1924（大正13）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「海のかなた」小川 未明",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052484",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "現下に於ける童話の使命",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052484",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52484_64342.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52484.html",
+      "sourcePublishedDate": "「蚕糸会館に於ける日本国民童話協会発会式講演」1941（昭和16）年6月3日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「現下に於ける童話の使命」小川 未明",
+      "sourceProcessing": "Source body fetched and verified for later editorial adaptation; no learner-facing text generated.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "sourceBodyExtractionStatus": "body-ready",
+      "sourceTextCharacterCount": 2861,
+      "sourceBodyFingerprint": "89578209864fc936b466490c0040ed1d870a8c1f54fb397d772373c18dd33131"
+    },
+    {
+      "candidateId": "aozora-052927",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "今後を童話作家に",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052927",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52927_53037.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52927.html",
+      "sourcePublishedDate": "「東京日日新聞」1926（大正15）年5月13日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「今後を童話作家に」小川 未明",
+      "sourceProcessing": "Source body fetched and verified for later editorial adaptation; no learner-facing text generated.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "sourceBodyExtractionStatus": "body-ready",
+      "sourceTextCharacterCount": 693,
+      "sourceBodyFingerprint": "b8166d560604bd375a762d0b4cb6d97001402551568a785acdb57446d66e3910"
+    },
+    {
+      "candidateId": "aozora-051802",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "新童話論",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051802",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51802_46584.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51802.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「新童話論」小川 未明",
+      "sourceProcessing": "Source body fetched and verified for later editorial adaptation; no learner-facing text generated.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "sourceBodyExtractionStatus": "body-ready",
+      "sourceTextCharacterCount": 2807,
+      "sourceBodyFingerprint": "44b10ff589acc2f382dc37bc3d8be80aaae7bf2f95227491951b849dfd648e7c"
+    },
+    {
+      "candidateId": "aozora-051604",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "武ちゃんと昔話",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "051604",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/51604_62859.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card51604.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「武ちゃんと昔話」小川 未明",
+      "sourceProcessing": "Source body fetched and verified for later editorial adaptation; no learner-facing text generated.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC K913",
+      "orthography": "新字新仮名",
+      "sourceBodyExtractionStatus": "body-ready",
+      "sourceTextCharacterCount": 1935,
+      "sourceBodyFingerprint": "ea3639e7afb1ec1a7a8c60b3854f1f1679a0ae27ec3e8ef1665fc33226ca006e"
+    },
+    {
+      "candidateId": "aozora-052991",
+      "targetShelf": "folktales-legends",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "童話に対する所見",
+      "sourceAuthor": "小川 未明",
+      "sourceTranslator": null,
+      "workId": "052991",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001475/files/52991_68011.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001475/card52991.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「童話に対する所見」小川 未明",
+      "sourceProcessing": "Source body fetched and verified for later editorial adaptation; no learner-facing text generated.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "小川 未明",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 914",
+      "orthography": "新字新仮名",
+      "sourceBodyExtractionStatus": "body-ready",
+      "sourceTextCharacterCount": 1266,
+      "sourceBodyFingerprint": "cdd07c7ff1cbff8e618dcac80827fc332b14b0dcb4cafc568e022fcf912b86d8"
+    }
+  ]
+}

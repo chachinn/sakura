@@ -1,17 +1,16 @@
 {
-  "version": 10,
+  "version": 12,
   "material": "articles",
   "mode": "source-grounded-adaptation",
   "targetCount": 300,
   "readyCount": 300,
-  "visibleQualityShelfTarget": 50,
-  "visibleQualityShelfReady": 50,
+  "finalDepthReadyCount": 300,
   "sourceArchiveRetained": true,
-  "qualityShelfPolicy": "The learner-facing shelf is capped at 50 curated Articles. Selection is balanced across 5 JLPT study levels and 10 topics (one strongest available lead reading per level-topic combination), favoring longer estimated reading time and newer verified sources. The 300-record verified source archive remains intact for Saved/Continue compatibility.",
-  "longFormPolicy": "Each visible Quality Shelf Article is expanded at reading time into a substantial multi-section feature using several verified source-grounded learner adaptations from the same JLPT study level and topic. Length follows the available substance rather than a fixed word-count target; shorter complete features are acceptable and richer topics may be longer. No filler is added solely to increase length.",
-  "longFormSourceSections": {"minimum":3,"maximum":5},
+  "qualityPolicy": "All 300 learner-facing Articles are substantial one-source adaptations with deterministic source, depth, study-support, ruby, vocabulary, grammar, and comprehension QA.",
+  "depthPolicy": "Final Articles must pass level-specific substantial one-source floors: N5 >=350 Japanese characters/5 paragraphs; N4 >=450/5; N3 >=600/6; N2 >=800/6; N1 >=1000/7. These are minimum quality floors, never padding targets.",
+  "sourcePolicy": "Default final method: one verified body-ready source produces one substantial Sakura learner adaptation. Do not stitch unrelated sources merely to manufacture length. Full verbatim reproduction is used only when the source registry specifically permits it and the record labels that mode honestly.",
   "sourceYearPriority": 2026,
-  "retrievedDate": "2026-08-14",
+  "retrievedDate": "2026-08-23",
   "levelCounts": {
     "N5": 60,
     "N4": 60,
@@ -32,33 +31,117 @@
     "work": 30
   },
   "topics": [
-    {"id":"beauty","icon":"💄","label":"Beauty & Cosmetics"},
-    {"id":"food","icon":"🍚","label":"Food & Eating"},
-    {"id":"travel","icon":"✈️","label":"Travel & Transportation"},
-    {"id":"digital","icon":"📱","label":"Digital Life & Technology"},
-    {"id":"consumer","icon":"🛒","label":"Consumer & Money"},
-    {"id":"health","icon":"🌿","label":"Health & Wellness"},
-    {"id":"environment","icon":"🌏","label":"Environment & Nature"},
-    {"id":"culture","icon":"🎨","label":"Culture & Arts"},
-    {"id":"work","icon":"💼","label":"Work & Careers"},
-    {"id":"society","icon":"👨‍👩‍👧","label":"Society & Family"}
+    {
+      "id": "beauty",
+      "icon": "💄",
+      "label": "Beauty & Cosmetics"
+    },
+    {
+      "id": "food",
+      "icon": "🍚",
+      "label": "Food & Eating"
+    },
+    {
+      "id": "travel",
+      "icon": "✈️",
+      "label": "Travel & Transportation"
+    },
+    {
+      "id": "digital",
+      "icon": "📱",
+      "label": "Digital Life & Technology"
+    },
+    {
+      "id": "consumer",
+      "icon": "🛒",
+      "label": "Consumer & Money"
+    },
+    {
+      "id": "health",
+      "icon": "🌿",
+      "label": "Health & Wellness"
+    },
+    {
+      "id": "environment",
+      "icon": "🌏",
+      "label": "Environment & Nature"
+    },
+    {
+      "id": "culture",
+      "icon": "🎨",
+      "label": "Culture & Arts"
+    },
+    {
+      "id": "work",
+      "icon": "💼",
+      "label": "Work & Careers"
+    },
+    {
+      "id": "society",
+      "icon": "👨‍👩‍👧",
+      "label": "Society & Family"
+    }
   ],
   "provenancePolicy": {
-    "facts": "300 readings grounded in linked official/open Japanese sources. This release adds 100 readings from 20 verified source families with 2026-first sourcing; one Beauty family uses a 2025 source because a distinct suitable 2026 source was not forced.",
-    "learnerText": "Learner adaptations are clearly identified and are not presented as verbatim government prose. Long-form Quality Features combine only these rewritten learner adaptations and label their source sections.",
-    "attribution": "Every record stores source title, publisher, URL, date, terms/license, attribution and edit notice. Long-form features preserve the lead source and list the additional source URLs used in the feature.",
+    "facts": "300 readings are grounded in linked official/open Japanese sources. The current source archive remains retained while learner bodies undergo the final depth rewrite.",
+    "learnerText": "Learner adaptations are clearly identified and are not presented as verbatim government prose unless a record explicitly uses a permitted full-text mode.",
+    "attribution": "Every record stores source title, publisher, URL, date, terms/license, attribution and edit notice.",
     "assets": "No source logos, photos, charts, videos, or separately credited third-party assets are included.",
     "studyLevel": "N5–N1 is Sakura study-support grading, not an official JLPT grade of the source."
   },
   "sourceYearPolicy": "2026 first; if a category lacks suitable legally reusable 2026 material, use 2025, then 2024, then the newest verified legally reusable source available. Always display the actual source year.",
-  "yearCounts": {"2026":295,"2025":5},
-  "levelFiles": {
-    "N5":["n5.json","n5-b.json","n5-c.json","n5-d.json","n5-e.json","n5-f.json"],
-    "N4":["n4.json","n4-b.json","n4-c.json","n4-d.json","n4-e.json","n4-f.json"],
-    "N3":["n3.json","n3-b.json","n3-c.json","n3-d.json","n3-e.json","n3-f.json"],
-    "N2":["n2.json","n2-b.json","n2-c.json","n2-d.json","n2-e.json","n2-f.json"],
-    "N1":["n1.json","n1-b.json","n1-c.json","n1-d.json","n1-e.json","n1-f.json"]
+  "yearCounts": {
+    "2025": 5,
+    "2026": 295
   },
-  "indexFiles": {"N5":"n5-index.json","N4":"n4-index.json","N3":"n3-index.json","N2":"n2-index.json","N1":"n1-index.json"},
-  "packPolicy": "Each level uses six 10-reading body shards plus a compact metadata index. Browsing/search reads indexes only. When a curated Quality Shelf Article is opened, Sakura loads that level on demand so it can compose the multi-section feature from related verified readings. The body cache remains bounded in memory."
+  "levelFiles": {
+    "N5": [
+      "n5.json",
+      "n5-b.json",
+      "n5-c.json",
+      "n5-d.json",
+      "n5-e.json",
+      "n5-f.json"
+    ],
+    "N4": [
+      "n4.json",
+      "n4-b.json",
+      "n4-c.json",
+      "n4-d.json",
+      "n4-e.json",
+      "n4-f.json"
+    ],
+    "N3": [
+      "n3.json",
+      "n3-b.json",
+      "n3-c.json",
+      "n3-d.json",
+      "n3-e.json",
+      "n3-f.json"
+    ],
+    "N2": [
+      "n2.json",
+      "n2-b.json",
+      "n2-c.json",
+      "n2-d.json",
+      "n2-e.json",
+      "n2-f.json"
+    ],
+    "N1": [
+      "n1.json",
+      "n1-b.json",
+      "n1-c.json",
+      "n1-d.json",
+      "n1-e.json",
+      "n1-f.json"
+    ]
+  },
+  "indexFiles": {
+    "N5": "n5-index.json",
+    "N4": "n4-index.json",
+    "N3": "n3-index.json",
+    "N2": "n2-index.json",
+    "N1": "n1-index.json"
+  },
+  "packPolicy": "Each level uses six 10-reading body shards plus a compact metadata index. Browsing/search reads indexes only; opening an Article loads only its required shard. The body cache remains bounded in memory."
 }

@@ -1,0 +1,196 @@
+name: Build Reading Garden full library
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/build-reading-full-library.yml
+      - tools/assemble-reading-full-library.mjs
+      - tools/build-reading-library.mjs
+      - tools/validate-reading-library.mjs
+      - data/reading/candidates/**
+      - data/reading/body-ready/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: reading-full-library-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    if: github.event_name == 'pull_request' && github.head_ref == 'complete-open-reading-garden-20260822'
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.gate.outputs.ready }}
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - name: Check out Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - id: gate
+        name: Require final Articles and skip an already-complete library
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import fs from 'node:fs';
+          const articles = JSON.parse(fs.readFileSync('data/reading/articles/manifest.json','utf8'));
+          const library = JSON.parse(fs.readFileSync('data/reading/library/manifest.json','utf8'));
+          const articlesComplete = Number(articles.finalDepthReadyCount || 0) === 300;
+          const libraryComplete = Number(library.learnerReadyCount || 0) === 2000 && library.strictComplete === true;
+          const ready = articlesComplete && !libraryComplete;
+          console.log(`ready=${ready ? 'true' : 'false'}`);
+          NODE
+      - id: matrix
+        if: steps.gate.outputs.ready == 'true'
+        name: Build exact 1,600-record pack matrix
+        shell: bash
+        run: |
+          node <<'NODE' >> "$GITHUB_OUTPUT"
+          const counts = {
+            'short-stories': 150,
+            news: 300,
+            travel: 200,
+            folklore: 100,
+            essays: 150,
+            'school-work': 120,
+            recipes: 100,
+            interviews: 100,
+            documents: 200,
+            novels: 80,
+            micro: 100,
+          };
+          const include = [];
+          for (const [shelf, count] of Object.entries(counts)) {
+            for (let pack = 0; pack < count / 10; pack += 1) include.push({ shelf, pack });
+          }
+          if (include.length !== 160) throw new Error(`Expected 160 packs, got ${include.length}`);
+          console.log(`matrix=${JSON.stringify({ include })}`);
+          NODE
+
+  generate:
+    needs: plan
+    if: needs.plan.outputs.ready == 'true'
+    strategy:
+      fail-fast: true
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Generate and validate ten one-record slots
+        env:
+          SHELF: ${{ matrix.shelf }}
+          PACK: ${{ matrix.pack }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$SHELF" in
+            short-stories|folklore|essays|novels|micro)
+              GENERATOR="sakura-reading-literary-pack"
+              ;;
+            *)
+              GENERATOR="sakura-reading-full-library-pack"
+              ;;
+          esac
+          BASE_ENDPOINT="https://hrycfsekrvflrbwahgyh.supabase.co/functions/v1/${GENERATOR}?shelf=${SHELF}&pack=${PACK}"
+          OIDC_URL="${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sakura-reading-full-library"
+          rm -f slot-*.json oidc-slot.json
+          for SLOT in $(seq 0 9); do
+            FILE="slot-${SLOT}.json"
+            success=0
+            for attempt in 1 2 3 4 5; do
+              curl --fail --silent --show-error \
+                -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+                "$OIDC_URL" > oidc-slot.json
+              OIDC_TOKEN=$(node -e "const x=require('./oidc-slot.json'); if(!x.value) process.exit(1); process.stdout.write(x.value)")
+              code=$(curl --max-time 160 --silent --show-error -o "$FILE" -w '%{http_code}' \
+                -H "Authorization: Bearer ${OIDC_TOKEN}" "${BASE_ENDPOINT}&slot=${SLOT}" || true)
+              if [ "$code" = "200" ] && node -e "const x=require('./$FILE'); process.exit(x.ok===true && x.recordCount===1 && Array.isArray(x.records) && x.records.length===1 && Array.isArray(x.qa) && x.qa.length===1 && x.qa.every(q=>q.qa&&q.qa.pass) ? 0 : 1)"; then
+                success=1
+                break
+              fi
+              echo "Slot ${SHELF}/${PACK}/${SLOT} attempt ${attempt} failed with HTTP ${code}"
+              node -e "try{const x=require('./$FILE'); console.error(JSON.stringify({error:x.error,detail:x.detail,shelf:x.shelf,pack:x.pack,slot:x.slot},null,2))}catch{}" || true
+              quota_wait=$(node -e "try{const x=require('./$FILE'); const d=String(x.detail||''); process.stdout.write(/:429:|quota|rate.limit/i.test(d)?'75':'15')}catch{process.stdout.write('15')}")
+              echo "Retrying slot ${SHELF}/${PACK}/${SLOT} after ${quota_wait}s backoff"
+              sleep "$quota_wait"
+            done
+            if [ "$success" != "1" ]; then
+              echo "Slot ${SHELF}/${PACK}/${SLOT} failed all guarded attempts"
+              exit 1
+            fi
+          done
+          rm -f oidc-slot.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const shelf = process.env.SHELF;
+          const pack = Number(process.env.PACK);
+          const payloads = Array.from({length:10},(_,slot)=>JSON.parse(fs.readFileSync(`slot-${slot}.json`,'utf8')));
+          const records = payloads.flatMap(x=>x.records || []);
+          const qa = payloads.flatMap(x=>x.qa || []);
+          const ids = new Set(records.map(x=>x.id));
+          if (records.length !== 10 || qa.length !== 10 || ids.size !== 10 || !qa.every(x=>x?.qa?.pass === true)) {
+            throw new Error(`${shelf}/${pack}: invalid combined pack records=${records.length} qa=${qa.length} uniqueIds=${ids.size}`);
+          }
+          fs.writeFileSync(`pack-${shelf}-${pack}.json`, `${JSON.stringify({ok:true,shelf,pack,recordCount:10,records,qa})}\n`);
+          console.log(JSON.stringify({shelf,pack,records:records.length,qaPass:true},null,2));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reading-pack-${{ matrix.shelf }}-${{ matrix.pack }}
+          path: pack-${{ matrix.shelf }}-${{ matrix.pack }}.json
+          if-no-files-found: error
+          retention-days: 2
+          compression-level: 6
+
+  assemble:
+    needs: [plan, generate]
+    if: needs.plan.outputs.ready == 'true' && needs.generate.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out isolated Reading Garden branch
+        uses: actions/checkout@v4
+        with:
+          ref: complete-open-reading-garden-20260822
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download all validated packs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reading-pack-*
+          path: .reading-generated
+          merge-multiple: true
+      - name: Assemble runtime corpus
+        env:
+          READING_GENERATED_ROOT: ${{ github.workspace }}/.reading-generated
+        run: node tools/assemble-reading-full-library.mjs
+      - name: Validate exact final library
+        run: node tools/validate-reading-library.mjs
+      - name: Validate rights after Story expansion
+        run: node tools/validate-reading-rights.mjs
+      - name: Diff hygiene
+        run: git diff --check
+      - name: Commit generated static library
+        shell: bash
+        run: |
+          rm -rf .reading-generated
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/reading/library data/reading/stories data/reading/qa/reading-library-report.json data/reading/qa/source-rights-report.json
+          if git diff --cached --quiet; then
+            echo "No full-library corpus changes to commit."
+            exit 0
+          fi
+          git commit -m "Populate Reading Garden learner library"
+          git fetch origin complete-open-reading-garden-20260822
+          git rebase origin/complete-open-reading-garden-20260822
+          git push origin HEAD:complete-open-reading-garden-20260822

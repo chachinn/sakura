@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "generatedDate": "2026-08-23",
+  "model": "source-grounded-static-corpus",
+  "totalTarget": 2000,
+  "learnerReadyCount": 400,
+  "strictComplete": false,
+  "indexPolicy": "Only compact shelf indexes load while browsing. Learner body shards load on demand when a reading is opened.",
+  "sourceEvidencePolicy": "Editorial source/body-ready inventories remain outside the runtime loader. Production files contain only reviewed learner-facing content plus provenance metadata.",
+  "studyLevelPolicy": "N5–N1 labels are Sakura study-support levels, not official JLPT ratings of source material.",
+  "shardPolicy": {
+    "defaultRecordsPerShard": 20,
+    "boundedRuntimeBodyCache": true,
+    "precacheAllBodies": false
+  },
+  "shelves": {
+    "articles": {
+      "title": "Articles",
+      "target": 300,
+      "learnerReadyCount": 300,
+      "runtime": "legacy-article-shards",
+      "qualityStatus": "long-form-complete",
+      "readyForFinal": true,
+      "note": "All 300 Articles passed the final one-source substantial-depth quality pass with level-specific long-form floors and complete study support."
+    },
+    "short-stories": {
+      "title": "Short Stories",
+      "target": 250,
+      "learnerReadyCount": 100,
+      "runtime": "legacy-story-packs",
+      "qualityStatus": "partial",
+      "readyForFinal": false,
+      "note": "100 public-domain original Story records are learner-ready; 150 additional verified public-domain works remain to be populated."
+    },
+    "news": {
+      "title": "News",
+      "target": 300,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "news/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "travel": {
+      "title": "Travel Reading",
+      "target": 200,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "travel/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "folklore": {
+      "title": "Folktales & Legends",
+      "target": 100,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "folklore/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "essays": {
+      "title": "Essays & Opinions",
+      "target": 150,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "essays/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "school-work": {
+      "title": "School & Work",
+      "target": 120,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "school-work/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "recipes": {
+      "title": "Recipes & How-To",
+      "target": 100,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "recipes/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "interviews": {
+      "title": "Interviews & Q&A",
+      "target": 100,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "interviews/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "documents": {
+      "title": "Real-Life Documents",
+      "target": 200,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "documents/index.json",
+      "shards": [],
+      "readyForFinal": false
+    },
+    "novels": {
+      "title": "Serialized Novels",
+      "target": 80,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "novels/index.json",
+      "shards": [],
+      "readyForFinal": false,
+      "requiresChapterContinuity": true
+    },
+    "micro": {
+      "title": "Poetry & Micro Reads",
+      "target": 100,
+      "learnerReadyCount": 0,
+      "runtime": "generic-sharded",
+      "index": "micro/index.json",
+      "shards": [],
+      "readyForFinal": false
+    }
+  },
+  "excludedShelves": [
+    "manga",
+    "conversations",
+    "diaries",
+    "texts",
+    "letters",
+    "reviews"
+  ]
+}

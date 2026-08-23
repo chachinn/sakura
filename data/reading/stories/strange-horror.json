@@ -37,7 +37,25 @@
     ],
     "sourceYear": 1925,
     "sourceEdition": "",
-    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today."
+    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "江戸川 乱歩",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "056648",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "江戸川 乱歩",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "horror-mirror-hell",
@@ -77,7 +95,25 @@
     ],
     "sourceYear": 1926,
     "sourceEdition": "",
-    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today."
+    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "江戸川 乱歩",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "057343",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "江戸川 乱歩",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "horror-man-with-picture",
@@ -117,7 +153,25 @@
     ],
     "sourceYear": 1929,
     "sourceEdition": "",
-    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today."
+    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "江戸川 乱歩",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "056645",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "江戸川 乱歩",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "horror-insect",
@@ -157,7 +211,25 @@
     ],
     "sourceYear": 1929,
     "sourceEdition": "",
-    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today."
+    "contentNote": "Aozora notes that some historical wording may be considered inappropriate today.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "江戸川 乱歩",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "057245",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "江戸川 乱歩",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "horror-inhuman-love",
@@ -197,7 +269,25 @@
     ],
     "sourceYear": 1926,
     "sourceEdition": "",
-    "contentNote": ""
+    "contentNote": "",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "江戸川 乱歩",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "057511",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "江戸川 乱歩",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2382",
@@ -237,7 +327,25 @@
     ],
     "sourceYear": 1936,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002382",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-531",
@@ -277,7 +385,25 @@
     ],
     "sourceYear": 1926,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "000531",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2377",
@@ -317,7 +443,25 @@
     ],
     "sourceYear": 1933,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002377",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2105",
@@ -357,7 +501,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002105",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-930",
@@ -397,7 +559,25 @@
     ],
     "sourceYear": 1929,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "000930",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-921",
@@ -437,7 +617,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "000921",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2380",
@@ -477,7 +675,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002380",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-935",
@@ -517,7 +733,25 @@
     ],
     "sourceYear": 1936,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "000935",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2100",
@@ -557,7 +791,25 @@
     ],
     "sourceYear": 1933,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002100",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2093",
@@ -597,7 +849,25 @@
     ],
     "sourceYear": 1935,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002093",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2117",
@@ -637,7 +907,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002117",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2381",
@@ -677,7 +965,25 @@
     ],
     "sourceYear": 1928,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002381",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-1050",
@@ -717,7 +1023,25 @@
     ],
     "sourceYear": 1933,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "001050",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2121",
@@ -757,7 +1081,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002121",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2104",
@@ -797,7 +1139,25 @@
     ],
     "sourceYear": null,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002104",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   },
   {
     "id": "aozora-000096-2379",
@@ -837,6 +1197,24 @@
     ],
     "sourceYear": 1929,
     "sourceEdition": "",
-    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose."
+    "contentNote": "Authentic public-domain excerpt; difficulty is approximate learner support level, not rewritten JLPT prose.",
+    "sourceFamilyId": "aozora-bunko",
+    "sourceAuthor": "夢野 久作",
+    "rightsStatus": "public-domain",
+    "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+    "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+    "rightsEvidence": {
+      "catalog": "Aozora extended UTF-8 catalog",
+      "catalogWorkId": "002379",
+      "workCopyrightFlag": "なし",
+      "contributorCopyrightFlags": [
+        {
+          "role": "著者",
+          "name": "夢野 久作",
+          "flag": "なし"
+        }
+      ],
+      "verifiedDate": "2026-08-22"
+    }
   }
 ]

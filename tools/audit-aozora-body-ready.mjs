@@ -1,0 +1,24 @@
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+import { fileURLToPath } from "node:url";
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
+const reading=path.join(root,"data","reading");
+const shelves=["short-stories","folktales-legends","essays-opinions","serialized-novels","poetry-micro-reads"];
+const minimum={"short-stories":300,"folktales-legends":300,"essays-opinions":250,"serialized-novels":300,"poetry-micro-reads":20};
+const inventories=Object.fromEntries(shelves.map(s=>[s,JSON.parse(fs.readFileSync(path.join(reading,"candidates",`${s}.json`),"utf8")).candidates]));
+const urls=[...new Set(Object.values(inventories).flat().map(x=>x.sourceUrl))];
+const decodeEntities=s=>String(s).replace(/&nbsp;|&#160;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n));
+const clean=s=>decodeEntities(String(s||"").replace(/<rt>[\s\S]*?<\/rt>/gi,"").replace(/<[^>]+>/g," ")).replace(/\s+/g," ").trim();
+const jp=s=>(String(s).match(/[ぁ-んァ-ヶ一-龯々〆〤]/g)||[]).length;
+const digest=s=>crypto.createHash("sha256").update(String(s).normalize("NFKC").replace(/\s+/g,"")).digest("hex");
+const mojibake=s=>/�|(?:���)|(?:�[A-Za-z])/.test(String(s||""));
+function decode(bytes,headers){const probe=Buffer.from(bytes).subarray(0,4096).toString("ascii");const declared=`${headers.get("content-type")||""} ${(probe.match(/charset\s*=\s*["']?([^\s"'>;]+)/i)||[])[1]||""}`;const charset=/shift[_-]?jis|windows-31j|x-sjis/i.test(declared)?"shift_jis":"utf-8";return new TextDecoder(charset).decode(bytes)}
+function extract(html){const main=(html.match(/<div\b[^>]*class=["'][^"']*main_text[^"']*["'][^>]*>([\s\S]*?)<div\b[^>]*class=["'][^"']*bibliographical_information/i)||html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)||[,html])[1];return clean(main.replace(/<(script|style|nav)\b[^>]*>[\s\S]*?<\/\1>/gi," "))}
+function headings(html){return [...html.matchAll(/<(?:h[1-5]|div|p)\b[^>]*class=["'][^"']*(?:midashi|chapter)[^"']*["'][^>]*>([\s\S]*?)<\/(?:h[1-5]|div|p)>/gi)].map(x=>clean(x[1])).filter(x=>x&&!/^(目次|本文|底本|入力|校正)$/.test(x))}
+const pages=new Map();for(let i=0;i<urls.length;i+=10){await Promise.all(urls.slice(i,i+10).map(async url=>{try{const r=await fetch(url,{headers:{"user-agent":"SakuraReadingAozoraAudit/1.0"}});if(!r.ok){pages.set(url,{error:`http-${r.status}`});return}const html=decode(await r.arrayBuffer(),r.headers);const body=extract(html);pages.set(url,{body,characters:jp(body),fingerprint:digest(body),headings:headings(html)})}catch(e){pages.set(url,{error:e.message})}}))}
+const readyCounts={},reasons={},details={};for(const shelf of shelves){let ready=0;const rows=[];for(const c of inventories[shelf]){const p=pages.get(c.sourceUrl)||{error:"not-fetched"};const failures=[];if(c.rightsStatus!=="public-domain"||c.rightsEvidence?.workCopyrightFlag!=="なし"||(c.rightsEvidence?.contributorCopyrightFlags||[]).some(x=>x.flag!=="なし"))failures.push("rights-not-verified");if(p.error)failures.push(p.error);if(!p.error&&p.characters<minimum[shelf])failures.push("insufficient-source-substance");if(shelf==="serialized-novels"){if(!c.sourceSectionTitle||mojibake(c.sourceSectionTitle))failures.push("invalid-or-mojibake-section-title");else if(c.sourceSectionTitle===c.sourceTitle)failures.push("work-title-is-not-a-chapter");else if(!p.headings.includes(c.sourceSectionTitle))failures.push("section-title-not-found-in-source");if(jp(c.sourceJapaneseSubstance)<minimum[shelf])failures.push("missing-extracted-section-substance");else if(!p.body.includes(c.sourceJapaneseSubstance))failures.push("section-body-not-found-in-source")}
+      if(!failures.length)ready++;else for(const x of failures)reasons[x]=(reasons[x]||0)+1;rows.push({candidateId:c.candidateId,sourceUrl:c.sourceUrl,sourceCharacters:shelf==="serialized-novels"?jp(c.sourceJapaneseSubstance):p.characters||0,sourceBodyFingerprint:shelf==="serialized-novels"?c.sourceBodyFingerprint||digest(c.sourceJapaneseSubstance):p.fingerprint||null,ready:!failures.length,failures})}
+  readyCounts[shelf]=ready;details[shelf]=rows}
+const allRows=Object.values(details).flat();const fingerprints=allRows.filter(x=>x.sourceBodyFingerprint).map(x=>x.sourceBodyFingerprint);const report={version:1,generatedDate:"2026-08-22",inspectedCandidates:allRows.length,uniqueSourceUrls:urls.length,readyCounts,rejectionReasons:reasons,duplicateSourceBodies:fingerprints.length-new Set(fingerprints).size,serializedPolicy:"A serialized candidate is ready only when its decoded, named source division and extracted section body exist in the original Aozora HTML; no arbitrary character slicing is allowed.",details};fs.writeFileSync(path.join(reading,"qa","aozora-body-ready-report.json"),`${JSON.stringify(report,null,2)}\n`);console.log(JSON.stringify({...report,details:undefined},null,2));

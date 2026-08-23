@@ -1,0 +1,71 @@
+name: Validate Reading Garden architecture
+
+on:
+  push:
+    branches:
+      - complete-open-reading-garden-20260822
+    paths:
+      - .github/workflows/validate-reading-library-architecture.yml
+      - data/reading/library/**
+      - data/reading/articles/**
+      - data/reading/body-ready/articles.json
+      - tools/build-reading-library.mjs
+      - tools/validate-reading-library.mjs
+      - tools/validate-reading-article-depth.mjs
+      - tools/audit-reading-article-source-mapping.mjs
+      - tools/plan-reading-article-rebuild.mjs
+      - tools/audit-reading-article-topic-seeds.mjs
+      - features/sakura-reading-quality.js
+      - features/sakura-reading-longform.js
+      - service-worker.js
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/validate-reading-library-architecture.yml
+      - data/reading/library/**
+      - data/reading/articles/**
+      - data/reading/body-ready/articles.json
+      - tools/build-reading-library.mjs
+      - tools/validate-reading-library.mjs
+      - tools/validate-reading-article-depth.mjs
+      - tools/audit-reading-article-source-mapping.mjs
+      - tools/plan-reading-article-rebuild.mjs
+      - tools/audit-reading-article-topic-seeds.mjs
+      - features/sakura-reading-quality.js
+      - features/sakura-reading-longform.js
+      - service-worker.js
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: |
+          node --check features/sakura-reading-quality.js
+          node --check features/sakura-reading-longform.js
+          node --check tools/build-reading-library.mjs
+          node --check tools/validate-reading-library.mjs
+          node --check tools/validate-reading-article-depth.mjs
+          node --check tools/audit-reading-article-source-mapping.mjs
+          node --check tools/plan-reading-article-rebuild.mjs
+          node --check tools/audit-reading-article-topic-seeds.mjs
+          node --check service-worker.js
+      - name: Validate partial production library
+        run: node tools/validate-reading-library.mjs --allow-incomplete
+      - name: Verify one-source Article inventory
+        run: node tools/audit-reading-article-source-mapping.mjs
+      - name: Plan Article topic reassignment
+        run: node tools/plan-reading-article-rebuild.mjs
+      - name: Audit existing Article topic source seeds
+        run: node tools/audit-reading-article-topic-seeds.mjs
+      - name: Report current Article depth baseline
+        run: node tools/validate-reading-article-depth.mjs || true
+      - name: Diff hygiene
+        run: git diff --check

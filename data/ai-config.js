@@ -107,7 +107,7 @@
   function bootReadingQuality() {
     if (window.SakuraReadingQuality?.version >= 1.2 || document.querySelector("script[data-sakura-reading-quality]")) return;
     const script = document.createElement("script");
-    script.src = "./features/sakura-reading-quality.js?v=2";
+    script.src = "./features/sakura-reading-quality.js?v=3";
     script.dataset.sakuraReadingQuality = "true";
     script.async = true;
     script.onerror = () => console.warn("Sakura Reading Quality Shelf could not load. Reading Garden core will remain available.");

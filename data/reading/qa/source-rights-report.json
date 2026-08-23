@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "generatedDate": "2026-08-22",
+  "pass": true,
+  "existingRecordsAudited": 400,
+  "rightsStatusDistribution": {
+    "adaptation-permitted": 300,
+    "public-domain": 100
+  },
+  "approvedSourceFamilies": 17,
+  "rejectedSourceFamilies": 0,
+  "candidateCounts": {
+    "short-stories": 150,
+    "news": 300,
+    "travel-reading": 200,
+    "folktales-legends": 100,
+    "essays-opinions": 150,
+    "school-work": 120,
+    "recipes-how-to": 100,
+    "interviews-qa": 100,
+    "real-life-documents": 200,
+    "serialized-novels": 80,
+    "poetry-micro-reads": 100
+  },
+  "remainingManualReviewCount": 0,
+  "duplicateExistingIds": 0,
+  "duplicateCandidateSourceUrlsAcrossShelves": 0,
+  "errors": [],
+  "warnings": []
+}

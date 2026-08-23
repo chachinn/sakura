@@ -1,0 +1,3318 @@
+{
+  "version": 1,
+  "shelf": "poetry-micro-reads",
+  "targetCount": 100,
+  "candidateCount": 100,
+  "candidates": [
+    {
+      "candidateId": "aozora-000178",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "芥川竜之介歌集",
+      "sourceAuthor": "芥川 竜之介",
+      "sourceTranslator": null,
+      "workId": "000178",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000879/files/178_14584.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000879/card178.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「芥川竜之介歌集」芥川 竜之介",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "芥川 竜之介",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-003818",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "詩集",
+      "sourceAuthor": "芥川 竜之介",
+      "sourceTranslator": null,
+      "workId": "003818",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000879/files/3818_27305.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000879/card3818.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「詩集」芥川 竜之介",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "芥川 竜之介",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 913",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-000189",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "続芭蕉雑記",
+      "sourceAuthor": "芥川 竜之介",
+      "sourceTranslator": null,
+      "workId": "000189",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000879/files/189_15140.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000879/card189.html",
+      "sourcePublishedDate": "「文藝春秋」1927（昭和2）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「続芭蕉雑記」芥川 竜之介",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "芥川 竜之介",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-000023",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "芭蕉雑記",
+      "sourceAuthor": "芥川 竜之介",
+      "sourceTranslator": null,
+      "workId": "000023",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000879/files/23_15267.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000879/card23.html",
+      "sourcePublishedDate": "「新潮」1923（大正12）年11月～1924（大正13）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「芭蕉雑記」芥川 竜之介",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "芥川 竜之介",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-001136",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "発句私見",
+      "sourceAuthor": "芥川 竜之介",
+      "sourceTranslator": null,
+      "workId": "001136",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000879/files/1136_15283.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000879/card1136.html",
+      "sourcePublishedDate": "「ホトトギス」1926（大正15）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「発句私見」芥川 竜之介",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "芥川 竜之介",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050555",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "県歌　信濃の国",
+      "sourceAuthor": "浅井 洌",
+      "sourceTranslator": null,
+      "workId": "050555",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000380/files/50555_37463.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000380/card50555.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「県歌　信濃の国」浅井 洌",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "浅井 洌",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050549",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "信濃国",
+      "sourceAuthor": "浅井 洌",
+      "sourceTranslator": null,
+      "workId": "050549",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000380/files/50549_37464.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000380/card50549.html",
+      "sourcePublishedDate": "「信濃教育会雑誌　　第一五三号」1899（明治32）年6月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「信濃国」浅井 洌",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "浅井 洌",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-049995",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "遠友夜学校校歌",
+      "sourceAuthor": "有島 武郎",
+      "sourceTranslator": null,
+      "workId": "049995",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000025/files/49995_38418.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000025/card49995.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「遠友夜学校校歌」有島 武郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "有島 武郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057433",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "大阪の朝",
+      "sourceAuthor": "安西 冬衛",
+      "sourceTranslator": null,
+      "workId": "057433",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001863/files/57433_58897.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001863/card57433.html",
+      "sourcePublishedDate": "「サンデー毎日」1952（昭和27）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「大阪の朝」安西 冬衛",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "安西 冬衛",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057434",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "堺水族館の歌",
+      "sourceAuthor": "安西 冬衛",
+      "sourceTranslator": null,
+      "workId": "057434",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001863/files/57434_58898.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001863/card57434.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「堺水族館の歌」安西 冬衛",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "安西 冬衛",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057435",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "大大阪のれいめい",
+      "sourceAuthor": "安西 冬衛",
+      "sourceTranslator": null,
+      "workId": "057435",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001863/files/57435_58189.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001863/card57435.html",
+      "sourcePublishedDate": "「大阪新聞」1948（昭和23）年1月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「大大阪のれいめい」安西 冬衛",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "安西 冬衛",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057436",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "水の上",
+      "sourceAuthor": "安西 冬衛",
+      "sourceTranslator": null,
+      "workId": "057436",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001863/files/57436_58896.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001863/card57436.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「水の上」安西 冬衛",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "安西 冬衛",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053717",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "AU MAGASIN DE NOUVEAUTES",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053717",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53717_63532.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53717.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「AU MAGASIN DE NOUVEAUTES」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053691",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "BOITEUX ・ BOITEUSE",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053691",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53691_65748.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53691.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「BOITEUX ・ BOITEUSE」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053692",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "LE URINE",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053692",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53692_69127.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53692.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「LE URINE」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053693",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "▽ノ遊戯――",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053693",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53693_65749.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53693.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「▽ノ遊戯――」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053782",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "朝",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053782",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53782_74410.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53782.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「朝」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053694",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "異常ナ可逆反応",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053694",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53694_67736.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53694.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「異常ナ可逆反応」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053695",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "運動",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053695",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53695_68770.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53695.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「運動」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053783",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "街衢ノ寒サ",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053783",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53783_75647.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53783.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「街衢ノ寒サ」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053794",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "悔恨ノ章",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053794",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53794_74212.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53794.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「悔恨ノ章」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053696",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "顔",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053696",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53696_69126.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53696.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「顔」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053698",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "狂女の告白",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053698",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53698_70994.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53698.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「狂女の告白」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053784",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "距離",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053784",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53784_74424.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53784.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「距離」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053700",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "空腹――",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053700",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53700_68769.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53700.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「空腹――」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053697",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "興行物天使",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053697",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53697_67737.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53697.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「興行物天使」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053785",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "骨片ニ関スル無題",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053785",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53785_74068.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53785.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「骨片ニ関スル無題」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053786",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "最後",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053786",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53786_74613.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53786.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「最後」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053719",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "且８氏の出発",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053719",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53719_63533.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53719.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「且８氏の出発」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053787",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "囚人の作つた箱庭",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053787",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53787_73034.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53787.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「囚人の作つた箱庭」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053720",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "出版法",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053720",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53720_63534.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53720.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「出版法」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053701",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "神経質に肥満した三角形",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053701",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53701_65750.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53701.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「神経質に肥満した三角形」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053838",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "診断　０：１",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053838",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53838_63538.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53838.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「診断　０：１」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053788",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "隻脚",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053788",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53788_74046.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53788.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「隻脚」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053789",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一九三一年　作品　第一番",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053789",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53789_74069.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53789.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一九三一年　作品　第一番」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053699",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書１",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053699",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53699_70756.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53699.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書１」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053702",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書２",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053702",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53702_70757.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53702.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書２」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053703",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書３",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053703",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53703_71466.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53703.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書３」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053704",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書４",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053704",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53704_71467.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53704.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書４」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053705",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書５",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053705",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53705_71468.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53705.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書５」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053706",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書６",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053706",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53706_71673.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53706.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書６」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053707",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "線に関する覚書７",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053707",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53707_71674.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53707.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第十号」朝鮮建築会、1931（昭和6）年10月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「線に関する覚書７」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053790",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "月原橙一郎",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053790",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53790_74077.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53790.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「月原橙一郎」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053791",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "内科",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053791",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53791_73033.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53791.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「内科」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053792",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "肉親の章",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053792",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53792_74228.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53792.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「肉親の章」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053721",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "二十二年",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053721",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53721_63535.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53721.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「二十二年」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053722",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "熱河略図 No.2",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053722",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53722_63536.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53722.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「熱河略図 No.2」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053708",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "破片ノ景色――",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053708",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53708_70755.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53708.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「破片ノ景色――」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053709",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "ひげ――",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053709",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53709_67735.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53709.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第七号」朝鮮建築会、1931（昭和6）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「ひげ――」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053710",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "二人‥‥１‥‥",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053710",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53710_69348.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53710.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「二人‥‥１‥‥」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053711",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "二人‥‥２‥‥",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053711",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53711_69349.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53711.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十集第八号」朝鮮建築会、1931（昭和6）年8月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「二人‥‥２‥‥」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053723",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "真昼",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053723",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53723_63537.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53723.html",
+      "sourcePublishedDate": "「朝鮮と建築　第十一集第七号」朝鮮建築会、1932（昭和7）年7月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「真昼」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-053793",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "与田凖一",
+      "sourceAuthor": "李 箱",
+      "sourceTranslator": null,
+      "workId": "053793",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001597/files/53793_73481.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001597/card53793.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「与田凖一」李 箱",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "李 箱",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054060",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "馬",
+      "sourceAuthor": "猪狩 満直",
+      "sourceTranslator": null,
+      "workId": "054060",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001626/files/54060_58750.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001626/card54060.html",
+      "sourcePublishedDate": "「弾道」1930（昭和5）年3月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「馬」猪狩 満直",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "猪狩 満直",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054061",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "炭坑長屋物語",
+      "sourceAuthor": "猪狩 満直",
+      "sourceTranslator": null,
+      "workId": "054061",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001626/files/54061_58749.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001626/card54061.html",
+      "sourcePublishedDate": "「北緯五十度詩集」北緯五十度社、1931（昭和6）年11月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「炭坑長屋物語」猪狩 満直",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "猪狩 満直",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-060961",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "幸福が遅く来たなら",
+      "sourceAuthor": "生田 春月",
+      "sourceTranslator": null,
+      "workId": "060961",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000227/files/60961_75472.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000227/card60961.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「幸福が遅く来たなら」生田 春月",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "生田 春月",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-060962",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "誤植",
+      "sourceAuthor": "生田 春月",
+      "sourceTranslator": null,
+      "workId": "060962",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000227/files/60962_75471.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000227/card60962.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「誤植」生田 春月",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "生田 春月",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-056886",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "我が一九二二年",
+      "sourceAuthor": "生田 長江",
+      "sourceTranslator": null,
+      "workId": "056886",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000393/files/56886_58754.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000393/card56886.html",
+      "sourcePublishedDate": "「我が一九二二年」新潮社、1923（大正12）年2月18日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「我が一九二二年」生田 長江",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "生田 長江",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-049430",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "蒼馬を見たり",
+      "sourceAuthor": "石川 三四郎",
+      "sourceTranslator": null,
+      "workId": "049430",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001170/files/49430_33320.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001170/card49430.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「蒼馬を見たり」石川 三四郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 三四郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-060918",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "女中",
+      "sourceAuthor": "石川 善助",
+      "sourceTranslator": null,
+      "workId": "060918",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001787/files/60918_75468.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001787/card60918.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「女中」石川 善助",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 善助",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048134",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "新しい歌の味ひ",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048134",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48134_47279.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48134.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「新しい歌の味ひ」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-000816",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "一握の砂",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "000816",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/816_15786.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card816.html",
+      "sourcePublishedDate": "「一握の砂」東雲堂書店、1910（明治43）年12月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「一握の砂」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-052298",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "公孫樹",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "052298",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/52298_49236.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card52298.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「公孫樹」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048156",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "歌のいろ／＼",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048156",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48156_35932.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48156.html",
+      "sourcePublishedDate": "「東京朝日新聞」1910（明治43）年12月10日～20日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「歌のいろ／＼」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048137",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "歌集「嘲笑」序文",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048137",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48137_47283.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48137.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「歌集「嘲笑」序文」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-000815",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "悲しき玩具",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "000815",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/815_20544.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card815.html",
+      "sourcePublishedDate": "「悲しき玩具」東雲堂書店、1912（明治45）年6月20日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「悲しき玩具」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-047891",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "心の姿の研究",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "047891",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/47891_31511.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card47891.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「心の姿の研究」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050410",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "散文詩",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "050410",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/50410_47999.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card50410.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「散文詩」石川 啄木、斎藤 三郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          },
+          {
+            "role": "編者",
+            "name": "斎藤 三郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-000817",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "詩",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "000817",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/817_20662.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card817.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「詩」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050411",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "唱歌",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "050411",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/50411_48008.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card50411.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「唱歌」石川 啄木、斎藤 三郎",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          },
+          {
+            "role": "編者",
+            "name": "斎藤 三郎",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048158",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "女郎買の歌",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048158",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48158_35935.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48158.html",
+      "sourcePublishedDate": "「東京朝日新聞」1910（明治43）年8月6日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「女郎買の歌」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048153",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "NAKIWARAI を読む",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048153",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48153_47587.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48153.html",
+      "sourcePublishedDate": "「東京朝日新聞」1910（明治43）年8月3日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「NAKIWARAI を読む」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-049679",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "弓町より",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "049679",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/49679_41953.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card49679.html",
+      "sourcePublishedDate": "「東京毎日新聞」1909（明治42）年11月30日、12月2日～7日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「弓町より」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-048151",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "吉井君の歌",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "048151",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/48151_47595.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card48151.html",
+      "sourcePublishedDate": "「東京朝日新聞」1910（明治43）年9月23日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「吉井君の歌」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-047892",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "呼子と口笛",
+      "sourceAuthor": "石川 啄木",
+      "sourceTranslator": null,
+      "workId": "047892",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000153/files/47892_31512.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000153/card47892.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「呼子と口笛」石川 啄木",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "石川 啄木",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054415",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "アコウの木",
+      "sourceAuthor": "泉 芳朗",
+      "sourceTranslator": null,
+      "workId": "054415",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001665/files/54415_64128.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001665/card54415.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「アコウの木」泉 芳朗",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "泉 芳朗",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054416",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "生地売り",
+      "sourceAuthor": "泉 芳朗",
+      "sourceTranslator": null,
+      "workId": "054416",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001665/files/54416_64607.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001665/card54416.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「生地売り」泉 芳朗",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "泉 芳朗",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054417",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "十二月の島だより",
+      "sourceAuthor": "泉 芳朗",
+      "sourceTranslator": null,
+      "workId": "054417",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001665/files/54417_64346.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001665/card54417.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「十二月の島だより」泉 芳朗",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "泉 芳朗",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-050251",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "広告",
+      "sourceAuthor": "伊丹 万作",
+      "sourceTranslator": null,
+      "workId": "050251",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000231/files/50251_38426.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000231/card50251.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「広告」伊丹 万作",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊丹 万作",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-058009",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "歌の潤い",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "058009",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/58009_68513.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card58009.html",
+      "sourcePublishedDate": "「アララギ　第六卷第三號」アララギ発行所、1913（大正2）年3月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「歌の潤い」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-059823",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "『悲しき玩具』を読む",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "059823",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/59823_72664.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card59823.html",
+      "sourcePublishedDate": "「アララギ　第五卷第八號」1912（大正元）年8月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「『悲しき玩具』を読む」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057469",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "子規と和歌",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "057469",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/57469_66091.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card57469.html",
+      "sourcePublishedDate": "「中央公論　第二十二卷第九號」1907（明治40）年9月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「子規と和歌」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057417",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "師を失いたる吾々",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "057417",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/57417_69135.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card57417.html",
+      "sourcePublishedDate": "「心の花　第五卷第十一號」大日本歌學會、1902（明治35）年11月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「師を失いたる吾々」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057441",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "絶対的人格",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "057441",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/57441_69132.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card57441.html",
+      "sourcePublishedDate": "「馬醉木　第三卷第一號」1906（明治39）年1月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「絶対的人格」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051305",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "竹の里人　一",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "051305",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/51305_51168.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card51305.html",
+      "sourcePublishedDate": "「馬醉木　第二號」根岸短歌会、1903（明治36）年7月5日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「竹の里人　一」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 914",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-059162",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "根岸庵訪問の記",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "059162",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/59162_66090.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card59162.html",
+      "sourcePublishedDate": "「俳星　第二卷第一號」俳星発行所、1901（明治34）年3月12日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「根岸庵訪問の記」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-057440",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "正岡子規君",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "057440",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/57440_69331.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card57440.html",
+      "sourcePublishedDate": "「日本」日本新聞社、1902（明治35）年9月27日、10月3日、10月4日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「正岡子規君」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-059134",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "紅葉",
+      "sourceAuthor": "伊藤 左千夫",
+      "sourceTranslator": null,
+      "workId": "059134",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000058/files/59134_69134.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000058/card59134.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「紅葉」伊藤 左千夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 左千夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911 915",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-045279",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "詩集夏花",
+      "sourceAuthor": "伊東 静雄",
+      "sourceTranslator": null,
+      "workId": "045279",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001197/files/45279_18539.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001197/card45279.html",
+      "sourcePublishedDate": "「詩集夏花」1940（昭和15）年3月15日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「詩集夏花」伊東 静雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊東 静雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-045280",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "わがひとに与ふる哀歌",
+      "sourceAuthor": "伊東 静雄",
+      "sourceTranslator": null,
+      "workId": "045280",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001197/files/45280_18540.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001197/card45280.html",
+      "sourcePublishedDate": "「わがひとに与ふる哀歌」1935（昭和10）年10月5日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「わがひとに与ふる哀歌」伊東 静雄",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊東 静雄",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054099",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "冬のしぶき",
+      "sourceAuthor": "伊藤 信二",
+      "sourceTranslator": null,
+      "workId": "054099",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001642/files/54099_65476.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001642/card54099.html",
+      "sourcePublishedDate": "「プロレタリア文學　第一卷第一號」日本プロレタリア作家同盟、1932（昭和7）年1月",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「冬のしぶき」伊藤 信二",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 信二",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-047406",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "東の渚",
+      "sourceAuthor": "伊藤 野枝",
+      "sourceTranslator": null,
+      "workId": "047406",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/000416/files/47406_50731.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/000416/card47406.html",
+      "sourcePublishedDate": "「青鞜　第二巻第一一号」1912（大正元）年11月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「東の渚」伊藤 野枝",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊藤 野枝",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-051296",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "荷風翁の発句",
+      "sourceAuthor": "伊庭 心猿",
+      "sourceTranslator": null,
+      "workId": "051296",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001336/files/51296_70779.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001336/card51296.html",
+      "sourcePublishedDate": "「俳句　第二卷第七號」角川書店、1953（昭和28）年7月1日",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「荷風翁の発句」伊庭 心猿",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "伊庭 心猿",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "旧字旧仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-045627",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "北斗帖",
+      "sourceAuthor": "違星 北斗",
+      "sourceTranslator": null,
+      "workId": "045627",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001210/files/45627_23861.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001210/card45627.html",
+      "sourcePublishedDate": null,
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「北斗帖」違星 北斗",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "違星 北斗",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054067",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "アンチの闘士",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054067",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54067_53601.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54067.html",
+      "sourcePublishedDate": "「プロレタリア詩」1932（昭和7）年1月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「アンチの闘士」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054065",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "鋼鉄",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054065",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54065_53602.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54065.html",
+      "sourcePublishedDate": "「文芸戦線」1929（昭和4）年11月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「鋼鉄」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054062",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "山上の歌",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054062",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54062_53605.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54062.html",
+      "sourcePublishedDate": "「ナップ」1931（昭和6）年10月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「山上の歌」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054063",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "死ぬる迄土地を守るのだ",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054063",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54063_53606.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54063.html",
+      "sourcePublishedDate": "「プロレタリア」1930（昭和5）年12月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「死ぬる迄土地を守るのだ」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054064",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "手",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054064",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54064_53610.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54064.html",
+      "sourcePublishedDate": "「文芸戦線」1929（昭和4）年8月号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「手」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    },
+    {
+      "candidateId": "aozora-054068",
+      "targetShelf": "poetry-micro-reads",
+      "sourceFamilyId": "aozora-bunko",
+      "sourceTitle": "プチロフ工場",
+      "sourceAuthor": "今村 恒夫",
+      "sourceTranslator": null,
+      "workId": "054068",
+      "sourceUrl": "https://www.aozora.gr.jp/cards/001627/files/54068_53609.html",
+      "sourceCardUrl": "https://www.aozora.gr.jp/cards/001627/card54068.html",
+      "sourcePublishedDate": "「文芸戦線」1929（昭和4）年11月臨時増刊号",
+      "sourceLicense": "Aozora Bunko file handling standard (copyright-expired work)",
+      "sourceLicenseUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceTermsUrl": "https://www.aozora.gr.jp/guide/kijyunn.html",
+      "sourceAttribution": "出典：青空文庫「プチロフ工場」今村 恒夫",
+      "sourceProcessing": "Candidate metadata only; no reading body is bundled by this inventory.",
+      "rightsStatus": "public-domain",
+      "rightsEvidence": {
+        "catalog": "Aozora extended UTF-8 catalog",
+        "workCopyrightFlag": "なし",
+        "contributorCopyrightFlags": [
+          {
+            "role": "著者",
+            "name": "今村 恒夫",
+            "flag": "なし"
+          }
+        ],
+        "checkedRule": "Work and every credited contributor must have copyright flag 'なし'."
+      },
+      "classification": "NDC 911",
+      "orthography": "新字新仮名",
+      "inventoryNote": "Work-level candidate approved for a later educational selection pass."
+    }
+  ]
+}
