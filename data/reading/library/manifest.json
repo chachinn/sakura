@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedDate": "2026-08-22",
+  "generatedDate": "2026-08-23",
   "model": "source-grounded-static-corpus",
   "totalTarget": 2000,
   "learnerReadyCount": 400,
@@ -19,9 +19,9 @@
       "target": 300,
       "learnerReadyCount": 300,
       "runtime": "legacy-article-shards",
-      "qualityStatus": "needs-depth-rewrite",
-      "readyForFinal": false,
-      "note": "All 300 source-grounded learner records exist, but every Article still requires the final one-source substantial-depth quality pass."
+      "qualityStatus": "long-form-complete",
+      "readyForFinal": true,
+      "note": "All 300 Articles passed the final one-source substantial-depth quality pass with level-specific long-form floors and complete study support."
     },
     "short-stories": {
       "title": "Short Stories",
