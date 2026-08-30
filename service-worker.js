@@ -1,4 +1,4 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v165";
+const SHELL_CACHE_VERSION = "sakura-shell-v166";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v7";
@@ -17,6 +17,7 @@ const APP_SHELL = [
     "./features/sakura-fresh-random.js?v=1",
     "./features/sakura-source-practice.js?v=1",
     "./features/sakura-practice-grid-polish.js?v=1",
+    "./features/sakura-travel-interpreter.js?v=2",
     "./features/sakura-bug-report.js?v=1",
     "./features/sakura-experience.js?v=3",
     "./features/sakura-ai-translator.js?v=2",
@@ -207,6 +208,7 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-fresh-random.") ||
                 requestUrl.pathname.includes("/features/sakura-source-practice.") ||
                 requestUrl.pathname.includes("/features/sakura-practice-grid-polish.") ||
+                requestUrl.pathname.includes("/features/sakura-travel-interpreter.") ||
                 requestUrl.pathname.includes("/features/sakura-bug-report.") ||
                 requestUrl.pathname.endsWith("/data/practice-source-checked.js") ||
                 requestUrl.pathname.endsWith("/data/ai-config.js");
