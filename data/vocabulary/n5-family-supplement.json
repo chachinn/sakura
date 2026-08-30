@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vocab-n5-husband-otto",
+    "type": "vocabulary",
+    "word": "夫",
+    "kana": "おっと",
+    "romaji": "otto",
+    "meaning": "husband; one's own husband",
+    "jlpt": "N5",
+    "categories": [
+      "Family"
+    ],
+    "exampleSentence": "夫は医者です。",
+    "exampleTranslation": "My husband is a doctor.",
+    "notes": "High-utility beginner family vocabulary. Use 夫 when referring neutrally to your own husband.",
+    "dictionaryMeaning": "husband; one's own husband",
+    "naturalMeaning": "my husband; one's husband",
+    "naturalUsageNotes": "A neutral standard way to refer to your own husband. For another person's husband, ご主人 is usually more appropriate."
+  },
+  {
+    "id": "vocab-n5-husband-goshujin",
+    "type": "vocabulary",
+    "word": "ご主人",
+    "kana": "ごしゅじん",
+    "romaji": "goshujin",
+    "meaning": "husband; someone's husband (polite)",
+    "jlpt": "N5",
+    "categories": [
+      "Family"
+    ],
+    "exampleSentence": "ご主人は日本語を話しますか。",
+    "exampleTranslation": "Does your husband speak Japanese?",
+    "notes": "High-utility beginner family vocabulary. Polite term for another person's husband.",
+    "dictionaryMeaning": "someone's husband; husband (polite)",
+    "naturalMeaning": "your/her/their husband",
+    "naturalUsageNotes": "A polite way to refer to another person's husband. It is not usually the neutral choice for referring to your own husband."
+  }
+]

@@ -13,6 +13,9 @@
         N2: "./data/vocabulary/n2.json",
         N1: "./data/vocabulary/n1.json"
     });
+    const supplementFiles = Object.freeze({
+        N5: "./data/vocabulary/n5-family-supplement.json?v=1"
+    });
     const loadedByLevel = new Map();
     const inFlightByLevel = new Map();
 
@@ -111,6 +114,22 @@
         return records;
     }
 
+    async function loadSupplement(level) {
+        const supplementUrl = supplementFiles[level];
+        if (!supplementUrl) return [];
+        try {
+            const response = await fetch(supplementUrl);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const records = await response.json();
+            if (!Array.isArray(records)) throw new Error("supplement must contain a JSON array");
+            return records;
+        }
+        catch (error) {
+            console.warn(`Vocabulary loader: optional ${level} supplement could not be loaded.`, error);
+            return [];
+        }
+    }
+
     function loadVocabularyLevel(level) {
         const validLevel = requireLevel(level);
         if (loadedByLevel.has(validLevel)) return Promise.resolve(loadedByLevel.get(validLevel));
@@ -123,7 +142,11 @@
             const records = await response.json();
             if (!Array.isArray(records)) throw new Error(`${files[validLevel]} must contain a JSON array.`);
 
-            const validRecords = validateVocabularyRecords(records, validLevel);
+            const supplement = await loadSupplement(validLevel);
+            const validRecords = validateVocabularyRecords(
+                dedupeVocabularyRecords([...records, ...supplement]),
+                validLevel
+            );
             loadedByLevel.set(validLevel, validRecords);
             return validRecords;
         })()
@@ -193,6 +216,7 @@
     window.SakuraVocabularyLoader = Object.freeze({
         levels,
         files,
+        supplementFiles,
         loadVocabularyLevel,
         loadVocabularyLevels,
         loadAllVocabulary: () => loadVocabularyLevels(levels),
