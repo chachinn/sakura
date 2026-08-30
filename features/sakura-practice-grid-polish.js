@@ -1,5 +1,5 @@
 /* Sakura Practice Grid Compatibility v3
-   Keeps Practice cleanup lightweight and makes the Travel Interpreter loader
+   Keeps Practice cleanup lightweight and makes the Sakura Interpreter loader
    resilient even when an older compatibility shim already initialized. */
 (function initializeSakuraPracticeGridCompatibility(){
   'use strict';
@@ -7,17 +7,21 @@
   function ensureTravelInterpreterLaunch(){
     const view=document.getElementById('travel-view');
     const grid=view?.querySelector('.travel-category-grid');
-    if(!view||!grid||view.querySelector('.sakura-travel-interpreter-card'))return;
-    const button=document.createElement('button');
-    button.type='button';
-    button.className='travel-feature-card travel-language-others sakura-travel-interpreter-card';
+    if(!view||!grid)return;
+    let button=view.querySelector('.sakura-travel-interpreter-card');
+    if(!button){
+      button=document.createElement('button');
+      button.type='button';
+      button.className='travel-feature-card travel-language-others sakura-travel-interpreter-card';
+      grid.insertAdjacentElement('beforebegin',button);
+    }
     button.dataset.tiOpen='';
-    button.innerHTML='<span aria-hidden="true">🗣️</span><div><h2>Travel Interpreter</h2><p>Speak or type naturally, then show or play Japanese in real conversations.</p></div><b aria-hidden="true">→</b>';
-    grid.insertAdjacentElement('beforebegin',button);
+    button.dataset.tiPreset='Travel';
+    button.innerHTML='<span aria-hidden="true">🗣️</span><div><h2>Sakura Interpreter</h2><p>Natural Japanese for any conversation. Opens with Travel context from here.</p></div><b aria-hidden="true">→</b>';
   }
 
   function loadTravelInterpreter(){
-    if(window.SakuraTravelInterpreter){
+    if(window.SakuraInterpreter||window.SakuraTravelInterpreter){
       ensureTravelInterpreterLaunch();
       return;
     }
@@ -30,7 +34,7 @@
     existing?.remove();
 
     const script=document.createElement('script');
-    script.src='./features/sakura-travel-interpreter.js?v=2';
+    script.src='./features/sakura-travel-interpreter.js?v=3';
     script.defer=true;
     script.dataset.sakuraTravelInterpreter='1';
     script.dataset.sakuraTravelInterpreterLoading='1';
@@ -41,7 +45,7 @@
     script.onerror=()=>{
       delete script.dataset.sakuraTravelInterpreterLoading;
       script.remove();
-      console.warn('Sakura Travel Interpreter could not load. Existing Travel and Translator tools remain available.');
+      console.warn('Sakura Interpreter could not load. Existing Travel and Translator tools remain available.');
     };
     document.head.appendChild(script);
   }
