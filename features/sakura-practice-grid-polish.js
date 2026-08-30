@@ -1,4 +1,4 @@
-/* Sakura Practice Grid Compatibility v6
+/* Sakura Practice Grid Compatibility v7
    Keeps Practice cleanup lightweight, keeps the SakuTalk loader resilient,
    and promotes SakuTalk without touching core navigation. */
 (function initializeSakuraPracticeGridCompatibility(){
@@ -6,6 +6,8 @@
 
   let pendingSakuTalkOpen=false;
   let sakutalkHeaderBound=false;
+  const SAKUTALK_CACHE_PREFIX='sakuraSakuTalkCacheV2:';
+  const SAKUTALK_CACHE_TTL_MS=30*24*60*60*1000;
 
   const sakutalkIcon=()=>`
     <svg viewBox="0 0 28 28" width="27" height="27" aria-hidden="true" focusable="false">
@@ -14,6 +16,58 @@
       <text x="14" y="15.8" text-anchor="middle" fill="currentColor"
         font-size="10.5" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif">あ</text>
     </svg>`;
+
+  function cacheHash(value){
+    let hash=2166136261;
+    const text=String(value||'');
+    for(let i=0;i<text.length;i++){
+      hash^=text.charCodeAt(i);
+      hash=Math.imul(hash,16777619);
+    }
+    return (hash>>>0).toString(36);
+  }
+
+  function installSakuTalkFetchCache(){
+    if(typeof window.fetch!=='function'||window.fetch.__sakuraSakuTalkCacheV2)return;
+    const nativeFetch=window.fetch.bind(window);
+    const cachedFetch=async(input,init={})=>{
+      const method=String(init?.method||input?.method||'GET').toUpperCase();
+      const url=String(typeof input==='string'||input instanceof URL?input:input?.url||'');
+      const rawBody=typeof init?.body==='string'?init.body:'';
+      if(method!=='POST'||!url.includes('/functions/v1/sakura-ai-translator')||!rawBody){
+        return nativeFetch(input,init);
+      }
+
+      let payload;
+      try{payload=JSON.parse(rawBody)}catch{return nativeFetch(input,init)}
+      const isSakuTalk=payload?.natural_interpreter===true||payload?.interpreter_mode==='general'||payload?.response_style==='interpreter-compact';
+      if(!isSakuTalk)return nativeFetch(input,init);
+
+      const cacheKey=`${SAKUTALK_CACHE_PREFIX}${cacheHash(rawBody)}`;
+      try{
+        const cached=JSON.parse(localStorage.getItem(cacheKey)||'null');
+        if(cached?.savedAt&&Date.now()-cached.savedAt<SAKUTALK_CACHE_TTL_MS&&cached?.body?.recommended?.japanese){
+          return new Response(JSON.stringify({...cached.body,cache_hit:true}),{
+            status:200,
+            headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Sakura-Cache':'hit'}
+          });
+        }
+        if(cached?.savedAt)localStorage.removeItem(cacheKey);
+      }catch{}
+
+      const response=await nativeFetch(input,init);
+      if(response.ok){
+        response.clone().json().then(body=>{
+          if(!body?.recommended?.japanese)return;
+          try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),body}))}catch{}
+        }).catch(()=>{});
+      }
+      return response;
+    };
+    cachedFetch.__sakuraSakuTalkCacheV2=true;
+    cachedFetch.__sakuraNativeFetch=nativeFetch;
+    window.fetch=cachedFetch;
+  }
 
   function ensureCompactTravelStyle(){
     if(document.getElementById('sakura-compact-travel-style'))return;
@@ -35,6 +89,7 @@
       #sakura-interpreter .sakura-interpreter-status:empty{display:none}
       #sakura-interpreter .sakura-result-card{gap:10px;padding:12px}
       #sakura-interpreter .sakura-result-state{min-height:88px;padding:14px}
+      #sakura-interpreter .sakura-result-state[hidden]{display:none!important}
       #travel-view .travel-category-grid{gap:8px}
       #travel-view .travel-category-card{min-height:104px;padding:12px;gap:7px;border-radius:16px}
       #travel-view .travel-category-card>span{width:36px;height:36px;border-radius:12px;font-size:20px}
@@ -127,7 +182,7 @@
     existing?.remove();
 
     const script=document.createElement('script');
-    script.src='./features/sakura-travel-interpreter.js?v=7';
+    script.src='./features/sakura-travel-interpreter.js?v=8';
     script.defer=true;
     script.dataset.sakuraTravelInterpreter='1';
     script.dataset.sakuraTravelInterpreterLoading='1';
@@ -171,7 +226,8 @@
   }
 
   // Run these before the compatibility version guard. An older installed PWA
-  // shim must not suppress the SakuTalk shortcut, compact Travel CSS, or loader.
+  // shim must not suppress the SakuTalk shortcut, cache, compact Travel CSS, or loader.
+  installSakuTalkFetchCache();
   ensureCompactTravelStyle();
   ensureSakuTalkHeader();
   bindSakuTalkHeader();
@@ -179,18 +235,20 @@
 
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded',()=>{
+      installSakuTalkFetchCache();
       ensureCompactTravelStyle();
       ensureSakuTalkHeader();
       ensureTravelInterpreterLaunch();
       brandInterpreterUi();
     },{once:true});
   }else{
+    installSakuTalkFetchCache();
     ensureTravelInterpreterLaunch();
     ensureSakuTalkHeader();
     brandInterpreterUi();
   }
 
-  if(window.SakuraPracticeGridPolish?.version>=6)return;
+  if(window.SakuraPracticeGridPolish?.version>=7)return;
 
   function cleanup(){
     document.getElementById('source-practice-launch')?.remove();
@@ -198,11 +256,12 @@
   }
 
   window.SakuraPracticeGridPolish=Object.freeze({
-    version:6,
+    version:7,
     cleanup,
     ensureTravelInterpreterLaunch,
     ensureSakuTalkHeader,
-    openSakuTalk
+    openSakuTalk,
+    installSakuTalkFetchCache
   });
 
   if(document.body)cleanup();
