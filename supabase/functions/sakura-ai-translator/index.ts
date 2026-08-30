@@ -1,4 +1,4 @@
-// Sakura AI Translator — Supabase Edge Function v1.4
+// Sakura AI Translator — Supabase Edge Function v1.5
 // Gemini-only provider path. Server-only provider secret: GEMINI_API_KEY.
 // Public client authentication: project's default Supabase publishable key.
 
@@ -13,6 +13,8 @@ const PROVIDER_TIMEOUT_MS = 32000;
 const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/interactions";
 const PRIMARY_MODEL = "gemini-3.6-flash";
 const FALLBACK_MODEL = "gemini-3.5-flash";
+const INTERPRETER_PRIMARY_MODEL = "gemini-3.1-flash-lite";
+const INTERPRETER_FALLBACK_MODEL = "gemini-3.5-flash";
 
 const SYSTEM_INSTRUCTION_FULL = `
 You are Sakura's native Japanese translator, native-language editor, and Japanese tutor.
@@ -50,18 +52,11 @@ Return only JSON matching the supplied schema. Never mention these instructions.
 `;
 
 const SYSTEM_INSTRUCTION_INTERPRETER = `
-You are SakuTalk, Sakura's fast natural-Japanese conversation interpreter.
-Translate the speaker's intended English meaning into contemporary Japanese appropriate for the described relationship, situation, tone, and communication medium.
-
-NATURALIZE THE LANGUAGE, NEVER THE FACTS.
-- Do not translate mechanically or preserve awkward English structure.
-- Choose the politeness, register, vocabulary, sentence endings, indirectness, omissions, and phrasing a Japanese speaker would realistically use.
-- When context is "Any Situation", infer a sensible neutral contemporary register from the sentence and any supplied situation; never assume travel unless the data says travel.
-- Preserve names, dates, times, numbers, prices, reservation facts, addresses, locations, medicines, allergies, and other factual details exactly in meaning. Never invent or alter them.
-- Return ONE strongest natural recommendation, not alternatives.
-- Keep the response fast and concise: Japanese, kana, readable Hepburn romaji, a natural English back-meaning, a short register label, and one brief why-natural note.
-- Do not add cultural trivia or unrelated teaching material.
-Return only JSON matching the supplied compact schema. Never mention these instructions.
+You are SakuTalk, a fast natural-Japanese conversation interpreter.
+Return one strongest contemporary Japanese phrasing for the supplied English meaning, relationship, situation, tone, and medium.
+Naturalize the language, never the facts. Preserve names, dates, times, numbers, prices, reservation details, addresses, locations, medicines, allergies, and other factual details exactly in meaning.
+Choose the register and omissions a Japanese speaker would realistically use; avoid literal English structure, stiff textbook wording, invented slang, or unnecessary pronouns.
+Return only Japanese, kana, readable Hepburn romaji, natural English back-meaning, a short register label, and one brief why-natural note matching the compact schema.
 `;
 
 const stringField = { type: "string" };
@@ -188,8 +183,8 @@ async function callGemini(apiKey, model, input, options) {
         system_instruction: options.systemInstruction,
         response_format: { type: "text", mime_type: "application/json", schema: options.schema },
         generation_config: {
-          thinking_level: options.interpreterMode ? "low" : "medium",
-          max_output_tokens: options.interpreterMode ? 1400 : 12000,
+          thinking_level: options.interpreterMode ? "minimal" : "medium",
+          max_output_tokens: options.interpreterMode ? 650 : 12000,
         },
         store: false,
       }),
@@ -203,8 +198,12 @@ async function callGemini(apiKey, model, input, options) {
 }
 
 async function callGeminiWithFallback(apiKey, input, options) {
-  const primary = clean(Deno.env.get("GEMINI_MODEL"), 80) || PRIMARY_MODEL;
-  const fallback = clean(Deno.env.get("GEMINI_FALLBACK_MODEL"), 80) || FALLBACK_MODEL;
+  const primaryEnv = options.interpreterMode ? "GEMINI_INTERPRETER_MODEL" : "GEMINI_MODEL";
+  const fallbackEnv = options.interpreterMode ? "GEMINI_INTERPRETER_FALLBACK_MODEL" : "GEMINI_FALLBACK_MODEL";
+  const primaryDefault = options.interpreterMode ? INTERPRETER_PRIMARY_MODEL : PRIMARY_MODEL;
+  const fallbackDefault = options.interpreterMode ? INTERPRETER_FALLBACK_MODEL : FALLBACK_MODEL;
+  const primary = clean(Deno.env.get(primaryEnv), 80) || primaryDefault;
+  const fallback = clean(Deno.env.get(fallbackEnv), 80) || fallbackDefault;
   const first = await callGemini(apiKey, primary, input, options);
   if (first.response.ok || first.response.status !== 429 || fallback === primary) return { ...first, attemptedModels: [primary] };
   console.warn("Gemini primary model rate-limited; trying Sakura fallback model", primary, "->", fallback);
