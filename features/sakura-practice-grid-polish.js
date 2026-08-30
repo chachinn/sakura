@@ -21,17 +21,28 @@
       ensureTravelInterpreterLaunch();
       return;
     }
+
     const existing=document.querySelector('script[data-sakura-travel-interpreter]');
-    if(existing){
+    if(existing?.dataset.sakuraTravelInterpreterLoading==='1'){
       existing.addEventListener('load',ensureTravelInterpreterLaunch,{once:true});
       return;
     }
+    existing?.remove();
+
     const script=document.createElement('script');
     script.src='./features/sakura-travel-interpreter.js?v=2';
     script.defer=true;
     script.dataset.sakuraTravelInterpreter='1';
-    script.onload=ensureTravelInterpreterLaunch;
-    script.onerror=()=>console.warn('Sakura Travel Interpreter could not load. Existing Travel and Translator tools remain available.');
+    script.dataset.sakuraTravelInterpreterLoading='1';
+    script.onload=()=>{
+      delete script.dataset.sakuraTravelInterpreterLoading;
+      ensureTravelInterpreterLaunch();
+    };
+    script.onerror=()=>{
+      delete script.dataset.sakuraTravelInterpreterLoading;
+      script.remove();
+      console.warn('Sakura Travel Interpreter could not load. Existing Travel and Translator tools remain available.');
+    };
     document.head.appendChild(script);
   }
 
