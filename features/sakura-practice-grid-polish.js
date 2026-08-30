@@ -39,10 +39,7 @@
   // installed PWA session, but that must never suppress the interpreter loader.
   loadTravelInterpreter();
 
-  if(window.SakuraPracticeGridPolish?.version>=3){
-    ensureTravelInterpreterLaunch();
-    return;
-  }
+  if(window.SakuraPracticeGridPolish?.version>=3)return;
 
   function cleanup(){
     document.getElementById('source-practice-launch')?.remove();
@@ -50,12 +47,6 @@
   }
 
   window.SakuraPracticeGridPolish=Object.freeze({version:3,cleanup,ensureTravelInterpreterLaunch});
-  if(document.body){
-    cleanup();
-    ensureTravelInterpreterLaunch();
-  }
-  else document.addEventListener('DOMContentLoaded',()=>{
-    cleanup();
-    ensureTravelInterpreterLaunch();
-  },{once:true});
+  if(document.body)cleanup();
+  else document.addEventListener('DOMContentLoaded',cleanup,{once:true});
 }());
