@@ -97,6 +97,7 @@
       #travel-view .travel-category-card p{padding-right:14px;font-size:11px;line-height:1.28}
       #travel-view .travel-category-card>b{right:11px;bottom:9px;font-size:17px}
       #travel-view .travel-feature-card{min-height:64px;margin-top:8px;padding:10px 12px;gap:10px;border-radius:16px}
+      #travel-view .sakura-travel-interpreter-card{margin-bottom:8px}
       #travel-view .travel-feature-card>span{width:38px;height:38px;border-radius:12px;font-size:20px}
       #travel-view .travel-feature-card h2{margin:0 0 2px;font-size:15px;line-height:1.2}
       #travel-view .travel-feature-card p{font-size:11px;line-height:1.3}
