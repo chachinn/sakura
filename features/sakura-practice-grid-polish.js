@@ -158,6 +158,7 @@
     button.dataset.tiPreset='Travel';
     button.innerHTML='<span aria-hidden="true">💬</span><div><h2>SakuTalk</h2><p>Natural Japanese · Travel preset</p></div><b aria-hidden="true">→</b>';
     brandInterpreterUi();
+    window.SakuraTripCompanion?.ensureLauncher?.();
   }
 
   function afterInterpreterLoad(){
@@ -200,6 +201,23 @@
     document.head.appendChild(script);
   }
 
+  function loadTripCompanion(){
+    if(window.SakuraTripCompanion){
+      window.SakuraTripCompanion.ensureLauncher?.();
+      return;
+    }
+    if(document.querySelector('script[data-sakura-trip-companion]'))return;
+    const script=document.createElement('script');
+    script.src='./features/sakura-trip-companion.js?v=1';
+    script.defer=true;
+    script.dataset.sakuraTripCompanion='1';
+    script.onerror=()=>{
+      script.remove();
+      console.warn('October Trip Companion preview could not load. Normal Travel Mode remains available.');
+    };
+    document.head.appendChild(script);
+  }
+
   function openSakuTalk(){
     if(window.SakuraInterpreter?.open){
       window.SakuraInterpreter.open();
@@ -227,12 +245,13 @@
   }
 
   // Run these before the compatibility version guard. An older installed PWA
-  // shim must not suppress the SakuTalk shortcut, cache, compact Travel CSS, or loader.
+  // shim must not suppress the SakuTalk shortcut, cache, Travel CSS, or trip preview loader.
   installSakuTalkFetchCache();
   ensureCompactTravelStyle();
   ensureSakuTalkHeader();
   bindSakuTalkHeader();
   loadTravelInterpreter();
+  loadTripCompanion();
 
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded',()=>{
@@ -241,12 +260,14 @@
       ensureSakuTalkHeader();
       ensureTravelInterpreterLaunch();
       brandInterpreterUi();
+      loadTripCompanion();
     },{once:true});
   }else{
     installSakuTalkFetchCache();
     ensureTravelInterpreterLaunch();
     ensureSakuTalkHeader();
     brandInterpreterUi();
+    loadTripCompanion();
   }
 
   if(window.SakuraPracticeGridPolish?.version>=7)return;
