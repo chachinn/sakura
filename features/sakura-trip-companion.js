@@ -1,18 +1,17 @@
-/* Sakura Trip Companion loader v2 */
+/* Sakura Trip Companion loader v3 */
 (function loadSakuraTripCompanion(){
   'use strict';
-  if(window.SakuraTripCompanion?.version>=2)return;
-  if(window.__sakuraTripCompanionLoadingV2)return;
-  window.__sakuraTripCompanionLoadingV2=true;
+  if(window.__sakuraTripCompanionLoadingV3)return;
+  window.__sakuraTripCompanionLoadingV3=true;
 
   const assets=[
-    ['./data/trips/japan-october-2026.js?v=1','sakura-trip-seed'],
+    ['./features/sakura-trip-public-default.js?v=1','sakura-trip-public-default'],
     ['./features/sakura-trip-store.js?v=1','sakura-trip-store'],
     ['./features/sakura-trip-companion-ui.js?v=1','sakura-trip-ui']
   ];
 
   const load=(src,key)=>new Promise((resolve,reject)=>{
-    if((key==='sakura-trip-seed'&&window.SAKURA_TRIP_SEED_OCTOBER_2026)||
+    if((key==='sakura-trip-public-default'&&window.SakuraTripPublicDefault)||
        (key==='sakura-trip-store'&&window.SakuraTripStore)||
        (key==='sakura-trip-ui'&&window.SakuraTripCompanion?.version>=2)){resolve();return;}
     const existing=document.querySelector(`script[data-${key}]`);
@@ -32,12 +31,17 @@
 
   (async()=>{
     try{
-      for(const [src,key] of assets)await load(src,key);
+      for(const [src,key] of assets){
+        await load(src,key);
+        if(key==='sakura-trip-store')window.SakuraTripPublicDefault?.patchStore?.();
+        if(key==='sakura-trip-ui')window.SakuraTripPublicDefault?.patchUi?.();
+      }
       window.SakuraTripCompanion?.ensureLauncher?.();
+      window.SakuraTripPublicDefault?.ensureEmptyLauncher?.();
     }catch(error){
       console.warn('Sakura Trip Companion could not load. Normal Travel Mode remains available.',error);
     }finally{
-      window.__sakuraTripCompanionLoadingV2=false;
+      window.__sakuraTripCompanionLoadingV3=false;
     }
   })();
 }());
