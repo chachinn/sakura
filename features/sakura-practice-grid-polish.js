@@ -1,11 +1,19 @@
-/* Sakura Practice Grid Compatibility v4
-   Keeps Practice cleanup lightweight, keeps the interpreter loader resilient,
-   and promotes the general interpreter as SakuTalk without touching core navigation. */
+/* Sakura Practice Grid Compatibility v5
+   Keeps Practice cleanup lightweight, keeps the SakuTalk loader resilient,
+   and promotes SakuTalk without touching core navigation. */
 (function initializeSakuraPracticeGridCompatibility(){
   'use strict';
 
   let pendingSakuTalkOpen=false;
   let sakutalkHeaderBound=false;
+
+  const sakutalkIcon=()=>`
+    <svg viewBox="0 0 28 28" width="27" height="27" aria-hidden="true" focusable="false">
+      <path d="M6.3 5.4h15.4a2.9 2.9 0 0 1 2.9 2.9v8.1a2.9 2.9 0 0 1-2.9 2.9h-7.3l-4.7 3.2v-3.2H6.3a2.9 2.9 0 0 1-2.9-2.9V8.3a2.9 2.9 0 0 1 2.9-2.9Z"
+        fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="15.8" text-anchor="middle" fill="currentColor"
+        font-size="10.5" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif">あ</text>
+    </svg>`;
 
   function brandInterpreterUi(){
     const title=document.querySelector('#sakura-interpreter .sakura-interpreter-title strong');
@@ -25,10 +33,13 @@
     button.dataset.sakutalkHeader='1';
     button.setAttribute('aria-label','Open SakuTalk');
     button.setAttribute('title','SakuTalk');
-    button.textContent='あ↔A';
-    button.style.fontSize='12px';
-    button.style.fontWeight='900';
-    button.style.letterSpacing='-0.08em';
+    button.innerHTML=sakutalkIcon();
+    button.style.fontSize='';
+    button.style.fontWeight='';
+    button.style.letterSpacing='';
+    button.style.display='grid';
+    button.style.placeItems='center';
+    button.style.color='var(--color-text)';
   }
 
   function ensureTravelInterpreterLaunch(){
@@ -44,7 +55,7 @@
     }
     button.dataset.tiOpen='';
     button.dataset.tiPreset='Travel';
-    button.innerHTML='<span aria-hidden="true">🗣️</span><div><h2>SakuTalk</h2><p>Natural Japanese for real conversations. Opens with Travel context from here.</p></div><b aria-hidden="true">→</b>';
+    button.innerHTML='<span aria-hidden="true">💬</span><div><h2>SakuTalk</h2><p>Natural Japanese for real conversations. Opens with Travel context from here.</p></div><b aria-hidden="true">→</b>';
     brandInterpreterUi();
   }
 
@@ -71,7 +82,7 @@
     existing?.remove();
 
     const script=document.createElement('script');
-    script.src='./features/sakura-travel-interpreter.js?v=5';
+    script.src='./features/sakura-travel-interpreter.js?v=6';
     script.defer=true;
     script.dataset.sakuraTravelInterpreter='1';
     script.dataset.sakuraTravelInterpreterLoading='1';
@@ -130,14 +141,21 @@
     brandInterpreterUi();
   }
 
-  if(window.SakuraPracticeGridPolish?.version>=4)return;
+  if(window.SakuraPracticeGridPolish?.version>=5)return;
 
   function cleanup(){
     document.getElementById('source-practice-launch')?.remove();
     document.querySelector('#practice-view .practice-coming-grid')?.classList.remove('practice-grid-balanced');
   }
 
-  window.SakuraPracticeGridPolish=Object.freeze({version:4,cleanup,ensureTravelInterpreterLaunch,ensureSakuTalkHeader,openSakuTalk});
+  window.SakuraPracticeGridPolish=Object.freeze({
+    version:5,
+    cleanup,
+    ensureTravelInterpreterLaunch,
+    ensureSakuTalkHeader,
+    openSakuTalk
+  });
+
   if(document.body)cleanup();
   else document.addEventListener('DOMContentLoaded',cleanup,{once:true});
 }());
