@@ -24,7 +24,6 @@
     }
     const script=document.createElement('script');
     script.src=src;
-    script.dataset[key.replace(/^sakura-/,'sakura')]='1';
     script.setAttribute(`data-${key}`,'1');
     script.onload=()=>{script.dataset.loaded='1';resolve();};
     script.onerror=()=>reject(new Error(`Could not load ${src}`));
