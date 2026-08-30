@@ -71,7 +71,7 @@
     existing?.remove();
 
     const script=document.createElement('script');
-    script.src='./features/sakura-travel-interpreter.js?v=4';
+    script.src='./features/sakura-travel-interpreter.js?v=5';
     script.defer=true;
     script.dataset.sakuraTravelInterpreter='1';
     script.dataset.sakuraTravelInterpreterLoading='1';
