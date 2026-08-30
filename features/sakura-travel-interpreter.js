@@ -1,4 +1,4 @@
-/* Sakura Interpreter v2 — natural Japanese for real conversations in any situation. */
+/* Sakura Interpreter v2.0.1 — natural Japanese for real conversations in any situation. */
 (function(){
 'use strict';
 if(window.SakuraInterpreter||window.SakuraTravelInterpreter)return;
@@ -20,7 +20,10 @@ const st=document.createElement('div');st.id='sakura-ti-staff';st.className='sak
 function launch(){
 let b=document.querySelector('.sakura-interpreter-launch');
 const f=$('translation-form');if(!f)return;
-if(!b){b=document.createElement('button');b.type='button';b.className='sakura-interpreter-launch';b.dataset.tiOpen='';f.parentNode.insertBefore(b,f)}
+if(b?.dataset.sakuraInterpreterUi==='2')return;
+if(!b){b=document.createElement('button');b.type='button';b.className='sakura-interpreter-launch';f.parentNode.insertBefore(b,f)}
+b.dataset.tiOpen='';
+b.dataset.sakuraInterpreterUi='2';
 b.innerHTML='<span>🗣️</span><div><strong>Sakura Interpreter</strong><small>Natural Japanese for any real conversation · voice · meaning check · full-screen display</small></div><b>›</b>';
 }
 
@@ -72,7 +75,7 @@ if(t.closest('[data-ti-again]')){$('sakura-ti-input').value='';$('sakura-ti-resu
 
 function init(){
 style();markup();launch();bind();new MutationObserver(launch).observe(document.body,{childList:true,subtree:true});
-const api=Object.freeze({version:2,open,close});window.SakuraInterpreter=api;window.SakuraTravelInterpreter=api;
+const api=Object.freeze({version:2.01,open,close});window.SakuraInterpreter=api;window.SakuraTravelInterpreter=api;
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 }());
