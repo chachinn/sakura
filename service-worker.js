@@ -1,4 +1,4 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v168";
+const SHELL_CACHE_VERSION = "sakura-shell-v169";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
@@ -93,15 +93,10 @@ self.addEventListener(
                                         cacheName !== READING_CONTENT_CACHE_VERSION &&
                                         cacheName !== QUIZ_CONTENT_CACHE_VERSION
                                 )
-                                .map(
-                                    cacheName =>
-                                        caches.delete(cacheName)
-                                )
+                                .map(cacheName => caches.delete(cacheName))
                         )
                 )
-                .then(
-                    () => self.clients.claim()
-                )
+                .then(() => self.clients.claim())
         );
     }
 );
@@ -110,58 +105,28 @@ self.addEventListener(
     "fetch",
     event => {
         const request = event.request;
-
-        if (request.method !== "GET") {
-            return;
-        }
-
+        if (request.method !== "GET") return;
         const requestUrl = new URL(request.url);
 
         if (request.mode === "navigate") {
             event.respondWith(
                 fetch(request)
-                    .then(
-                        response => {
-                            const responseCopy = response.clone();
-
-                            caches
-                                .open(SHELL_CACHE_VERSION)
-                                .then(
-                                    cache =>
-                                        cache.put(
-                                            "./index.html",
-                                            responseCopy
-                                        )
-                                );
-
-                            return response;
-                        }
-                    )
-                    .catch(
-                        () =>
-                            caches.match("./index.html")
-                    )
+                    .then(response => {
+                        const responseCopy = response.clone();
+                        caches.open(SHELL_CACHE_VERSION).then(cache => cache.put("./index.html", responseCopy));
+                        return response;
+                    })
+                    .catch(() => caches.match("./index.html"))
             );
-
             return;
         }
 
         if (requestUrl.origin === self.location.origin) {
-            const isKanjiContent =
-                requestUrl.pathname.includes("/data/kanji/") &&
-                requestUrl.pathname.endsWith(".json");
-            const isTravelContent =
-                requestUrl.pathname.includes("/data/travel/") &&
-                requestUrl.pathname.endsWith(".json");
-            const isVocabularyContent =
-                requestUrl.pathname.includes("/data/vocabulary/") &&
-                requestUrl.pathname.endsWith(".json");
-            const isReadingContent =
-                requestUrl.pathname.includes("/data/reading/") &&
-                requestUrl.pathname.endsWith(".json");
-            const isQuizContent =
-                requestUrl.pathname.includes("/data/quizzes/") &&
-                requestUrl.pathname.endsWith(".json");
+            const isKanjiContent = requestUrl.pathname.includes("/data/kanji/") && requestUrl.pathname.endsWith(".json");
+            const isTravelContent = requestUrl.pathname.includes("/data/travel/") && requestUrl.pathname.endsWith(".json");
+            const isVocabularyContent = requestUrl.pathname.includes("/data/vocabulary/") && requestUrl.pathname.endsWith(".json");
+            const isReadingContent = requestUrl.pathname.includes("/data/reading/") && requestUrl.pathname.endsWith(".json");
+            const isQuizContent = requestUrl.pathname.includes("/data/quizzes/") && requestUrl.pathname.endsWith(".json");
 
             if (isKanjiContent || isTravelContent || isVocabularyContent || isReadingContent || isQuizContent) {
                 const contentCacheName = isKanjiContent
@@ -177,9 +142,7 @@ self.addEventListener(
                     fetch(request)
                         .then(async response => {
                             const contentCache = await caches.open(contentCacheName);
-                            if (!response.ok) {
-                                return (await contentCache.match(request)) || response;
-                            }
+                            if (!response.ok) return (await contentCache.match(request)) || response;
                             await contentCache.put(request, response.clone());
                             return response;
                         })
@@ -211,27 +174,29 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-source-practice.") ||
                 requestUrl.pathname.includes("/features/sakura-practice-grid-polish.") ||
                 requestUrl.pathname.includes("/features/sakura-travel-interpreter.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-companion.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-public-default.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-store.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-companion-ui.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-management.") ||
+                requestUrl.pathname.includes("/features/sakura-transit-rescue.") ||
+                requestUrl.pathname.includes("/features/sakura-camera-japanese.") ||
                 requestUrl.pathname.includes("/features/sakura-bug-report.") ||
                 requestUrl.pathname.endsWith("/data/practice-source-checked.js") ||
                 requestUrl.pathname.endsWith("/data/ai-config.js");
-            const networkRequest = shouldBypassHttpCache
-                ? new Request(request, { cache:"no-cache" })
-                : request;
+            const networkRequest = shouldBypassHttpCache ? new Request(request, { cache:"no-cache" }) : request;
             event.respondWith(
                 fetch(networkRequest)
-                    .then(
-                        response => {
-                            if (response.ok) {
-                                const responseCopy = response.clone();
-                                caches.open(SHELL_CACHE_VERSION).then(cache => cache.put(request, responseCopy));
-                            }
-                            return response;
+                    .then(response => {
+                        if (response.ok) {
+                            const responseCopy = response.clone();
+                            caches.open(SHELL_CACHE_VERSION).then(cache => cache.put(request, responseCopy));
                         }
-                    )
+                        return response;
+                    })
                     .catch(() => caches.match(request))
             );
             return;
         }
-
     }
 );
