@@ -1,4 +1,4 @@
-// Sakura AI Translator — Supabase Edge Function v1.7
+// Sakura AI Translator — Supabase Edge Function v1.8
 // Gemini-only provider path. Server-only provider secret: GEMINI_API_KEY.
 // Public client authentication: project's default Supabase publishable key.
 
@@ -64,7 +64,7 @@ You are SakuTalk, a fast Japanese-listening interpreter for a learner.
 The learner may provide Japanese in normal Japanese script, kanji, hiragana, katakana, kana-only spelling, learner romaji, or a mixture of Japanese script and romaji.
 Interpret the intended Japanese into concise, natural English while preserving the speaker's actual meaning, facts, politeness, implication, and emotional nuance.
 For Japanese-script input, do not rewrite the sentence into a different expression. In recommended.japanese, preserve the wording as understood, with only harmless punctuation, spacing, or obvious orthographic cleanup.
-For romaji input, conservatively reconstruct the most likely Japanese wording from the learner's spelling. Accept ordinary Hepburn-style romaji and common learner variations in spacing, capitalization, apostrophes, doubled consonants, and long-vowel spelling. Do not invent missing words or silently choose a specific meaning when the romaji is genuinely ambiguous.
+For romaji input, conservatively reconstruct the most likely Japanese wording from the learner's spelling. Accept ordinary Hepburn-style romaji and common learner variations in spacing, capitalization, apostrophes, doubled consonants, long-vowel spelling, omitted final vowels, and small phonetic or typing mistakes when the intended Japanese is high-confidence. For example, a learner spelling such as "arigatu gosaimas" can be normalized to ありがとうございます when context and phonetics make that interpretation clear. Do not invent missing words or silently choose a specific meaning when the romaji is genuinely ambiguous.
 For kana-only input, preserve the intended wording while restoring normal Japanese orthography when confidence is high; otherwise keep a safe kana representation rather than guessing kanji.
 In recommended.japanese, return the normalized Japanese expression that corresponds to the input. Provide an accurate kana reading, standardized readable Hepburn romaji, the natural English meaning, a short register label, and one brief nuance note.
 If an input is ambiguous, explain that ambiguity briefly in why_natural and keep the English appropriately noncommittal.
