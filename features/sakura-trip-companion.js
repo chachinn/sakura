@@ -1,8 +1,8 @@
-/* Sakura Trip Companion loader v8 */
+/* Sakura Trip Companion loader v9 */
 (function loadSakuraTripCompanion(){
   'use strict';
-  if(window.__sakuraTripCompanionLoadingV8)return;
-  window.__sakuraTripCompanionLoadingV8=true;
+  if(window.__sakuraTripCompanionLoadingV9)return;
+  window.__sakuraTripCompanionLoadingV9=true;
 
   const refreshSakuTalkV3=()=>{
     const api=window.SakuraInterpreter;
@@ -24,7 +24,8 @@
     ['./features/sakura-trip-companion-ui.js?v=1','sakura-trip-ui'],
     ['./features/sakura-transit-rescue.js?v=2','sakura-transit-rescue'],
     ['./features/sakura-camera-japanese.js?v=1','sakura-camera-japanese'],
-    ['./features/sakura-trip-management.js?v=1','sakura-trip-management']
+    ['./features/sakura-trip-management.js?v=1','sakura-trip-management'],
+    ['./features/sakura-trip-live-tools.js?v=1','sakura-trip-live-tools']
   ];
 
   const load=(src,key)=>new Promise((resolve,reject)=>{
@@ -34,7 +35,8 @@
        (key==='sakura-trip-ui'&&window.SakuraTripCompanion?.version>=2)||
        (key==='sakura-transit-rescue'&&window.SakuraTransitRescue?.version>=2)||
        (key==='sakura-camera-japanese'&&window.SakuraCameraJapanese?.version>=1)||
-       (key==='sakura-trip-management'&&window.SakuraTripManagement?.version>=1)){resolve();return;}
+       (key==='sakura-trip-management'&&window.SakuraTripManagement?.version>=1)||
+       (key==='sakura-trip-live-tools'&&window.SakuraTripLiveTools?.version>=1)){resolve();return;}
 
     const existing=document.querySelector(`script[data-${key}]`);
     if(existing){
@@ -79,12 +81,13 @@
       }
       window.SakuraTripCompanion?.ensureLauncher?.();
       window.SakuraTripPublicDefault?.ensureEmptyLauncher?.();
+      window.SakuraTripLiveTools?.decorate?.();
       refreshSakuTalkV3();
       if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',refreshSakuTalkV3,{once:true});
     }catch(error){
       console.warn('Sakura Trip Companion could not fully load. Normal Travel Mode remains available.',error);
     }finally{
-      window.__sakuraTripCompanionLoadingV8=false;
+      window.__sakuraTripCompanionLoadingV9=false;
     }
   })();
 }());
