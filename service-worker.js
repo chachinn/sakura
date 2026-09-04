@@ -1,4 +1,4 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v172";
+const SHELL_CACHE_VERSION = "sakura-shell-v173";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
@@ -184,6 +184,7 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-trip-management.") ||
                 requestUrl.pathname.includes("/features/sakura-transit-rescue.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-transit-bridge.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-companion-polish.") ||
                 requestUrl.pathname.includes("/features/sakura-camera-japanese.") ||
                 requestUrl.pathname.includes("/features/sakura-bug-report.") ||
                 requestUrl.pathname.endsWith("/data/practice-source-checked.js") ||
