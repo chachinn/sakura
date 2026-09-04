@@ -7,6 +7,7 @@
 
     const categories = Object.freeze({
         trains: { title: "Trains & Stations", icon: "電", description: "Useful Japanese for tickets, platforms, transfers, and railway problems.", filters: ["All", "Essential", "Tickets", "Platforms", "Transfers", "Directions", "Problems"] },
+        airports: { title: "Airports & Immigration", icon: "空", description: "Airport, check-in, immigration, baggage, security, boarding, and airport-rail help.", filters: ["All", "Essential", "Check-in", "Security", "Immigration", "Baggage", "Connections", "Departure", "Help"] },
         restaurants: { title: "Restaurants & Food", icon: "食", description: "Natural phrases for ordering, requests, reservations, and payment.", filters: ["All", "Essential", "Ordering", "Reservations", "Menu", "Requests", "Payment"] },
         shopping: { title: "Shopping", icon: "買", description: "Practical help with prices, sizes, stock, fitting, tax-free shopping, and payment.", filters: ["All", "Essential", "Sizes", "Stock", "Fitting", "Tax-Free", "Payment"] },
         hotels: { title: "Hotels", icon: "宿", description: "Check-in, luggage, room requests, check-out, and accommodation problems.", filters: ["All", "Essential", "Check-in", "Check-out", "Luggage", "Room Requests", "Problems"] },
