@@ -45,9 +45,11 @@
       #travel-rail-view.stpr-trip-mode>#rail-line-list,
       #travel-rail-view.stpr-trip-mode>.rail-line-panel,
       #travel-rail-view.stpr-trip-mode>#rail-city-note{display:none!important}
+      #travel-rail-view.stpr-trip-mode .rail-network-planner-heading,
       #travel-rail-view.stpr-trip-mode .rail-network-planner-copy,
       #travel-rail-view.stpr-trip-mode .rail-network-fields,
       #travel-rail-view.stpr-trip-mode .rail-network-actions{display:none!important}
+      #travel-rail-view.stpr-trip-mode.stpr-checking .rail-network-planner-heading{display:flex!important}
       #travel-rail-view.stpr-trip-mode.stpr-checking .rail-network-planner-copy{display:block!important}
       #travel-rail-view.stpr-trip-mode.stpr-checking .rail-network-fields{display:grid!important}
       #travel-rail-view.stpr-trip-mode.stpr-checking .rail-network-actions{display:flex!important}
@@ -177,7 +179,7 @@
     }catch(error){console.warn('Pinned itinerary route could not be rendered in Railway System.',error);return false}
   }
   function planner(){return document.querySelector('#travel-rail-view .rail-network-planner')}
-  function configurePlannerVisibility(checking=false){const view=document.getElementById('travel-rail-view');if(!view)return;ctx.checking=!!checking;view.classList.toggle('stpr-checking',ctx.checking)}
+  function configurePlannerVisibility(checking=false){const view=document.getElementById('travel-rail-view');if(!view)return;ctx.checking=!!checking;view.classList.toggle('stpr-checking',ctx.checking);if(ctx.checking){const plan=planner();if(plan)plan.hidden=false}}
   function clearPlannerForCheck(){
     try{railNetworkPlannerState={city:railGuideCityData?.city||ctx.city,from:'',to:''};railNetworkRouteOptions=[];railNetworkSelectedRouteIndex=0;renderRailNetworkPlanner()}catch{}
     const from=document.getElementById('rail-network-from-input'),to=document.getElementById('rail-network-to-input');if(from)from.value='';if(to)to.value='';from?.focus();
@@ -186,7 +188,9 @@
   function usePinned(){
     configurePlannerVisibility(false);
     const pair=currentRawPair(),resolved=resolvedPair(pair)||bestResolvablePair(ctx.day,ctx.pairs);
-    if(resolved)setPlannerRoute(resolved);else{
+    const plan=planner();
+    if(resolved){if(plan)plan.hidden=false;setPlannerRoute(resolved)}else{
+      if(plan)plan.hidden=true;
       try{railNetworkPlannerState={city:railGuideCityData?.city||ctx.city,from:'',to:''};railNetworkRouteOptions=[];railNetworkSelectedRouteIndex=0;renderRailNetworkPlanner()}catch{}
     }
     renderContext();
@@ -209,7 +213,7 @@
     const plan=planner();if(plan&&card.nextElementSibling!==plan)card.insertAdjacentElement('afterend',plan);
   }
   function cleanupRailMode(){
-    const view=document.getElementById('travel-rail-view');if(!view)return;view.classList.remove('stpr-trip-mode','stpr-checking');view.querySelector('.stpr-card')?.remove();view.querySelector('.stlv-rail-context')?.remove();const back=view.querySelector('.back-button');if(back){delete back.dataset.stprReturn;back.setAttribute('aria-label','Back to Trains & Stations')}
+    const view=document.getElementById('travel-rail-view');if(!view)return;view.classList.remove('stpr-trip-mode','stpr-checking');view.querySelector('.stpr-card')?.remove();view.querySelector('.stlv-rail-context')?.remove();const plan=planner(),railHeading=view.querySelector('.rail-section-heading');if(plan){plan.hidden=false;if(railHeading)railHeading.insertAdjacentElement('beforebegin',plan)}const back=view.querySelector('.back-button');if(back){delete back.dataset.stprReturn;back.setAttribute('aria-label','Back to Trains & Stations')}
   }
   function returnToTrip(){
     const trip=ctx.trip,index=ctx.dayIndex;cleanupRailMode();
