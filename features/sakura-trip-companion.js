@@ -1,8 +1,8 @@
-/* Sakura Trip Companion loader v11 */
+/* Sakura Trip Companion loader v12 */
 (function loadSakuraTripCompanion(){
   'use strict';
-  if(window.__sakuraTripCompanionLoadingV11)return;
-  window.__sakuraTripCompanionLoadingV11=true;
+  if(window.__sakuraTripCompanionLoadingV12)return;
+  window.__sakuraTripCompanionLoadingV12=true;
 
   const refreshSakuTalkV3=()=>{
     const api=window.SakuraInterpreter;
@@ -22,8 +22,9 @@
     ['./features/sakura-trip-public-default.js?v=1','sakura-trip-public-default'],
     ['./features/sakura-trip-store.js?v=1','sakura-trip-store'],
     ['./features/sakura-trip-companion-ui.js?v=1','sakura-trip-ui'],
+    ['./features/sakura-trip-import-hotfix.js?v=1','sakura-trip-import-hotfix'],
     ['./features/sakura-trip-file-import.js?v=1','sakura-trip-file-import'],
-    ['./features/sakura-trip-file-sync.js?v=1','sakura-trip-file-sync'],
+    ['./features/sakura-trip-file-sync.js?v=2','sakura-trip-file-sync'],
     ['./features/sakura-transit-rescue.js?v=2','sakura-transit-rescue'],
     ['./features/sakura-camera-japanese.js?v=1','sakura-camera-japanese'],
     ['./features/sakura-trip-management.js?v=1','sakura-trip-management'],
@@ -35,6 +36,7 @@
        (key==='sakura-trip-public-default'&&window.SakuraTripPublicDefault)||
        (key==='sakura-trip-store'&&window.SakuraTripStore)||
        (key==='sakura-trip-ui'&&window.SakuraTripCompanion?.version>=2)||
+       (key==='sakura-trip-import-hotfix'&&window.SakuraTripImportRuntimeHotfix?.version>=1)||
        (key==='sakura-trip-file-import'&&window.SakuraTripFileImport?.version>=1)||
        (key==='sakura-trip-file-sync'&&window.SakuraTripFileSync?.version>=1)||
        (key==='sakura-transit-rescue'&&window.SakuraTransitRescue?.version>=2)||
@@ -91,7 +93,7 @@
     }catch(error){
       console.warn('Sakura Trip Companion could not fully load. Normal Travel Mode remains available.',error);
     }finally{
-      window.__sakuraTripCompanionLoadingV11=false;
+      window.__sakuraTripCompanionLoadingV12=false;
     }
   })();
 }());
