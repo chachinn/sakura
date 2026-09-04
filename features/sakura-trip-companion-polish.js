@@ -77,9 +77,9 @@
     const card=[...r.querySelectorAll('.stlv-card')].find(c=>/Carry\s*\/\s*buy\s*\/\s*don[’']?t-forget checklist/i.test(c.textContent||''));
     const list=card?.querySelector('.stlv-list');if(!card||!list)return;
     const entries=checklistEntries(d),state=runtimeState(t,d),checks=state.checklist||{};
+    const signature=JSON.stringify([entries,checks]);if(list.dataset.stcpSignature===signature)return;list.dataset.stcpSignature=signature;
     if(!entries.length){list.innerHTML='<div class="stcp-empty">No carry / buy reminders for this day.</div>';return}
-    const html=entries.map((text,n)=>`<label class="stlv-check ${checks['c'+n]?'done':''}"><input type="checkbox" data-stlv-check="c${n}" ${checks['c'+n]?'checked':''}><span>${esc(text)}</span></label>`).join('');
-    if(list.innerHTML!==html)list.innerHTML=html;
+    list.innerHTML=entries.map((text,n)=>`<label class="stlv-check ${checks['c'+n]?'done':''}"><input type="checkbox" data-stlv-check="c${n}" ${checks['c'+n]?'checked':''}><span>${esc(text)}</span></label>`).join('');
   }
 
   function addSyncButton(){
