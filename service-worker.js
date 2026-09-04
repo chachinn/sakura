@@ -1,4 +1,4 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v176";
+const SHELL_CACHE_VERSION = "sakura-shell-v177";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v2";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
@@ -18,6 +18,7 @@ const APP_SHELL = [
     "./features/sakura-source-practice.js?v=1",
     "./features/sakura-practice-grid-polish.js?v=1",
     "./features/sakura-travel-interpreter.js?v=3",
+    "./features/sakura-travel-airports.js?v=1",
     "./features/sakura-trip-companion.js?v=18",
     "./features/sakura-trip-experience.js?v=1",
     "./features/sakura-trip-camera-nav.js?v=1",
@@ -167,6 +168,7 @@ self.addEventListener(
                 requestUrl.pathname.endsWith("/app.js") ||
                 requestUrl.pathname.endsWith("/data/kanji.js") ||
                 requestUrl.pathname.endsWith("/data/vocabulary.js") ||
+                requestUrl.pathname.endsWith("/data/travel.js") ||
                 requestUrl.pathname.includes("/features/sakura-experience.") ||
                 requestUrl.pathname.includes("/features/sakura-ai-translator.") ||
                 requestUrl.pathname.includes("/features/sakura-auth.") ||
@@ -181,6 +183,7 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-source-practice.") ||
                 requestUrl.pathname.includes("/features/sakura-practice-grid-polish.") ||
                 requestUrl.pathname.includes("/features/sakura-travel-interpreter.") ||
+                requestUrl.pathname.includes("/features/sakura-travel-airports.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-companion.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-public-default.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-store.") ||
