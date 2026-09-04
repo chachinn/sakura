@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "city": "tokyo",
+  "verifiedOn": "2026-09-04",
+  "notice": "Trip Companion offline orientation supplement. It is not live timetable data. Confirm the exact train, destination, platform, stopping pattern and service notices at the station.",
+  "lines": [
+    {
+      "id": "narita-express-trip",
+      "name": "Narita Express · Airport–Shinjuku Corridor",
+      "jp": "成田エクスプレス",
+      "code": "N'EX",
+      "loop": false,
+      "operator": "JR East",
+      "directionForward": "toward Shibuya / Shinjuku",
+      "directionReverse": "toward Narita Airport",
+      "summary": "Airport orientation corridor used by the saved October itinerary between Narita Airport and Shinjuku.",
+      "serviceNote": "N'EX stopping patterns vary by train. A station appearing in this offline corridor does not mean every N'EX service stops there. Use the reserved train number and current departure board.",
+      "stations": [
+        {"code":"NEX-T1","name":"Narita Airport Terminal 1","jp":"成田空港","connections":["JR Narita Line","Keisei"]},
+        {"code":"NEX-T23","name":"Narita Airport Terminal 2・3","jp":"空港第2ビル","connections":["JR Narita Line","Keisei"]},
+        {"code":"NEX-TYO","name":"Tokyo","jp":"東京","connections":["JR lines","Tokyo Metro","Shinkansen"]},
+        {"code":"NEX-SBY","name":"Shibuya","jp":"渋谷","connections":["JR Yamanote","JR Saikyo/Shonan-Shinjuku","Tokyo Metro","Tokyu","Keio Inokashira"]},
+        {"code":"NEX-SJK","name":"Shinjuku","jp":"新宿","connections":["JR Yamanote","JR Chuo","JR Saikyo/Shonan-Shinjuku","Tokyo Metro","Toei","Odakyu","Keio"]}
+      ]
+    },
+    {
+      "id": "seibu-shinjuku-trip",
+      "name": "Seibu Shinjuku Line · Tokyo–Sayama Core",
+      "jp": "西武新宿線",
+      "code": "SS",
+      "loop": false,
+      "operator": "Seibu Railway",
+      "directionForward": "toward Tokorozawa / Sayamashi / Hon-Kawagoe",
+      "directionReverse": "toward Takadanobaba / Seibu-Shinjuku",
+      "summary": "Offline corridor for the October Sayama day, including Takadanobaba, Tokorozawa and Sayamashi.",
+      "serviceNote": "Local, express and other service patterns differ. Confirm that the train stops at your intended station and follow the itinerary's saved bus/exit instructions after Sayamashi.",
+      "stations": [
+        {"code":"SS01","name":"Seibu-Shinjuku","jp":"西武新宿","connections":["Shinjuku area rail connections"]},
+        {"code":"SS02","name":"Takadanobaba","jp":"高田馬場","connections":["JR Yamanote","Tokyo Metro Tozai"]},
+        {"code":"SS09","name":"Saginomiya","jp":"鷺ノ宮"},
+        {"code":"SS13","name":"Kami-Shakujii","jp":"上石神井"},
+        {"code":"SS17","name":"Tanashi","jp":"田無"},
+        {"code":"SS19","name":"Kodaira","jp":"小平"},
+        {"code":"SS21","name":"Higashi-Murayama","jp":"東村山"},
+        {"code":"SS22","name":"Tokorozawa","jp":"所沢","connections":["Seibu Ikebukuro Line"]},
+        {"code":"SS24","name":"Shin-Tokorozawa","jp":"新所沢"},
+        {"code":"SS26","name":"Sayamashi","jp":"狭山市","nearby":"Sayama tea / local bus access"},
+        {"code":"SS29","name":"Hon-Kawagoe","jp":"本川越","nearby":"Central Kawagoe access"}
+      ]
+    }
+  ]
+}
