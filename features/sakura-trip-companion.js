@@ -13,6 +13,7 @@
 
   const assets=[
     ['./features/sakura-travel-interpreter.js?v=10','sakura-sakutalk-v3'],
+    ['./features/sakura-travel-airports.js?v=1','sakura-travel-airports'],
     ['./features/sakura-trip-public-default.js?v=1','sakura-trip-public-default'],
     ['./features/sakura-trip-store.js?v=2','sakura-trip-store'],
     ['./features/sakura-trip-companion-ui.js?v=1','sakura-trip-ui'],
@@ -32,6 +33,7 @@
 
   const load=(src,key)=>new Promise((resolve,reject)=>{
     if((key==='sakura-sakutalk-v3'&&window.SakuraInterpreter?.version>=3)||
+       (key==='sakura-travel-airports'&&window.SakuraTravelAirports?.version>=1)||
        (key==='sakura-trip-public-default'&&window.SakuraTripPublicDefault)||
        (key==='sakura-trip-store'&&window.SakuraTripStore?.version>=2)||
        (key==='sakura-trip-ui'&&window.SakuraTripCompanion?.version>=2)||
@@ -64,7 +66,7 @@
   (async()=>{
     try{
       for(const [src,key] of assets){await load(src,key);if(key==='sakura-trip-store')window.SakuraTripPublicDefault?.patchStore?.();if(key==='sakura-trip-ui')window.SakuraTripPublicDefault?.patchUi?.()}
-      window.SakuraTripCompanion?.ensureLauncher?.();window.SakuraTripPublicDefault?.ensureEmptyLauncher?.();window.SakuraTripLiveTools?.decorate?.();window.SakuraTripExperience?.decorate?.();refreshSakuTalkV3();
+      window.SakuraTravelAirports?.ensure?.();window.SakuraTripCompanion?.ensureLauncher?.();window.SakuraTripPublicDefault?.ensureEmptyLauncher?.();window.SakuraTripLiveTools?.decorate?.();window.SakuraTripExperience?.decorate?.();refreshSakuTalkV3();
       if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',refreshSakuTalkV3,{once:true});
     }catch(error){console.warn('Sakura Trip Companion could not fully load. Normal Travel Mode remains available.',error)}finally{window.__sakuraTripCompanionLoadingV18=false}
   })();
