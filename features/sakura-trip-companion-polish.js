@@ -1,7 +1,7 @@
-/* Sakura Trip Companion polish v1 — concise checklists + visible Google Sheet sync state. */
+/* Sakura Trip Companion polish v2 — concise checklists + reliable Google Sheet sync state. */
 (function initializeSakuraTripCompanionPolish(){
   'use strict';
-  if(window.SakuraTripCompanionPolish?.version>=1)return;
+  if(window.SakuraTripCompanionPolish?.version>=2)return;
 
   const S=()=>window.SakuraTripStore;
   const root=()=>document.getElementById('sakura-trip-companion');
@@ -32,6 +32,10 @@
   }
   function sourceFor(t){
     if(!t?.id)return null;
+    const persisted=window.SakuraTripSourcePersistence?.sourceFor?.(t.id);
+    if(persisted)return persisted;
+    const synced=window.SakuraTripFileSync?.getSource?.(t.id);
+    if(synced)return synced;
     try{const map=JSON.parse(localStorage.getItem(META_KEY)||'{}');return map?.[t.id]||null}catch{return null}
   }
   function runtimeState(t,d){
@@ -82,22 +86,37 @@
     list.innerHTML=entries.map((text,n)=>`<label class="stlv-check ${checks['c'+n]?'done':''}"><input type="checkbox" data-stlv-check="c${n}" ${checks['c'+n]?'checked':''}><span>${esc(text)}</span></label>`).join('');
   }
 
+  function syncMarkup(connected,compact=false){
+    if(compact)return connected?'↻ Resync Google Sheet':'🔗 Connect Google Sheet';
+    return connected
+      ?'↻ Resync Google Sheet<small>Pull the latest itinerary from your connected Sheet, then review before merging.</small>'
+      :'🔗 Connect Google Sheet<small>Your current trip came from a file. Connect the Sheet once to enable one-tap resync.</small>';
+  }
+  function renderSyncButton(button,connected){
+    if(!button)return;
+    const compact=!!button.closest('.stc-actions');
+    const mode=connected?'resync':'connect';
+    const signature=`${mode}:${compact?'compact':'full'}`;
+    button.dataset.stcpMode=mode;
+    button.setAttribute('aria-label',connected?'Resync Google Sheet':'Connect Google Sheet');
+    if(button.dataset.stcpPresentation!==signature){
+      button.dataset.stcpPresentation=signature;
+      button.innerHTML=syncMarkup(connected,compact);
+    }
+  }
+
   function addSyncButton(){
     const r=root(),t=currentTrip();if(!r||!t)return;
-    const src=sourceFor(t),connected=src?.type==='google-sheet'&&src?.url;
+    const src=sourceFor(t),connected=src?.type==='google-sheet'&&!!src?.url;
     const allActions=[...r.querySelectorAll('.stc-actions')].find(x=>x.querySelector('[data-import]'));
     if(allActions&&!allActions.querySelector('[data-stcp-sync]')&&!allActions.querySelector('[data-stfs-resync]')){
-      const b=document.createElement('button');b.type='button';b.dataset.stcpSync='1';b.className='stcp-sync';b.innerHTML=connected?'↻ Resync Google Sheet':'🔗 Connect Google Sheet';allActions.insertBefore(b,allActions.firstChild);
+      const b=document.createElement('button');b.type='button';b.dataset.stcpSync='1';b.className='stcp-sync';allActions.insertBefore(b,allActions.firstChild);
     }
     const tripRow=r.querySelector('[data-all]');
     if(tripRow&&!tripRow.parentElement?.querySelector('[data-stcp-sync]')){
-      const b=document.createElement('button');b.type='button';b.dataset.stcpSync='1';b.className='stcp-sync';
-      b.innerHTML=connected?'↻ Resync Google Sheet<small>Pull the latest itinerary from your connected Sheet, then review before merging.</small>':'🔗 Connect Google Sheet<small>Your current trip came from a file. Connect the Sheet once to enable one-tap resync.</small>';
-      tripRow.insertAdjacentElement('afterend',b);
+      const b=document.createElement('button');b.type='button';b.dataset.stcpSync='1';b.className='stcp-sync';tripRow.insertAdjacentElement('afterend',b);
     }
-    r.querySelectorAll('[data-stcp-sync]').forEach(b=>{
-      const should=connected?'resync':'connect';if(b.dataset.stcpMode!==should){b.dataset.stcpMode=should;if(b.closest('.stc-actions'))b.textContent=connected?'↻ Resync Google Sheet':'🔗 Connect Google Sheet'}
-    });
+    r.querySelectorAll('[data-stcp-sync]').forEach(b=>renderSyncButton(b,connected));
   }
 
   function decorate(){queued=false;css();polishChecklist();addSyncButton()}
@@ -115,9 +134,10 @@
   },true);
 
   document.addEventListener('sakura:trips-changed',queue);
+  document.addEventListener('sakura:trip-source-changed',queue);
   const observer=new MutationObserver(queue);
   function init(){css();const r=root();if(r)observer.observe(r,{childList:true,subtree:true});queue()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 
-  window.SakuraTripCompanionPolish=Object.freeze({version:1,decorate,checklistEntries});
+  window.SakuraTripCompanionPolish=Object.freeze({version:2,decorate,checklistEntries,syncMarkup});
 }());
