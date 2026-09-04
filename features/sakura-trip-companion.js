@@ -1,8 +1,8 @@
-/* Sakura Trip Companion loader v14 */
+/* Sakura Trip Companion loader v15 */
 (function loadSakuraTripCompanion(){
   'use strict';
-  if(window.__sakuraTripCompanionLoadingV14)return;
-  window.__sakuraTripCompanionLoadingV14=true;
+  if(window.__sakuraTripCompanionLoadingV15)return;
+  window.__sakuraTripCompanionLoadingV15=true;
 
   const refreshSakuTalkV3=()=>{
     const api=window.SakuraInterpreter;
@@ -24,6 +24,7 @@
     ['./features/sakura-trip-companion-ui.js?v=1','sakura-trip-ui'],
     ['./features/sakura-trip-import-hotfix.js?v=1','sakura-trip-import-hotfix'],
     ['./features/sakura-trip-file-import.js?v=1','sakura-trip-file-import'],
+    ['./features/sakura-trip-source-persistence.js?v=1','sakura-trip-source-persistence'],
     ['./features/sakura-trip-file-sync.js?v=2','sakura-trip-file-sync'],
     ['./features/sakura-transit-rescue.js?v=2','sakura-transit-rescue'],
     ['./features/sakura-camera-japanese.js?v=1','sakura-camera-japanese'],
@@ -40,6 +41,7 @@
        (key==='sakura-trip-ui'&&window.SakuraTripCompanion?.version>=2)||
        (key==='sakura-trip-import-hotfix'&&window.SakuraTripImportRuntimeHotfix?.version>=1)||
        (key==='sakura-trip-file-import'&&window.SakuraTripFileImport?.version>=1)||
+       (key==='sakura-trip-source-persistence'&&window.SakuraTripSourcePersistence?.version>=1)||
        (key==='sakura-trip-file-sync'&&window.SakuraTripFileSync?.version>=1)||
        (key==='sakura-transit-rescue'&&window.SakuraTransitRescue?.version>=2)||
        (key==='sakura-camera-japanese'&&window.SakuraCameraJapanese?.version>=1)||
@@ -98,7 +100,7 @@
     }catch(error){
       console.warn('Sakura Trip Companion could not fully load. Normal Travel Mode remains available.',error);
     }finally{
-      window.__sakuraTripCompanionLoadingV14=false;
+      window.__sakuraTripCompanionLoadingV15=false;
     }
   })();
 }());
