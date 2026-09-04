@@ -1,6 +1,6 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v175";
+const SHELL_CACHE_VERSION = "sakura-shell-v176";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
-const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
+const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v2";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
 const READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v10";
 const QUIZ_CONTENT_CACHE_VERSION = "sakura-quiz-content-v4";
@@ -18,6 +18,9 @@ const APP_SHELL = [
     "./features/sakura-source-practice.js?v=1",
     "./features/sakura-practice-grid-polish.js?v=1",
     "./features/sakura-travel-interpreter.js?v=3",
+    "./features/sakura-trip-companion.js?v=18",
+    "./features/sakura-trip-experience.js?v=1",
+    "./features/sakura-trip-camera-nav.js?v=1",
     "./features/sakura-bug-report.js?v=1",
     "./features/sakura-experience.js?v=3",
     "./features/sakura-ai-translator.js?v=2",
@@ -32,6 +35,7 @@ const APP_SHELL = [
     "./data/native-japanese.js?v=2",
     "./data/slang.js?v=2",
     "./data/travel.js?v=4",
+    "./data/rail/tokyo-trip-supplement.json?v=1",
     "./data/kanji.js?v=24",
     "./data/kanji/n5.json",
     "./data/vocabulary/n5.json?v=2",
@@ -91,7 +95,8 @@ self.addEventListener(
                                         cacheName !== TRAVEL_CONTENT_CACHE_VERSION &&
                                         cacheName !== VOCABULARY_CONTENT_CACHE_VERSION &&
                                         cacheName !== READING_CONTENT_CACHE_VERSION &&
-                                        cacheName !== QUIZ_CONTENT_CACHE_VERSION
+                                        cacheName !== QUIZ_CONTENT_CACHE_VERSION &&
+                                        cacheName !== "sakura-trip-offline-v1"
                                 )
                                 .map(cacheName => caches.delete(cacheName))
                         )
@@ -123,7 +128,9 @@ self.addEventListener(
 
         if (requestUrl.origin === self.location.origin) {
             const isKanjiContent = requestUrl.pathname.includes("/data/kanji/") && requestUrl.pathname.endsWith(".json");
-            const isTravelContent = requestUrl.pathname.includes("/data/travel/") && requestUrl.pathname.endsWith(".json");
+            const isTravelPhraseContent = requestUrl.pathname.includes("/data/travel/") && requestUrl.pathname.endsWith(".json");
+            const isRailContent = requestUrl.pathname.includes("/data/rail/") && requestUrl.pathname.endsWith(".json");
+            const isTravelContent = isTravelPhraseContent || isRailContent;
             const isVocabularyContent = requestUrl.pathname.includes("/data/vocabulary/") && requestUrl.pathname.endsWith(".json");
             const isReadingContent = requestUrl.pathname.includes("/data/reading/") && requestUrl.pathname.endsWith(".json");
             const isQuizContent = requestUrl.pathname.includes("/data/quizzes/") && requestUrl.pathname.endsWith(".json");
@@ -187,7 +194,8 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-trip-pinned-rail.") ||
                 requestUrl.pathname.includes("/features/sakura-transit-rescue.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-transit-bridge.") ||
-                requestUrl.pathname.includes("/features/sakura-trip-companion-polish.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-experience.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-camera-nav.") ||
                 requestUrl.pathname.includes("/features/sakura-camera-japanese.") ||
                 requestUrl.pathname.includes("/features/sakura-bug-report.") ||
                 requestUrl.pathname.endsWith("/data/practice-source-checked.js") ||
