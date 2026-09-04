@@ -91,6 +91,7 @@
       const from=parts[i],to=parts[i+1];
       const service=x=>/\b(?:JR\s+)?[A-Za-z0-9'’.-]+(?:\s+[A-Za-z0-9'’.-]+){0,3}\s+Line\b|\bNarita Express\b|\bN['’]?EX\b/i.test(x);
       if(!from||!to||(service(from)&&service(to))||/\bLine\b/i.test(from)&&!/\bStation\b|Airport/i.test(from))continue;
+      if(/(?:^|\s)~?\d{1,2}:\d{2}\b/.test(from)||/(?:^|\s)~?\d{1,2}:\d{2}\b/.test(to))continue;
       if(/^walk\s+to\b/i.test(to))continue;
       out.push({from,to,itemIndex,time,source:'arrow'});
     }
@@ -204,7 +205,7 @@
       <h2>${ESC(ctx.day.title||'Itinerary rail route')}</h2>
       ${pair?`<div class="stpr-route"><small>YOUR SAVED ROUTE</small><strong>${ESC(pair.from)} → ${ESC(pair.to)}</strong>${pair.time?`<span>${ESC(pair.time)}</span>`:''}${hint?`<span>${ESC(hint)}</span>`:''}</div>`:`<div class="stpr-route"><small>YOUR SAVED ROUTE</small><strong>Itinerary route</strong><span>Sakura could not isolate a station pair, so your day instructions remain pinned here.</span></div>`}
       ${ctx.pairs.length>1?`<div class="stpr-legs">${ctx.pairs.map((p,index)=>`<button type="button" class="${index===ctx.selected?'on':''}" data-stpr-leg="${index}"><small>ITINERARY LEG ${index+1}</small><strong>${ESC(p.from)} → ${ESC(p.to)}</strong></button>`).join('')}</div>`:''}
-      <div class="stpr-actions"><button type="button" class="primary" data-stpr-use>📌 Use pinned route</button><button type="button" data-stpr-check>↪ Check another route</button>${ctx.trip.hotel?'<button type="button" data-stpr-home>🏠 Get me home</button>':''}</div>
+      <div class="stpr-actions">${ctx.checking?'<button type="button" class="primary" data-stpr-use>📌 Back to itinerary route</button>':''}<button type="button" data-stpr-check>↪ Check another route</button>${ctx.trip.hotel?'<button type="button" data-stpr-home>🏠 Get me home</button>':''}</div>
       ${ctx.checking?'<div class="stpr-manual-note">You’re checking a different route below. Your itinerary route above stays pinned and is not replaced.</div>':''}
       ${offlineNote?`<div class="stpr-note">${ESC(offlineNote)}</div>`:''}
       ${warnings.length?`<div class="stpr-note">${warnings.map(ESC).join('<br>')}</div>`:''}`;
