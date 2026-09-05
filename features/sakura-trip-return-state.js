@@ -26,11 +26,12 @@ function currentContext(){
   if(!isDayView())return null;
   const t=S()?.currentTrip?.(),r=R(),scroller=r?.querySelector('.stc-scroll'),days=r?.querySelector('[data-days]');
   if(!t||!scroller)return null;
-  return {tripId:t.id,dayIndex:activeDayIndex(t),scrollTop:scroller.scrollTop||0,daysScrollLeft:days?.scrollLeft||0};
+  return {tripId:t.id,dayIndex:activeDayIndex(t),scrollTop:scroller.scrollTop||0,daysScrollLeft:days?.scrollLeft||0,hadTimeline:!!r.querySelector('.stz2-timeline')};
 }
 function capture(reason='tool'){
   const ctx=currentContext();if(!ctx)return null;
   pending={...ctx,reason,capturedAt:Date.now(),returnRequested:false};
+  setTimeout(()=>{if(pending&&!pending.returnRequested&&sameContext()&&!blockingToolOpen())clear()},450);
   return {...pending};
 }
 function clear(){pending=null;clearTimeout(restoreTimer);restoreTimer=0}
@@ -57,7 +58,8 @@ function applyPosition(){
 }
 function restoreWhenReady(attempt=0){
   if(!pending||!pending.returnRequested)return;
-  if(blockingToolOpen()||!sameContext()){
+  const waitingForTimeline=!!(pending.hadTimeline&&!R()?.querySelector('.stz2-timeline'));
+  if(blockingToolOpen()||!sameContext()||waitingForTimeline){
     if(attempt<18){restoreTimer=setTimeout(()=>restoreWhenReady(attempt+1),35);return}
     return;
   }
