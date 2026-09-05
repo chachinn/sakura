@@ -86,10 +86,10 @@ assert.ok(loader.includes('SakuraTripRailRuntimeGuard?.version>=2'),'loader must
 assert.ok(loader.includes('existing.remove()'),'loader must replace already-loaded stale versioned assets');
 assert.ok(loader.indexOf('sakura-trip-store-upgrade.js')<loader.indexOf('sakura-trip-companion-ui.js'),'stable store upgrade must load before Trip UI captures the store');
 assert.ok(loader.indexOf('sakura-trip-workbook-extras.js')<loader.indexOf('sakura-trip-file-sync.js'),'workbook extras must register before file-sync clears the file input');
-assert.ok(loader.indexOf('sakura-trip-live-tools.js')<loader.indexOf('sakura-trip-return-state.js'),'live tools initialize before the return/bridge hardening layer');
-assert.ok(loader.indexOf('sakura-trip-return-state.js')<loader.indexOf('sakura-trip-transit-bridge.js'),'return-state must load before the Transit bridge captures Trip Companion rail context');
+assert.ok(loader.indexOf('sakura-trip-live-tools.js')<loader.indexOf('sakura-trip-transit-bridge.js'),'live tools may initialize first, but the rail-entry bridge must immediately supersede their Trip Companion entry paths');
 assert.ok(loader.indexOf('sakura-trip-transit-bridge.js')<loader.indexOf('sakura-trip-pinned-rail.js'),'Transit bridge must load before pinned rail so it survives a later Railway-layer load failure');
 assert.ok(loader.indexOf('sakura-trip-transit-bridge.js')<loader.indexOf('sakura-trip-companion-stabilize-v2.js'),'Transit bridge must own clicks before the timeline Railway handler is installed');
+assert.ok(loader.indexOf('sakura-trip-companion-stabilize-v2.js')<loader.indexOf('sakura-trip-return-state.js'),'return-state must remain after the timeline/stabilizer so exact position restoration can wait for rebuilt content');
 assert.ok(loader.indexOf('sakura-trip-return-state.js')<loader.indexOf('sakura-trip-rail-runtime-guard.js'),'return-state must remain ready before the rail runtime guard');
 
 const transitBridge=read('features/sakura-trip-transit-bridge.js');
