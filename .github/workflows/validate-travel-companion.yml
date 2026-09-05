@@ -32,6 +32,7 @@ jobs:
           node --check features/sakura-trip-core.js
           node --check features/sakura-trip-store-upgrade.js
           node --check features/sakura-trip-workbook-extras.js
+          node --check features/sakura-trip-management-safe.js
           node --check features/sakura-camera-japanese-v2.js
           node --check features/sakura-trip-companion-stabilize-v2.js
           node --check features/sakura-trip-companion.js
