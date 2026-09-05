@@ -1,0 +1,40 @@
+name: Validate Travel Companion
+
+on:
+  pull_request:
+    paths:
+      - 'features/sakura-trip-**'
+      - 'features/sakura-camera-japanese-v2.js'
+      - 'service-worker.js'
+      - 'scripts/validate-travel-companion.mjs'
+      - '.github/workflows/validate-travel-companion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'features/sakura-trip-**'
+      - 'features/sakura-camera-japanese-v2.js'
+      - 'service-worker.js'
+      - 'scripts/validate-travel-companion.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  travel-companion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax check Travel modules
+        run: |
+          node --check features/sakura-trip-core.js
+          node --check features/sakura-trip-store-upgrade.js
+          node --check features/sakura-trip-workbook-extras.js
+          node --check features/sakura-trip-management-safe.js
+          node --check features/sakura-camera-japanese-v2.js
+          node --check features/sakura-trip-companion-stabilize-v2.js
+          node --check features/sakura-trip-companion.js
+      - name: Run Travel Companion regression suite
+        run: node scripts/validate-travel-companion.mjs
