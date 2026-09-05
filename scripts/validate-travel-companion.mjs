@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const read=p=>fs.readFileSync(p,'utf8');
 const context={console};context.globalThis=context;context.window=context;vm.createContext(context);
 vm.runInContext(read('features/sakura-trip-core.js'),context,{filename:'sakura-trip-core.js'});
-const C=context.SakuraTripCore;assert.equal(C.version,1);
+const C=context.SakuraTripCore;assert.equal(C.version,2);
 
 const day={date:'2026-10-19',items:[
   {time:'07:00',title:'Morning Prep + Light Breakfast | Place | Time',type:'other'},
@@ -13,7 +13,13 @@ const day={date:'2026-10-19',items:[
   {time:'15:30',title:'Travel to Enoshima',type:'transport'}
 ]};
 assert.equal(C.bestDestination(day).item.title,'Hasedera Temple','Show This Place must ignore prep/header rows');
+assert.equal(C.bestDestination(day).item.japaneseName,'長谷寺','known destinations must gain an offline Japanese name');
 assert.ok(C.destinationScore(day.items[0])<0,'prep/header row must score as non-destination');
+const renbai=C.resolveDestinationDisplay({title:'Kamakura Renbai Farmers’ Market',type:'attraction'});
+assert.equal(renbai.japaneseName,'鎌倉市農協連即売所','Renbai must use its official Japanese destination name');
+assert.match(renbai.japaneseAddress,/神奈川県鎌倉市小町1-13-10/,'Renbai must have its Japanese address offline');
+assert.equal(C.resolveDestinationDisplay({title:'Unknown Private Venue'}).japaneseName,'','unknown named venues must not receive fabricated Japanese names');
+assert.equal(C.resolveDestinationDisplay({title:'Hasedera Temple',japaneseName:'保存済み正式名'}).japaneseName,'保存済み正式名','saved itinerary japaneseName must remain authoritative');
 
 const guidance=C.guidanceLines({route:'convenient brand option near Shinjuku East Exit • SOUTH EXIT • Seibu bus stop 1 • DO NOT TAKE 武17',items:[]});
 assert.ok(!guidance.some(x=>/convenient brand/i.test(x)),'near-exit shop prose must not become transit guidance');
@@ -54,8 +60,28 @@ const extras=C.extractWorkbookExtras({sheets:[
 ]});
 assert.equal(extras.packing.length,1);assert.equal(extras.budget.length,1);assert.equal(extras.shopping.length,1);assert.equal(extras.booking.length,1);assert.equal(extras.notes.length,1);
 
+const railContext={console,setTimeout,clearTimeout,Intl,Date};railContext.globalThis=railContext;railContext.window=railContext;railContext.document={readyState:'loading',addEventListener(){},getElementById(){return null}};vm.createContext(railContext);vm.runInContext(read('features/sakura-trip-pinned-rail.js'),railContext,{filename:'sakura-trip-pinned-rail.js'});
+const P=railContext.SakuraTripPinnedRail;assert.equal(P.version,2);
+const day2={route:'From: Takadanobaba Station • JR Yamanote Line → Shinjuku • JR Shonan-Shinjuku Line / Yokosuka-through service → Kamakura • At Enoden Kamakura Station:',items:[
+  {time:'06:45',title:'Travel to Kamakura',type:'transport'},
+  {time:'08:20',title:'Buy Enoden 1-Day Pass + Travel to Hase',type:'transport'},
+  {time:'09:25',title:'Walk to Great Buddha',type:'other'},
+  {time:'10:50',title:'Walk / Enoden to Gokurakuji',type:'other'},
+  {time:'11:25',title:'Enoden Coastal Ride to Koshigoe',type:'other'},
+  {time:'18:35',title:'Descend + Return to Katase-Enoshima',type:'other'},
+  {time:'19:10',title:'Return to Takadanobaba',type:'other'}
+]};
+const railPairs=Array.from(P.rawPairsForDay(day2),x=>`${x.from} → ${x.to}`);
+assert.ok(railPairs.includes('Takadanobaba Station → Kamakura'),'Day 2 must produce the outbound Takadanobaba → Kamakura rail leg');
+assert.ok(railPairs.includes('Kamakura → Hase'),'Day 2 must produce the Kamakura → Hase Enoden leg');
+assert.ok(railPairs.includes('Hase → Gokurakuji'),'Day 2 must carry the last station anchor across attraction walks');
+assert.ok(railPairs.includes('Gokurakuji → Koshigoe'),'Day 2 must produce the coastal Enoden leg');
+assert.ok(!railPairs.some(x=>/Great Buddha/.test(x)),'attractions must not be promoted to railway station anchors');
+
 const loader=read('features/sakura-trip-companion.js');
-for(const required of ['sakura-trip-core.js','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
+for(const required of ['sakura-trip-core.js?v=2','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js','sakura-trip-pinned-rail.js?v=2','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
+assert.ok(loader.includes('__sakuraTripCompanionLoadingV22'),'loader guard must advance so the new runtime can initialize');
+assert.ok(loader.includes('existing.remove()'),'loader must replace already-loaded stale versioned assets');
 assert.ok(loader.indexOf('sakura-trip-store-upgrade.js')<loader.indexOf('sakura-trip-companion-ui.js'),'stable store upgrade must load before Trip UI captures the store');
 assert.ok(loader.indexOf('sakura-trip-workbook-extras.js')<loader.indexOf('sakura-trip-file-sync.js'),'workbook extras must register before file-sync clears the file input');
 
@@ -64,6 +90,6 @@ assert.ok(camera.includes('Visible Japanese')&&camera.includes('English translat
 assert.ok(camera.includes('returnContext')&&camera.includes('SakuraTripCompanion?.open'),'Camera Japanese must restore Trip Companion context');
 const stabilizer=read('features/sakura-trip-companion-stabilize-v2.js');
 assert.ok(stabilizer.includes('Full day timeline'));assert.ok(stabilizer.includes('Useful workbook tabs'));assert.ok(stabilizer.includes('Japan offline readiness'));
-const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v176'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
+const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v177'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
 
 console.log('Travel Companion QA: all regression checks passed.');
