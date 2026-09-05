@@ -40,7 +40,6 @@ const diff=C.diffTrip(oldTrip,newTrip);
 assert.equal(diff.filter(x=>x.kind==='changed').length,1,'time-only change must be reported as changed');
 assert.equal(diff.filter(x=>x.kind==='added'||x.kind==='removed').length,0,'time-only change must not become add/remove');
 
-// Exercise the store wrapper against the same behavior as the legacy store: normalize strips item IDs.
 const savedTrips=[{id:'october',name:'Japan',startDate:'2026-10-21',endDate:'2026-10-21',timezone:'Asia/Tokyo',days:[{date:'2026-10-21',title:'MAPPA Day',items:[{id:'existing-mappa-id',time:'16:00',title:'MAPPA Expo',place:'Yurakucho Museum',type:'event',priority:'critical',reservation:true}]}]}];
 const memory=new Map([['active','october']]);let persisted=structuredClone(savedTrips);
 const storeContext={console,structuredClone,JSON,Math,Date,setTimeout,clearTimeout};storeContext.globalThis=storeContext;storeContext.window=storeContext;storeContext.localStorage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,String(v)),removeItem:k=>memory.delete(k)};storeContext.document={dispatchEvent(){}};storeContext.CustomEvent=function(){};vm.createContext(storeContext);vm.runInContext(read('features/sakura-trip-core.js'),storeContext);
@@ -79,14 +78,18 @@ assert.ok(railPairs.includes('Gokurakuji → Koshigoe'),'Day 2 must produce the 
 assert.ok(!railPairs.some(x=>/Great Buddha/.test(x)),'attractions must not be promoted to railway station anchors');
 
 const loader=read('features/sakura-trip-companion.js');
-for(const required of ['sakura-trip-core.js?v=2','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js','sakura-trip-pinned-rail.js?v=2','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
-assert.ok(loader.includes('__sakuraTripCompanionLoadingV22'),'loader guard must advance so the new runtime can initialize');
+for(const required of ['sakura-trip-core.js?v=2','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js?v=2','sakura-trip-pinned-rail.js?v=2','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
+assert.ok(loader.includes('__sakuraTripCompanionLoadingV23'),'loader guard must advance so the new runtime can initialize');
+assert.ok(loader.includes('SakuraCameraJapanese?.version>=3'),'loader must require Camera Japanese v3');
 assert.ok(loader.includes('existing.remove()'),'loader must replace already-loaded stale versioned assets');
 assert.ok(loader.indexOf('sakura-trip-store-upgrade.js')<loader.indexOf('sakura-trip-companion-ui.js'),'stable store upgrade must load before Trip UI captures the store');
 assert.ok(loader.indexOf('sakura-trip-workbook-extras.js')<loader.indexOf('sakura-trip-file-sync.js'),'workbook extras must register before file-sync clears the file input');
 
 const camera=read('features/sakura-camera-japanese-v2.js');
-assert.ok(camera.includes('Visible Japanese')&&camera.includes('English translation'),'Camera Japanese must show transcription and translation separately');
+assert.ok(camera.includes('version:3'),'Camera Japanese runtime must advance to v3');
+assert.ok(camera.includes('Visible Japanese')&&camera.includes('English translation · visible text only'),'Camera Japanese must separate transcription from strictly visible English translation');
+assert.ok(camera.includes("' · PARTIAL'")&&camera.includes('cropped or unclear fragments marked'),'Camera Japanese must surface partial/cropped output instead of silently completing it');
+assert.ok(camera.includes('literal-visible-v2'),'Camera Japanese must request the stricter grounding profile');
 assert.ok(camera.includes('returnContext')&&camera.includes('SakuraTripCompanion?.open'),'Camera Japanese must restore Trip Companion context');
 const stabilizer=read('features/sakura-trip-companion-stabilize-v2.js');
 assert.ok(stabilizer.includes('Full day timeline'));assert.ok(stabilizer.includes('Useful workbook tabs'));assert.ok(stabilizer.includes('Japan offline readiness'));
