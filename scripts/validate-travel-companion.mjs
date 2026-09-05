@@ -78,26 +78,31 @@ assert.ok(railPairs.includes('Gokurakuji → Koshigoe'),'Day 2 must produce the 
 assert.ok(!railPairs.some(x=>/Great Buddha/.test(x)),'attractions must not be promoted to railway station anchors');
 
 const loader=read('features/sakura-trip-companion.js');
-for(const required of ['sakura-trip-core.js?v=2','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js?v=2','sakura-trip-transit-bridge.js?v=2','sakura-trip-pinned-rail.js?v=2','sakura-trip-rail-runtime-guard.js?v=2','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
-assert.ok(loader.includes('__sakuraTripCompanionLoadingV26'),'loader guard must advance for the resilient Transit bridge release');
+for(const required of ['sakura-trip-core.js?v=2','sakura-trip-store-upgrade.js','sakura-trip-workbook-extras.js','sakura-camera-japanese-v2.js?v=2','sakura-trip-transit-bridge.js?v=3','sakura-trip-pinned-rail.js?v=2','sakura-trip-rail-runtime-guard.js?v=2','sakura-trip-companion-stabilize-v2.js'])assert.ok(loader.includes(required),`loader missing ${required}`);
+assert.ok(loader.includes('__sakuraTripCompanionLoadingV27'),'loader guard must advance for the all-entry rail bridge release');
 assert.ok(loader.includes('SakuraCameraJapanese?.version>=3'),'loader must require Camera Japanese v3');
-assert.ok(loader.includes('SakuraTripTransitBridge?.version>=2'),'loader must reject the old Transit bridge that delegates to live-tools');
+assert.ok(loader.includes('SakuraTripTransitBridge?.version>=3'),'loader must reject Transit bridge versions that do not own every Trip Companion rail entry');
 assert.ok(loader.includes('SakuraTripRailRuntimeGuard?.version>=2'),'loader must retain Trip Companion rail runtime guard v2');
 assert.ok(loader.includes('existing.remove()'),'loader must replace already-loaded stale versioned assets');
 assert.ok(loader.indexOf('sakura-trip-store-upgrade.js')<loader.indexOf('sakura-trip-companion-ui.js'),'stable store upgrade must load before Trip UI captures the store');
 assert.ok(loader.indexOf('sakura-trip-workbook-extras.js')<loader.indexOf('sakura-trip-file-sync.js'),'workbook extras must register before file-sync clears the file input');
-assert.ok(loader.indexOf('sakura-trip-live-tools.js')<loader.indexOf('sakura-trip-transit-bridge.js'),'live tools may initialize first, but the resilient Transit bridge must immediately supersede its generic Transit API');
+assert.ok(loader.indexOf('sakura-trip-live-tools.js')<loader.indexOf('sakura-trip-return-state.js'),'live tools initialize before the return/bridge hardening layer');
+assert.ok(loader.indexOf('sakura-trip-return-state.js')<loader.indexOf('sakura-trip-transit-bridge.js'),'return-state must load before the Transit bridge captures Trip Companion rail context');
 assert.ok(loader.indexOf('sakura-trip-transit-bridge.js')<loader.indexOf('sakura-trip-pinned-rail.js'),'Transit bridge must load before pinned rail so it survives a later Railway-layer load failure');
+assert.ok(loader.indexOf('sakura-trip-transit-bridge.js')<loader.indexOf('sakura-trip-companion-stabilize-v2.js'),'Transit bridge must own clicks before the timeline Railway handler is installed');
 assert.ok(loader.indexOf('sakura-trip-return-state.js')<loader.indexOf('sakura-trip-rail-runtime-guard.js'),'return-state must remain ready before the rail runtime guard');
 
 const transitBridge=read('features/sakura-trip-transit-bridge.js');
-assert.ok(transitBridge.includes('version:2'),'Transit bridge runtime must advance to v2');
+assert.ok(transitBridge.includes('version:3'),'Transit bridge runtime must advance to v3');
 assert.ok(transitBridge.includes('REQUIRED_PINNED_VERSION=2'),'Transit bridge must require the pinned Railway runtime rather than trust SakuraTransitRescue');
 assert.ok(transitBridge.includes('ensurePinned'),'Transit bridge must be able to load pinned Railway itself');
 assert.ok(!transitBridge.includes('const api=window.SakuraTransitRescue'),'Transit bridge must not delegate Trip Companion Transit to the generic live-tools Transit API');
-assert.ok(transitBridge.includes('data-help="transit"'),'Transit bridge must own Trip Companion Transit clicks');
+assert.ok(transitBridge.includes('data-help="transit"'),'Transit bridge must own Quick Help Transit Rescue clicks');
+assert.ok(transitBridge.includes('data-stz2-rail'),'Transit bridge must own Full Day Timeline Railway clicks');
 assert.ok(transitBridge.includes('stopImmediatePropagation'),'Transit bridge must block older transit handlers');
 assert.ok(transitBridge.includes('focusRouteResult'),'Transit bridge must land on the actual Railway route result');
+assert.ok(transitBridge.includes('repairLegacyRail'),'Transit bridge must auto-repair the old live-tools wrapper if it somehow appears');
+assert.ok(transitBridge.includes('.stlv-rail-context'),'Transit bridge must explicitly detect the legacy live-tools wrapper');
 assert.ok(transitBridge.includes("#travel-rail-view .back-button"),'Transit bridge must own Railway Back for itinerary-origin trips');
 assert.ok(transitBridge.includes('returnToTrip'),'Transit bridge must route Back through pinned Trip Companion return when available');
 
@@ -114,6 +119,6 @@ assert.ok(camera.includes('literal-visible-v2'),'Camera Japanese must request th
 assert.ok(camera.includes('returnContext')&&camera.includes('SakuraTripCompanion?.open'),'Camera Japanese must restore Trip Companion context');
 const stabilizer=read('features/sakura-trip-companion-stabilize-v2.js');
 assert.ok(stabilizer.includes('Full day timeline'));assert.ok(stabilizer.includes('Useful workbook tabs'));assert.ok(stabilizer.includes('Japan offline readiness'));
-const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v179'));assert.ok(sw.includes('sakura-trip-transit-bridge.'));assert.ok(sw.includes('sakura-trip-rail-runtime-guard.'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
+const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v180'));assert.ok(sw.includes('sakura-trip-transit-bridge.'));assert.ok(sw.includes('sakura-trip-rail-runtime-guard.'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
 
 console.log('Travel Companion QA: all regression checks passed.');
