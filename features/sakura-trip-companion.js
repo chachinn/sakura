@@ -28,11 +28,11 @@
     ['./features/sakura-trip-management.js?v=1','sakura-trip-management'],
     ['./features/sakura-trip-management-safe.js?v=1','sakura-trip-management-safe'],
     ['./features/sakura-trip-live-tools.js?v=1','sakura-trip-live-tools'],
-    ['./features/sakura-trip-return-state.js?v=1','sakura-trip-return-state'],
     ['./features/sakura-trip-transit-bridge.js?v=3','sakura-trip-transit-bridge'],
     ['./features/sakura-trip-pinned-rail.js?v=2','sakura-trip-pinned-rail'],
     ['./features/sakura-trip-companion-polish.js?v=2','sakura-trip-companion-polish'],
     ['./features/sakura-trip-companion-stabilize-v2.js?v=1','sakura-trip-companion-stabilizer-v2'],
+    ['./features/sakura-trip-return-state.js?v=1','sakura-trip-return-state'],
     ['./features/sakura-trip-rail-runtime-guard.js?v=2','sakura-trip-rail-runtime-guard']
   ];
 
@@ -53,12 +53,12 @@
     (key==='sakura-trip-management'&&window.SakuraTripManagement?.version>=1)||
     (key==='sakura-trip-management-safe'&&window.SakuraTripManagement?.__stabilizerV2===true)||
     (key==='sakura-trip-live-tools'&&window.SakuraTripLiveTools?.version>=1)||
-    (key==='sakura-trip-return-state'&&window.SakuraTripReturnState?.version>=1)||
     (key==='sakura-trip-transit-bridge'&&window.SakuraTripTransitBridge?.version>=3)||
     (key==='sakura-trip-pinned-rail'&&window.SakuraTripPinnedRail?.version>=2)||
     (key==='sakura-trip-rail-runtime-guard'&&window.SakuraTripRailRuntimeGuard?.version>=2)||
     (key==='sakura-trip-companion-polish'&&window.SakuraTripCompanionPolish?.version>=2)||
-    (key==='sakura-trip-companion-stabilizer-v2'&&window.SakuraTripCompanionStabilizer?.version>=2);
+    (key==='sakura-trip-companion-stabilizer-v2'&&window.SakuraTripCompanionStabilizer?.version>=2)||
+    (key==='sakura-trip-return-state'&&window.SakuraTripReturnState?.version>=1);
 
   const load=(src,key)=>new Promise((resolve,reject)=>{
     if(ready(key)){resolve();return}
