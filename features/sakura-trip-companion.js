@@ -29,11 +29,11 @@
     ['./features/sakura-trip-management-safe.js?v=1','sakura-trip-management-safe'],
     ['./features/sakura-trip-live-tools.js?v=1','sakura-trip-live-tools'],
     ['./features/sakura-trip-pinned-rail.js?v=2','sakura-trip-pinned-rail'],
+    ['./features/sakura-trip-companion-polish.js?v=2','sakura-trip-companion-polish'],
+    ['./features/sakura-trip-companion-stabilize-v2.js?v=1','sakura-trip-companion-stabilizer-v2'],
     ['./features/sakura-trip-return-state.js?v=1','sakura-trip-return-state'],
     ['./features/sakura-trip-rail-runtime-guard.js?v=1','sakura-trip-rail-runtime-guard'],
-    ['./features/sakura-trip-transit-bridge.js?v=1','sakura-trip-transit-bridge'],
-    ['./features/sakura-trip-companion-polish.js?v=2','sakura-trip-companion-polish'],
-    ['./features/sakura-trip-companion-stabilize-v2.js?v=1','sakura-trip-companion-stabilizer-v2']
+    ['./features/sakura-trip-transit-bridge.js?v=1','sakura-trip-transit-bridge']
   ];
 
   const ready=key=>
