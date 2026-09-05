@@ -36,13 +36,13 @@
   function itemKey(item,date){return item?.id?`id:${item.id}`:`sig:${core.baseItemSignature(item,date)}`}
   function carryIds(existing,incoming){
     const prev=upgradeDay(existing||{}),next=clone(incoming||{}),bySig=new Map((prev.items||[]).map(i=>[core.baseItemSignature(i,prev.date||next.date),i]));
-    next.items=(next.items||[]).map(item=>{if(item.id)return item;const match=bySig.get(core.baseItemSignature(item,next.date));return match?{...item,id:match.id}:item});
+    next.items=(next.items||[]).map(item=>{const match=bySig.get(core.baseItemSignature(item,next.date));return match?{...item,id:match.id}:item});
     next.items=core.assignStableIds(next);return next;
   }
   function mergeDay(existing,incoming){
     const next=carryIds(existing,incoming),map=new Map();
     for(const item of upgradeDay(existing||{}).items||[])map.set(itemKey(item,existing?.date),item);
-    for(const item of next.items||[]){const sig=core.baseItemSignature(item,next.date);let key=itemKey(item,next.date);if(!map.has(key)){const old=[...map.entries()].find(([,v])=>core.baseItemSignature(v,next.date)===sig);if(old)key=old[0]}const previous=map.get(key);map.set(key,{...(previous||{}),...item,id:item.id||previous?.id})}
+    for(const item of next.items||[]){const sig=core.baseItemSignature(item,next.date);let key=itemKey(item,next.date);if(!map.has(key)){const old=[...map.entries()].find(([,v])=>core.baseItemSignature(v,next.date)===sig);if(old)key=old[0]}const previous=map.get(key);map.set(key,{...(previous||{}),...item,id:previous?.id||item.id})}
     return {...existing,...next,items:[...map.values()].sort((a,b)=>timeMinutes(a.time)-timeMinutes(b.time))};
   }
   function preserveTripIds(existing,incoming){const byDate=new Map((existing?.days||[]).map(d=>[d.date,d]));return {...incoming,days:(incoming.days||[]).map(d=>byDate.has(d.date)?carryIds(byDate.get(d.date),d):upgradeDay(d))}}
