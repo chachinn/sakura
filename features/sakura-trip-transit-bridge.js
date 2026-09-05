@@ -1,11 +1,12 @@
-/* Sakura Trip Transit Bridge v2 — own Trip Companion Railway entry before generic Transit fallbacks. */
+/* Sakura Trip Transit Bridge v3 — own every Trip Companion Railway entry before generic Transit fallbacks. */
 (function initializeSakuraTripTransitBridge(){
   'use strict';
-  if(window.SakuraTripTransitBridge?.version>=2)return;
+  if(window.SakuraTripTransitBridge?.version>=3)return;
 
   const REQUIRED_PINNED_VERSION=2;
-  const PINNED_SRC='./features/sakura-trip-pinned-rail.js?v=2&runtime=bridge2';
-  let loadingPinned=null,opening=false;
+  const PINNED_SRC='./features/sakura-trip-pinned-rail.js?v=2&runtime=bridge3';
+  const TRIP_RAIL_ENTRY_SELECTOR='#sakura-trip-companion [data-help="transit"], #sakura-trip-companion [data-stz2-rail]';
+  let loadingPinned=null,opening=false,repairingLegacy=false;
   let returnContext={tripId:'',index:0,active:false};
 
   function activeTripDay(){
@@ -21,6 +22,22 @@
     if(!Number.isInteger(index))index=store?.currentDayIndex?.(trip)??0;
     index=Math.max(0,Math.min(index,trip.days.length-1));
     return{trip,day:trip.days[index]||null,index};
+  }
+
+  function tripDayFromReturnContext(){
+    const store=window.SakuraTripStore;
+    const trips=store?.loadTrips?.()||[];
+    const trip=returnContext.tripId?trips.find(item=>item.id===returnContext.tripId):store?.currentTrip?.();
+    if(!trip?.days?.length)return{trip:null,day:null,index:0};
+    const index=Math.max(0,Math.min(Number(returnContext.index)||0,trip.days.length-1));
+    return{trip,day:trip.days[index]||null,index};
+  }
+
+  function rememberReturnContext(trip,index,source='transit-bridge-v3'){
+    if(!trip?.days?.length)return;
+    const safeIndex=Math.max(0,Math.min(Number.isInteger(index)?index:0,trip.days.length-1));
+    returnContext={tripId:trip.id||'',index:safeIndex,active:true};
+    window.SakuraTripReturnState?.capture?.(source);
   }
 
   function pinned(){
@@ -70,12 +87,11 @@
     return true;
   }
 
-  async function openPinnedRail(trip,day,index){
+  async function openPinnedRail(trip,day,index,source='transit-bridge-v3'){
     if(opening)return;
     opening=true;
-    returnContext={tripId:trip?.id||'',index:Number.isInteger(index)?index:0,active:true};
+    rememberReturnContext(trip,index,source);
     try{
-      window.SakuraTripReturnState?.capture?.('transit-bridge-v2');
       const api=await ensurePinned();
       await api.open(trip,day);
       const view=document.getElementById('travel-rail-view');
@@ -98,11 +114,27 @@
     }finally{opening=false}
   }
 
+  async function repairLegacyRail(){
+    if(repairingLegacy||opening||!returnContext.active)return false;
+    const view=document.getElementById('travel-rail-view');
+    const legacy=view?.querySelector('.stlv-rail-context');
+    if(!legacy||view?.classList.contains('stpr-trip-mode')||view?.querySelector('.stpr-card'))return false;
+    const {trip,day,index}=tripDayFromReturnContext();
+    if(!trip||!day)return false;
+    repairingLegacy=true;
+    legacy.remove();
+    try{
+      await openPinnedRail(trip,day,index,'legacy-trip-rail-repair');
+      return true;
+    }catch(error){
+      console.warn('Could not replace legacy Trip Companion Railway wrapper.',error);
+      return false;
+    }finally{repairingLegacy=false}
+  }
+
   function fallbackReturnToTrip(){
     const store=window.SakuraTripStore;
-    const trips=store?.loadTrips?.()||[];
-    const trip=returnContext.tripId?trips.find(item=>item.id===returnContext.tripId):store?.currentTrip?.();
-    const index=trip?.days?.length?Math.max(0,Math.min(returnContext.index,trip.days.length-1)):0;
+    const {trip,index}=tripDayFromReturnContext();
     window.SakuraTripReturnState?.requestRestore?.('railway-back');
     if(trip?.id){
       try{
@@ -118,16 +150,16 @@
   }
 
   window.addEventListener('click',event=>{
-    const button=event.target.closest?.('#sakura-trip-companion [data-help="transit"]');
+    const button=event.target.closest?.(TRIP_RAIL_ENTRY_SELECTOR);
     if(!button)return;
     const {trip,day,index}=activeTripDay();
     if(!trip||!day)return;
     event.preventDefault();
     event.stopPropagation();
     event.stopImmediatePropagation();
-    openPinnedRail(trip,day,index).catch(error=>{
+    openPinnedRail(trip,day,index,button.hasAttribute?.('data-stz2-rail')?'timeline-railway':'transit-rescue').catch(error=>{
       console.warn('Could not open Trip Companion Railway.',error);
-      if(typeof window.alert==='function')window.alert('Sakura could not load the itinerary train route. Please close and reopen Sakura, then try Transit Rescue again.');
+      if(typeof window.alert==='function')window.alert('Sakura could not load the itinerary train route. Please close and reopen Sakura, then try Railway again.');
     });
   },true);
 
@@ -135,7 +167,7 @@
     const back=event.target.closest?.('#travel-rail-view .back-button');
     if(!back)return;
     const view=document.getElementById('travel-rail-view');
-    const tripMode=Boolean(returnContext.active||view?.dataset.sttbTripRailOrigin==='1'||view?.classList.contains('stpr-trip-mode')||view?.querySelector('.stpr-card'));
+    const tripMode=Boolean(returnContext.active||view?.dataset.sttbTripRailOrigin==='1'||view?.classList.contains('stpr-trip-mode')||view?.querySelector('.stpr-card')||view?.querySelector('.stlv-rail-context'));
     if(!tripMode)return;
     event.preventDefault();
     event.stopPropagation();
@@ -145,5 +177,9 @@
     fallbackReturnToTrip();
   },true);
 
-  window.SakuraTripTransitBridge=Object.freeze({version:2,activeTripDay,ensurePinned,openPinnedRail,focusRouteResult});
+  const observer=new MutationObserver(()=>{if(returnContext.active&&document.querySelector('#travel-rail-view .stlv-rail-context'))void repairLegacyRail()});
+  const startObserver=()=>{if(document.body)observer.observe(document.body,{childList:true,subtree:true})};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',startObserver,{once:true});else startObserver();
+
+  window.SakuraTripTransitBridge=Object.freeze({version:3,activeTripDay,ensurePinned,openPinnedRail,repairLegacyRail,focusRouteResult,entrySelector:TRIP_RAIL_ENTRY_SELECTOR});
 }());
