@@ -39,7 +39,7 @@
     if(item.reservation)score+=3;
     if(['food','shopping','attraction','event','hotel','other'].includes(String(item.type||'').toLowerCase()))score+=1;
     if(genericDestination.test(text)&&!place&&!address&&!jp)score-=14;
-    if(transportOnly.test(title)&&!place&&!address&&!jp)score-=8;
+    if(transportOnly.test(title)&&!explicitPlace.test(title)&&!place&&!address&&!jp)score-=8;
     if(/[|]/.test(title)&&/place|time/i.test(title))score-=12;
     return score;
   }
