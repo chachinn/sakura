@@ -1,4 +1,4 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v177";
+const SHELL_CACHE_VERSION = "sakura-shell-v178";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
@@ -188,6 +188,7 @@ self.addEventListener(
                 requestUrl.pathname.includes("/features/sakura-trip-management.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-live-tools.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-pinned-rail.") ||
+                requestUrl.pathname.includes("/features/sakura-trip-rail-runtime-guard.") ||
                 requestUrl.pathname.includes("/features/sakura-transit-rescue.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-transit-bridge.") ||
                 requestUrl.pathname.includes("/features/sakura-trip-companion-polish.") ||
