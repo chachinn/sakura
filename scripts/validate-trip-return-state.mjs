@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 
 const read=p=>fs.readFileSync(p,'utf8');
 const state=read('features/sakura-trip-return-state.js');
+const pinned=read('features/sakura-trip-pinned-rail.js');
 const loader=read('features/sakura-trip-companion.js');
 
 for(const selector of [
@@ -23,6 +24,8 @@ assert.ok(state.includes('hadTimeline')&&state.includes('waitingForTimeline'),'r
 assert.ok(state.includes('Math.min(pending.scrollTop,max)'),'restored scroll must be clamped to the rebuilt page');
 assert.ok(state.includes("setTimeout(()=>{if(pending&&!pending.returnRequested&&sameContext()&&!blockingToolOpen())clear()},450)"),'cancelled tools must not leave stale return state');
 assert.ok(state.includes('__returnStateV1'),'Trip Companion open must be wrapped exactly once');
+assert.ok(pinned.includes("SakuraTripReturnState?.capture?.('railway')"),'pinned Railway must explicitly capture Trip Companion position before its bridge closes the screen');
+assert.ok(pinned.includes("SakuraTripReturnState?.requestRestore?.('railway-back')"),'pinned Railway Back must explicitly request exact saved-position restoration');
 assert.ok(loader.includes('sakura-trip-return-state.js?v=1'),'Trip Companion loader must load the return-state layer');
 assert.ok(loader.indexOf('sakura-trip-companion-stabilize-v2.js')<loader.indexOf('sakura-trip-return-state.js'),'return-state layer must load after the day timeline/stabilizer');
 

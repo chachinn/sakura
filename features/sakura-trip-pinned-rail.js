@@ -1,7 +1,7 @@
-/* Sakura Trip Pinned Rail v1 — keep itinerary rail legs primary inside the real Railway System. */
+/* Sakura Trip Pinned Rail v2 — turn saved itinerary movement into real offline Railway routes. */
 (function initializeSakuraTripPinnedRail(){
   'use strict';
-  if(window.SakuraTripPinnedRail?.version>=1)return;
+  if(window.SakuraTripPinnedRail?.version>=2)return;
 
   const ESC=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const clean=value=>String(value??'').replace(/\s+/g,' ').trim();
@@ -83,14 +83,14 @@
       .replace(/\s*;.*$/,'')
       .trim();
   }
+  function serviceLike(value){return /\b(?:JR\s+)?[A-Za-z0-9'’.-]+(?:\s+[A-Za-z0-9'’.-]+){0,4}\s+Line\b|\bNarita Express\b|\bN['’]?EX\b|\b(?:Enoden|Odakyu|Seibu|Keisei)\b.*\b(?:Line|service)\b/i.test(value)}
   function rawArrowPairs(text,itemIndex=-1,time=''){
     const parts=String(text||'').split(ARROW).map(stripSegment).filter(Boolean);
     if(parts.length<2)return[];
     const out=[];
     for(let i=0;i<parts.length-1;i++){
       const from=parts[i],to=parts[i+1];
-      const service=x=>/\b(?:JR\s+)?[A-Za-z0-9'’.-]+(?:\s+[A-Za-z0-9'’.-]+){0,3}\s+Line\b|\bNarita Express\b|\bN['’]?EX\b/i.test(x);
-      if(!from||!to||(service(from)&&service(to))||/\bLine\b/i.test(from)&&!/\bStation\b|Airport/i.test(from))continue;
+      if(!from||!to||(serviceLike(from)&&serviceLike(to))||(serviceLike(from)&&!/\bStation\b|Airport/i.test(from)))continue;
       if(/(?:^|\s)~?\d{1,2}:\d{2}\b/.test(from)||/(?:^|\s)~?\d{1,2}:\d{2}\b/.test(to))continue;
       if(/^walk\s+to\b/i.test(to))continue;
       out.push({from,to,itemIndex,time,source:'arrow'});
@@ -106,22 +106,27 @@
   }
   function destinationFromTitle(title){
     const value=stripSegment(title);
-    let m=value.match(/^(?:travel|go|head|ride)\s+to\s+(.+)$/i);if(m)return stripSegment(m[1]);
-    m=value.match(/^arrive\s+(?:at|in)\s+(.+)$/i);if(m)return stripSegment(m[1]);
-    return'';
+    const m=value.match(/\b(?:travel|return|head|go|ride|walk|arrive)\b[^•;]*?\b(?:to|at|in)\s+(.+)$/i);
+    return m?stripSegment(m[1]):'';
+  }
+  function transportItem(item){
+    const text=`${item?.title||''} ${item?.place||''}`;
+    return /transport|train|rail|bus/i.test(item?.type||'')||/→|->|\b(?:travel|return|train|rail|station|n['’]?ex|narita express|enoden|odakyu|seibu|keisei|metro|subway)\b/i.test(text);
   }
   function rawPairsForDay(day){
     const pairs=[];const seen=new Set();let last='';const initialFrom=explicitFrom(day);
-    const add=p=>{const key=`${clean(p.from).toLowerCase()}→${clean(p.to).toLowerCase()}`;if(!p.from||!p.to||p.from===p.to||seen.has(key))return;seen.add(key);pairs.push(p);last=p.to};
+    const add=p=>{const key=`${clean(p.from).toLowerCase()}→${clean(p.to).toLowerCase()}`;if(!p.from||!p.to||clean(p.from).toLowerCase()===clean(p.to).toLowerCase()||seen.has(key))return;seen.add(key);pairs.push(p);last=p.to};
     (day?.items||[]).forEach((item,index)=>{
-      const transport=/transport|train|rail|bus/i.test(item.type||'')||/→|->|\btravel\b|\btrain\b|\bstation\b|n['’]?ex/i.test(`${item.title||''} ${item.place||''}`);
-      if(!transport)return;
-      const arrowPairs=rawArrowPairs(item.title||item.place,index,item.time||'');
-      if(arrowPairs.length){arrowPairs.forEach(add);return}
-      const to=destinationFromTitle(item.title||item.place);if(to){const from=last||initialFrom;if(from)add({from,to,itemIndex:index,time:item.time||'',source:'destination'})}
+      if(!transportItem(item))return;
+      const primary=clean(item.title||item.place);
+      const to=destinationFromTitle(primary);
+      if(to){const from=last||initialFrom;if(from)add({from,to,itemIndex:index,time:item.time||'',source:'movement'});return}
+      for(const text of [item.title,item.place,item.note,item.reminder]){
+        const arrowPairs=rawArrowPairs(text,index,item.time||'');if(arrowPairs.length){arrowPairs.forEach(add);break}
+      }
     });
-    for(const chunk of routeChunks(day))rawArrowPairs(chunk,-1,'').forEach(add);
-    return pairs.slice(0,8);
+    if(!pairs.length)for(const chunk of routeChunks(day))rawArrowPairs(chunk,-1,'').forEach(add);
+    return pairs.slice(0,10);
   }
   function selectedPairIndex(pairs,trip,day){
     if(!pairs.length)return 0;
@@ -132,7 +137,7 @@
   }
   function routeHint(day){
     const chunks=routeChunks(day);
-    const preferred=chunks.find(x=>/recommended route/i.test(x))||chunks.find(x=>/\b(?:JR|Metro|Subway|N['’]?EX|Narita Express|Seibu)\b.*(?:→|->)/i.test(x));
+    const preferred=chunks.find(x=>/\b(?:JR|Metro|Subway|N['’]?EX|Narita Express|Enoden|Odakyu|Seibu|Keisei)\b.*(?:→|->)/i.test(x));
     return preferred?clean(preferred.replace(/^[✅📌🚆\s]+/u,'')):'';
   }
   function guidance(day){
@@ -147,27 +152,39 @@
     await waitFor(()=>document.getElementById('travel-rail-view'),2500);
     if(typeof selectRailCity==='function')await selectRailCity(city);
     else if(typeof openRailGuide==='function')await openRailGuide();
-    await waitFor(()=>typeof railNetworkMatchesForInput==='function'&&typeof renderRailNetworkPlanner==='function'&&document.getElementById('rail-network-route-result'),5000);
+    return !!(await waitFor(()=>{
+      const cityReady=typeof railGuideCityData!=='undefined'&&railGuideCityData?.city===city;
+      return cityReady&&typeof railNetworkMatchesForInput==='function'&&typeof renderRailNetworkPlanner==='function'&&typeof renderRailNetworkRoute==='function'&&document.getElementById('rail-network-route-result');
+    },5000));
   }
   function resolveHub(text){
     if(typeof railNetworkMatchesForInput!=='function')return null;
     const raw=stripSegment(text);const candidates=[raw]
+      .concat(raw.split(/\s*\/\s*|\s+or\s+/i).map(clean))
       .concat(raw.replace(/\b(?:Station|駅)\b/gi,'').trim())
-      .concat(raw.replace(/^(?:Travel|Go|Head|Ride|Arrive)\s+(?:to|at|in)\s+/i,'').trim())
+      .concat(raw.replace(/^(?:Travel|Go|Head|Ride|Return|Arrive)\s+(?:to|at|in)\s+/i,'').trim())
       .filter(Boolean);
     for(const candidate of [...new Set(candidates)]){
-      const matches=railNetworkMatchesForInput(candidate)||[],best=matches[0],second=matches[1];
+      const value=candidate.replace(/\b(?:Station|駅)\b/gi,'').trim()||candidate;
+      const matches=railNetworkMatchesForInput(value)||[],best=matches[0],second=matches[1];
       if(best&&(best.score>=200||(best.score>=165&&(!second||second.score<best.score))||(best.score>=140&&(!second||second.score<best.score))))return best.hub;
     }
     return null;
   }
   function resolvedPair(pair){if(!pair)return null;const from=resolveHub(pair.from),to=resolveHub(pair.to);return from&&to&&from.key!==to.key?{from,to}:null}
+  function routeAnchorHubs(day){
+    const hubs=[];const add=value=>{const hub=resolveHub(value);if(hub&&hubs.at(-1)?.key!==hub.key)hubs.push(hub)};
+    const from=explicitFrom(day);if(from)add(from);
+    for(const chunk of routeChunks(day)){
+      const at=chunk.match(/\b(?:At|From|To)\s*:\s*(.+?\bStation\b)/i);if(at)add(at[1]);
+      const parts=String(chunk).split(ARROW).map(stripSegment).filter(Boolean);
+      for(const part of parts)if(!serviceLike(part))add(part);
+    }
+    return hubs;
+  }
   function bestResolvablePair(day,pairs){
     for(const pair of pairs){const resolved=resolvedPair(pair);if(resolved)return resolved}
-    for(const chunk of routeChunks(day)){
-      const parts=String(chunk).split(ARROW).map(stripSegment).filter(Boolean),hubs=parts.map(resolveHub).filter(Boolean);
-      for(let i=0;i<hubs.length-1;i++)if(hubs[i].key!==hubs[i+1].key)return{from:hubs[i],to:hubs[i+1]};
-    }
+    const hubs=routeAnchorHubs(day);if(hubs.length>=2)return{from:hubs[0],to:hubs.at(-1)};
     return null;
   }
   function setPlannerRoute(resolved){
@@ -175,8 +192,11 @@
     try{
       railNetworkPlannerState={city:railGuideCityData?.city||ctx.city,from:resolved.from.key,to:resolved.to.key};
       railNetworkRouteOptions=[];railNetworkSelectedRouteIndex=0;
-      renderRailNetworkPlanner();renderRailNetworkRoute(resolved.from.key,resolved.to.key,{recompute:true});
-      return true;
+      renderRailNetworkPlanner();
+      const fromInput=document.getElementById('rail-network-from-input'),toInput=document.getElementById('rail-network-to-input');
+      if(fromInput)fromInput.value=resolved.from.name;if(toInput)toInput.value=resolved.to.name;
+      renderRailNetworkRoute(resolved.from.key,resolved.to.key,{recompute:true});
+      return Boolean(fromInput?.value&&toInput?.value);
     }catch(error){console.warn('Pinned itinerary route could not be rendered in Railway System.',error);return false}
   }
   function planner(){return document.querySelector('#travel-rail-view .rail-network-planner')}
@@ -188,9 +208,9 @@
   function currentRawPair(){return ctx.pairs[Math.max(0,Math.min(ctx.selected,ctx.pairs.length-1))]||null}
   function usePinned(){
     configurePlannerVisibility(false);
-    const pair=currentRawPair(),resolved=resolvedPair(pair)||bestResolvablePair(ctx.day,ctx.pairs);
+    const pair=currentRawPair(),resolved=pair?resolvedPair(pair):bestResolvablePair(ctx.day,ctx.pairs);
     const plan=planner();
-    if(resolved){if(plan)plan.hidden=false;setPlannerRoute(resolved)}else{
+    if(resolved){if(plan)plan.hidden=false;if(!setPlannerRoute(resolved)&&plan)plan.hidden=true}else{
       if(plan)plan.hidden=true;
       try{railNetworkPlannerState={city:railGuideCityData?.city||ctx.city,from:'',to:''};railNetworkRouteOptions=[];railNetworkSelectedRouteIndex=0;renderRailNetworkPlanner()}catch{}
     }
@@ -199,11 +219,11 @@
   function renderContext(){
     const view=document.getElementById('travel-rail-view');if(!view||!ctx.trip||!ctx.day)return;
     css();view.classList.add('stpr-trip-mode');view.querySelector('.stlv-rail-context')?.remove();view.querySelector('.stpr-card')?.remove();
-    const pair=currentRawPair(),hint=routeHint(ctx.day),warnings=guidance(ctx.day),resolved=resolvedPair(pair),offlineNote=pair&&!resolved?'This itinerary leg stays pinned even though one endpoint is outside Sakura’s offline station map. Follow your itinerary instructions; use “Check another route” only when you need a different station pair.':'';
+    const pair=currentRawPair(),hint=routeHint(ctx.day),warnings=guidance(ctx.day),resolved=pair?resolvedPair(pair):bestResolvablePair(ctx.day,ctx.pairs),offlineNote=pair&&!resolved?'This saved itinerary leg includes an endpoint that Sakura cannot safely match to its offline station map. The itinerary stays pinned here rather than substituting a different station. Use “Check another route” only if you want to choose station anchors yourself.':'';
     const card=document.createElement('section');card.className='stpr-card';card.innerHTML=`
-      <span class="stpr-kicker">Trip Companion · pinned itinerary route</span>
+      <span class="stpr-kicker">Trip Companion · actual Railway System</span>
       <h2>${ESC(ctx.day.title||'Itinerary rail route')}</h2>
-      ${pair?`<div class="stpr-route"><small>YOUR SAVED ROUTE</small><strong>${ESC(pair.from)} → ${ESC(pair.to)}</strong>${pair.time?`<span>${ESC(pair.time)}</span>`:''}${hint?`<span>${ESC(hint)}</span>`:''}</div>`:`<div class="stpr-route"><small>YOUR SAVED ROUTE</small><strong>Itinerary route</strong><span>Sakura could not isolate a station pair, so your day instructions remain pinned here.</span></div>`}
+      ${pair?`<div class="stpr-route"><small>YOUR SAVED RAIL LEG</small><strong>${ESC(pair.from)} → ${ESC(pair.to)}</strong>${pair.time?`<span>${ESC(pair.time)}</span>`:''}${hint?`<span>${ESC(hint)}</span>`:''}</div>`:resolved?`<div class="stpr-route"><small>YOUR SAVED RAIL ROUTE</small><strong>${ESC(resolved.from.name)} → ${ESC(resolved.to.name)}</strong>${hint?`<span>${ESC(hint)}</span>`:''}</div>`:`<div class="stpr-route"><small>YOUR SAVED ROUTE</small><strong>Itinerary route</strong><span>Sakura could not isolate a safe station pair, so it will not invent one.</span></div>`}
       ${ctx.pairs.length>1?`<div class="stpr-legs">${ctx.pairs.map((p,index)=>`<button type="button" class="${index===ctx.selected?'on':''}" data-stpr-leg="${index}"><small>ITINERARY LEG ${index+1}</small><strong>${ESC(p.from)} → ${ESC(p.to)}</strong></button>`).join('')}</div>`:''}
       <div class="stpr-actions">${ctx.checking?'<button type="button" class="primary" data-stpr-use>📌 Back to itinerary route</button>':''}<button type="button" data-stpr-check>↪ Check another route</button>${ctx.trip.hotel?'<button type="button" data-stpr-home>🏠 Get me home</button>':''}</div>
       ${ctx.checking?'<div class="stpr-manual-note">You’re checking a different route below. Your itinerary route above stays pinned and is not replaced.</div>':''}
@@ -217,7 +237,9 @@
     const view=document.getElementById('travel-rail-view');if(!view)return;view.classList.remove('stpr-trip-mode','stpr-checking');view.querySelector('.stpr-card')?.remove();view.querySelector('.stlv-rail-context')?.remove();const plan=planner(),railHeading=view.querySelector('.rail-section-heading');if(plan){plan.hidden=false;if(railHeading)railHeading.insertAdjacentElement('beforebegin',plan)}const back=view.querySelector('.back-button');if(back){delete back.dataset.stprReturn;back.setAttribute('aria-label','Back to Trains & Stations')}
   }
   function returnToTrip(){
-    const trip=ctx.trip,index=ctx.dayIndex;cleanupRailMode();
+    const trip=ctx.trip,index=ctx.dayIndex;
+    window.SakuraTripReturnState?.requestRestore?.('railway-back');
+    cleanupRailMode();
     if(trip?.id){try{S()?.setActiveTrip?.(trip.id);localStorage.setItem((S()?.keys?.PREVIEW_DAY_PREFIX||'sakuraTripPreviewDayV1:')+trip.id,String(index))}catch{}}
     ctx={trip:null,day:null,dayIndex:0,city:'tokyo',pairs:[],selected:0,checking:false};
     if(typeof showRoute==='function')showRoute('travel');
@@ -226,12 +248,12 @@
   async function open(trip,day){
     const activeTrip=trip||S()?.currentTrip?.();if(!activeTrip)return;
     const activeDay=day||activeTrip.days?.[S()?.currentDayIndex?.(activeTrip)||0];if(!activeDay)return;
+    window.SakuraTripReturnState?.capture?.('railway');
     const pairs=rawPairsForDay(activeDay),selected=selectedPairIndex(pairs,activeTrip,activeDay),city=guessCity(activeTrip,activeDay);
     ctx={trip:activeTrip,day:activeDay,dayIndex:dayIndex(activeTrip,activeDay),city,pairs,selected,checking:false};
     window.SakuraTripCompanion?.close?.();
     await ensureRail(city);
     usePinned();
-    renderContext();
   }
 
   function bind(){
@@ -250,10 +272,10 @@
   }
   function patchRescue(){
     const previous=window.SakuraTransitRescue||baseRescue||{};
-    window.SakuraTransitRescue=Object.freeze({...previous,version:4,open,openRailway:open});
+    window.SakuraTransitRescue=Object.freeze({...previous,version:5,open,openRailway:open});
   }
   function init(){css();patchRescue();bind()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 
-  window.SakuraTripPinnedRail=Object.freeze({version:1,open,returnToTrip,rawPairsForDay,routeHint});
+  window.SakuraTripPinnedRail=Object.freeze({version:2,open,returnToTrip,rawPairsForDay,routeHint});
 }());

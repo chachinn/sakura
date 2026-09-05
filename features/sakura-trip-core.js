@@ -1,7 +1,7 @@
-/* Sakura Trip Companion Core v1 — deterministic helpers shared by Travel UI and QA. */
+/* Sakura Trip Companion Core v2 — deterministic helpers shared by Travel UI and QA. */
 (function initializeSakuraTripCore(global){
   'use strict';
-  if(global.SakuraTripCore?.version>=1)return;
+  if(global.SakuraTripCore?.version>=2)return;
 
   const clean=value=>String(value??'').replace(/\s+/g,' ').trim();
   const compact=value=>clean(value).toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
@@ -9,6 +9,74 @@
   const genericDestination=/\b(morning prep|breakfast\s*\|\s*place|place\s*\|\s*time|prep\b|free time|buffer|travel to|walk to|return to|head to|depart(?:ure)?|check[- ]?out|pack(?:ing)?|get ready|rest(?: at hotel)?|hotel rest|downtime)\b/i;
   const transportOnly=/\b(train|rail|bus|metro|subway|taxi|walk|transfer|station|platform|n['’]?ex|narita express)\b/i;
   const explicitPlace=/\b(temple|shrine|museum|cafe|café|restaurant|hall|expo|park|garden|market|mall|store|shop|castle|tower|aquarium|zoo|hotel|airport|station|beach|cave|island|street|center|centre|theater|theatre|salon|bar)\b/i;
+
+  // Offline, verified/canonical destination fallbacks for common Sakura Tokyo/Kamakura/Yokohama stops.
+  // Explicit itinerary japaneseName always wins. Unknown places stay untouched rather than being machine-translated.
+  const KNOWN_DESTINATIONS=Object.freeze([
+    {jp:'鎌倉市農協連即売所',jpAddress:'〒248-0006 神奈川県鎌倉市小町1-13-10',aliases:['Kamakura Renbai Farmers Market','Kamakura Renbai Farmers’ Market','Kamakura Renbai','Renbai Farmers Market','Renbai']},
+    {jp:'長谷寺',jpAddress:'〒248-0016 神奈川県鎌倉市長谷3-11-2',aliases:['Hasedera Temple','Hasedera','Hase-dera','Hase Temple']},
+    {jp:'鎌倉大仏・高徳院',aliases:['Great Buddha of Kamakura Kotoku-in','Great Buddha of Kamakura','Great Buddha','Kamakura Daibutsu','Kotoku-in','Kotokuin']},
+    {jp:'御霊神社',aliases:['Goryo Shrine','Goryō Shrine']},
+    {jp:'極楽寺',aliases:['Gokurakuji Temple','Gokurakuji']},
+    {jp:'腰越漁港',aliases:['Koshigoe Fishing Port','Koshigoe Port']},
+    {jp:'江の島弁財天仲見世通り',aliases:['Enoshima Benzaiten Nakamise Street','Benzaiten Nakamise Street']},
+    {jp:'江島神社 辺津宮',aliases:['Enoshima Shrine Hetsumiya','Hetsumiya']},
+    {jp:'江の島サムエル・コッキング苑',aliases:['Samuel Cocking Garden','Enoshima Samuel Cocking Garden']},
+    {jp:'江の島シーキャンドル',aliases:['Enoshima Sea Candle','Sea Candle']},
+    {jp:'江の島岩屋',aliases:['Enoshima Iwaya Caves','Enoshima Iwaya Cave','Enoshima Iwaya','Iwaya Caves']},
+    {jp:'稚児ヶ淵',aliases:['Chigogafuchi','Chigoga-fuchi']},
+    {jp:'中野ブロードウェイ',aliases:['Nakano Broadway']},
+    {jp:'思い出横丁',aliases:['Omoide Yokocho','Memory Lane']},
+    {jp:'渋谷スクランブル交差点',aliases:['Shibuya Scramble Crossing','Shibuya Crossing']},
+    {jp:'忠犬ハチ公像',aliases:['Hachiko Statue','Hachikō Statue']},
+    {jp:'明治神宮',aliases:['Meiji Jingu','Meiji Shrine']},
+    {jp:'竹下通り',aliases:['Takeshita Street','Takeshita-dori','Takeshita Dori']},
+    {jp:'表参道',aliases:['Omotesando','Omote-sando']},
+    {jp:'浅草寺',aliases:['Sensoji Temple','Senso-ji','Sensoji','Asakusa Temple']},
+    {jp:'雷門',aliases:['Kaminarimon Gate','Kaminarimon','Thunder Gate']},
+    {jp:'仲見世通り',aliases:['Nakamise Shopping Street','Nakamise-dori','Nakamise Dori']},
+    {jp:'神奈川近代文学館',jpAddress:'〒231-0862 横浜市中区山手町110',aliases:['Kanagawa Museum of Modern Literature','Museum of Modern Literature Kanagawa']},
+    {jp:'横浜中華街',aliases:['Yokohama Chinatown']},
+    {jp:'山下公園',aliases:['Yamashita Park']},
+    {jp:'横浜赤レンガ倉庫',aliases:['Yokohama Red Brick Warehouse','Red Brick Warehouse']},
+    {jp:'横浜港大さん橋国際客船ターミナル',aliases:['Osanbashi Pier','Osanbashi','Yokohama International Passenger Terminal']},
+    {jp:'アニメイト横浜ビブレ',aliases:['Animate Yokohama VIVRE','Animate Yokohama Vivre']},
+    {jp:'豪徳寺',jpAddress:'〒154-0021 東京都世田谷区豪徳寺2-24-7',aliases:['Gotokuji Temple','Gotokuji','Gōtokuji']},
+    {jp:'東京建物 Brillia HALL',aliases:['Tokyo Tatemono Brillia HALL','Brillia HALL']},
+    {jp:'江戸東京たてもの園',aliases:['Edo-Tokyo Open Air Architectural Museum','Edo Tokyo Open Air Architectural Museum']},
+    {jp:'成田国際空港',aliases:['Narita International Airport','Narita Airport']}
+  ]);
+
+  function knownDestination(item){
+    const title=compact(item?.title),place=compact(item?.place),both=`${place} ${title}`.trim();
+    if(!both)return null;
+    let best=null,bestScore=-1;
+    for(const entry of KNOWN_DESTINATIONS){
+      for(const alias of entry.aliases||[]){
+        const key=compact(alias);if(!key)continue;
+        let score=-1;
+        if(title===key||place===key)score=10000+key.length;
+        else if(title.includes(key)||place.includes(key))score=1000+key.length;
+        else if(both.includes(key))score=key.length;
+        if(score>bestScore){best=entry;bestScore=score}
+      }
+    }
+    return bestScore>=0?best:null;
+  }
+  function resolveDestinationDisplay(item){
+    const englishName=clean(item?.place||item?.title);
+    const explicitJapanese=clean(item?.japaneseName);
+    const explicitJapaneseAddress=clean(item?.japaneseAddress||item?.addressJapanese);
+    const englishAddress=clean(item?.address);
+    if(explicitJapanese)return {japaneseName:explicitJapanese,englishName,japaneseAddress:explicitJapaneseAddress,englishAddress};
+    const known=knownDestination(item);
+    return {japaneseName:known?.jp||'',englishName,japaneseAddress:explicitJapaneseAddress||known?.jpAddress||'',englishAddress};
+  }
+  function destinationDisplayItem(item){
+    const display=resolveDestinationDisplay(item);
+    if(!display.japaneseName&&!display.japaneseAddress)return item;
+    return {...item,japaneseName:display.japaneseName||clean(item?.japaneseName),address:display.japaneseAddress||item?.address||'',japaneseAddress:display.japaneseAddress,englishAddress:display.englishAddress};
+  }
 
   function baseItemSignature(item,date=''){
     const title=compact(item?.title||item?.place||'stop');
@@ -43,7 +111,7 @@
     if(/[|]/.test(title)&&/place|time/i.test(title))score-=12;
     return score;
   }
-  function destinationItems(day){return (day?.items||[]).map((item,index)=>({item,index,score:destinationScore(item)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index)}
+  function destinationItems(day){return (day?.items||[]).map((item,index)=>({item:destinationDisplayItem(item),index,score:destinationScore(item)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index)}
   function bestDestination(day,{nowMinutes=null}={}){
     const candidates=destinationItems(day);if(!candidates.length)return null;
     if(Number.isFinite(nowMinutes)){
@@ -92,5 +160,5 @@
     return result;
   }
 
-  global.SakuraTripCore=Object.freeze({version:1,clean,compact,stableHash:fnv,baseItemSignature,assignStableIds,upgradeTrip,destinationScore,destinationItems,bestDestination,guidanceLines,checklistLines,diffTrip,extractWorkbookExtras});
+  global.SakuraTripCore=Object.freeze({version:2,clean,compact,stableHash:fnv,baseItemSignature,assignStableIds,upgradeTrip,destinationScore,destinationItems,bestDestination,resolveDestinationDisplay,guidanceLines,checklistLines,diffTrip,extractWorkbookExtras});
 })(typeof window!=='undefined'?window:globalThis);
