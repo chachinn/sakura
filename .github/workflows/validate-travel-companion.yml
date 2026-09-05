@@ -8,6 +8,7 @@ on:
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
+      - 'scripts/validate-trip-rail-entry.mjs'
       - '.github/workflows/validate-travel-companion.yml'
   push:
     branches: [main]
@@ -17,6 +18,7 @@ on:
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
+      - 'scripts/validate-trip-rail-entry.mjs'
 
 permissions:
   contents: read
@@ -38,8 +40,11 @@ jobs:
           node --check features/sakura-camera-japanese-v2.js
           node --check features/sakura-trip-companion-stabilize-v2.js
           node --check features/sakura-trip-return-state.js
+          node --check features/sakura-trip-transit-bridge.js
           node --check features/sakura-trip-companion.js
       - name: Run Travel Companion regression suite
         run: node scripts/validate-travel-companion.mjs
       - name: Run Trip return-state regression suite
         run: node scripts/validate-trip-return-state.mjs
+      - name: Run Trip rail-entry regression suite
+        run: node scripts/validate-trip-rail-entry.mjs
