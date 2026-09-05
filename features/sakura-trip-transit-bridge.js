@@ -1,12 +1,17 @@
-/* Sakura Trip Transit Bridge v1 — sends Trip Companion Transit Rescue into the actual Railway System. */
+/* Sakura Trip Transit Bridge v2 — own Trip Companion Railway entry before generic Transit fallbacks. */
 (function initializeSakuraTripTransitBridge(){
   'use strict';
-  if(window.SakuraTripTransitBridge?.version>=1)return;
+  if(window.SakuraTripTransitBridge?.version>=2)return;
+
+  const REQUIRED_PINNED_VERSION=2;
+  const PINNED_SRC='./features/sakura-trip-pinned-rail.js?v=2&runtime=bridge2';
+  let loadingPinned=null,opening=false;
+  let returnContext={tripId:'',index:0,active:false};
 
   function activeTripDay(){
     const store=window.SakuraTripStore;
     const trip=store?.currentTrip?.();
-    if(!trip?.days?.length)return{trip:null,day:null};
+    if(!trip?.days?.length)return{trip:null,day:null,index:0};
     let index=NaN;
     const selected=document.querySelector('#sakura-trip-companion .stc-day.on');
     if(selected)index=Number(selected.dataset.day);
@@ -15,29 +20,130 @@
     }
     if(!Number.isInteger(index))index=store?.currentDayIndex?.(trip)??0;
     index=Math.max(0,Math.min(index,trip.days.length-1));
-    return{trip,day:trip.days[index]||null};
+    return{trip,day:trip.days[index]||null,index};
+  }
+
+  function pinned(){
+    const api=window.SakuraTripPinnedRail;
+    return api?.version>=REQUIRED_PINNED_VERSION&&typeof api.open==='function'?api:null;
+  }
+
+  function ensurePinned(){
+    const ready=pinned();
+    if(ready)return Promise.resolve(ready);
+    if(loadingPinned)return loadingPinned;
+    loadingPinned=new Promise((resolve,reject)=>{
+      const existing=document.querySelector('script[data-sakura-trip-pinned-rail]');
+      if(existing&&existing.dataset.loaded!=='1'){
+        existing.addEventListener('load',()=>{const api=pinned();api?resolve(api):reject(new Error('Trip Companion Railway loaded without the required runtime version.'))},{once:true});
+        existing.addEventListener('error',()=>reject(new Error('Could not load Trip Companion Railway.')),{once:true});
+        return;
+      }
+      if(existing&&!pinned())existing.remove();
+      const script=document.createElement('script');
+      script.src=PINNED_SRC;
+      script.dataset.sakuraTripPinnedRail='1';
+      script.dataset.sakuraTripPinnedRailBridge='1';
+      script.onload=()=>{
+        script.dataset.loaded='1';
+        const api=pinned();
+        api?resolve(api):reject(new Error('Trip Companion Railway loaded without the required runtime version.'));
+      };
+      script.onerror=()=>reject(new Error('Could not load Trip Companion Railway.'));
+      document.head.appendChild(script);
+    }).finally(()=>{loadingPinned=null});
+    return loadingPinned;
+  }
+
+  const routeResult=()=>document.getElementById('rail-network-route-result');
+  const routeHasContent=()=>Boolean(routeResult()?.textContent?.trim());
+  async function waitForRoute(ms=2400){
+    const start=Date.now();
+    while(Date.now()-start<ms){if(routeHasContent())return routeResult();await new Promise(resolve=>setTimeout(resolve,50))}
+    return routeHasContent()?routeResult():null;
+  }
+  function focusRouteResult(){
+    const result=routeResult();
+    if(!result||!routeHasContent())return false;
+    const top=Math.max(0,window.scrollY+result.getBoundingClientRect().top-118);
+    window.scrollTo({top,behavior:'auto'});
+    return true;
+  }
+
+  async function openPinnedRail(trip,day,index){
+    if(opening)return;
+    opening=true;
+    returnContext={tripId:trip?.id||'',index:Number.isInteger(index)?index:0,active:true};
+    try{
+      window.SakuraTripReturnState?.capture?.('transit-bridge-v2');
+      const api=await ensurePinned();
+      await api.open(trip,day);
+      const view=document.getElementById('travel-rail-view');
+      if(view)view.dataset.sttbTripRailOrigin='1';
+      view?.querySelector('.stlv-rail-context')?.remove();
+
+      let result=await waitForRoute(700);
+      if(!result){
+        const from=document.getElementById('rail-network-from-input');
+        const to=document.getElementById('rail-network-to-input');
+        if(from?.value&&to?.value){
+          from.dispatchEvent(new Event('input',{bubbles:true}));
+          to.dispatchEvent(new Event('input',{bubbles:true}));
+          document.getElementById('rail-network-plan-button')?.click();
+          result=await waitForRoute(1700);
+        }
+      }
+      if(result)requestAnimationFrame(()=>focusRouteResult());
+      else console.warn('Trip Companion Railway opened without a populated route result.');
+    }finally{opening=false}
+  }
+
+  function fallbackReturnToTrip(){
+    const store=window.SakuraTripStore;
+    const trips=store?.loadTrips?.()||[];
+    const trip=returnContext.tripId?trips.find(item=>item.id===returnContext.tripId):store?.currentTrip?.();
+    const index=trip?.days?.length?Math.max(0,Math.min(returnContext.index,trip.days.length-1)):0;
+    window.SakuraTripReturnState?.requestRestore?.('railway-back');
+    if(trip?.id){
+      try{
+        store?.setActiveTrip?.(trip.id);
+        localStorage.setItem((store?.keys?.PREVIEW_DAY_PREFIX||'sakuraTripPreviewDayV1:')+trip.id,String(index));
+      }catch{}
+    }
+    const view=document.getElementById('travel-rail-view');
+    if(view){delete view.dataset.sttbTripRailOrigin;view.querySelector('.stlv-rail-context')?.remove()}
+    returnContext={tripId:'',index:0,active:false};
+    if(typeof showRoute==='function')showRoute('travel');
+    setTimeout(()=>window.SakuraTripCompanion?.open?.(index),0);
   }
 
   window.addEventListener('click',event=>{
     const button=event.target.closest?.('#sakura-trip-companion [data-help="transit"]');
     if(!button)return;
-    const api=window.SakuraTransitRescue;
-    if(!api?.open)return;
-    const {trip,day}=activeTripDay();
+    const {trip,day,index}=activeTripDay();
     if(!trip||!day)return;
-
-    // The legacy Trip Companion listener lives on document capture and renders
-    // a static "Safest path" screen. Intercept one level earlier (window capture)
-    // so the newer Railway-backed Transit Rescue gets the click instead.
     event.preventDefault();
     event.stopPropagation();
     event.stopImmediatePropagation();
-
-    Promise.resolve().then(()=>{
-      if((api.version||0)>=3)return api.open(trip,day);
-      return api.open({trip,day});
-    }).catch(error=>console.warn('Could not open Railway-backed Transit Rescue.',error));
+    openPinnedRail(trip,day,index).catch(error=>{
+      console.warn('Could not open Trip Companion Railway.',error);
+      if(typeof window.alert==='function')window.alert('Sakura could not load the itinerary train route. Please close and reopen Sakura, then try Transit Rescue again.');
+    });
   },true);
 
-  window.SakuraTripTransitBridge=Object.freeze({version:1,activeTripDay});
+  window.addEventListener('click',event=>{
+    const back=event.target.closest?.('#travel-rail-view .back-button');
+    if(!back)return;
+    const view=document.getElementById('travel-rail-view');
+    const tripMode=Boolean(returnContext.active||view?.dataset.sttbTripRailOrigin==='1'||view?.classList.contains('stpr-trip-mode')||view?.querySelector('.stpr-card'));
+    if(!tripMode)return;
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    const api=pinned();
+    if(api?.returnToTrip)return api.returnToTrip();
+    fallbackReturnToTrip();
+  },true);
+
+  window.SakuraTripTransitBridge=Object.freeze({version:2,activeTripDay,ensurePinned,openPinnedRail,focusRouteResult});
 }());
