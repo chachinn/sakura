@@ -14,8 +14,8 @@ assert.ok(bridgeSource.includes('repairLegacyRail'),'Transit bridge must be able
 assert.ok(bridgeSource.includes('.stlv-rail-context'),'Legacy live-tools wrapper must be explicitly detected and removed');
 assert.ok(loaderSource.includes('__sakuraTripCompanionLoadingV27'),'Trip Companion loader must advance to v27');
 assert.ok(loaderSource.includes('sakura-trip-transit-bridge.js?v=3'),'Loader must request Transit bridge v3');
-assert.ok(loaderSource.indexOf('sakura-trip-return-state.js')<loaderSource.indexOf('sakura-trip-transit-bridge.js'),'Return state must load before the Transit bridge');
 assert.ok(loaderSource.indexOf('sakura-trip-transit-bridge.js')<loaderSource.indexOf('sakura-trip-companion-stabilize-v2.js'),'Transit bridge must load before timeline Railway controls are installed');
+assert.ok(loaderSource.indexOf('sakura-trip-companion-stabilize-v2.js')<loaderSource.indexOf('sakura-trip-return-state.js'),'Established exact-position return layer must remain after the timeline stabilizer');
 assert.ok(swSource.includes('sakura-shell-v180'),'PWA shell must advance for the rail-entry release');
 
 const clickListeners=[];
