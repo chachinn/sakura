@@ -9,6 +9,7 @@ on:
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
       - 'scripts/validate-trip-rail-entry.mjs'
+      - 'scripts/validate-trip-quick-help-jump.mjs'
       - '.github/workflows/validate-travel-companion.yml'
   push:
     branches: [main]
@@ -19,6 +20,7 @@ on:
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
       - 'scripts/validate-trip-rail-entry.mjs'
+      - 'scripts/validate-trip-quick-help-jump.mjs'
 
 permissions:
   contents: read
@@ -41,6 +43,7 @@ jobs:
           node --check features/sakura-trip-companion-stabilize-v2.js
           node --check features/sakura-trip-return-state.js
           node --check features/sakura-trip-transit-bridge.js
+          node --check features/sakura-trip-quick-help-jump.js
           node --check features/sakura-trip-companion.js
       - name: Run Travel Companion regression suite
         run: node scripts/validate-travel-companion.mjs
@@ -48,3 +51,5 @@ jobs:
         run: node scripts/validate-trip-return-state.mjs
       - name: Run Trip rail-entry regression suite
         run: node scripts/validate-trip-rail-entry.mjs
+      - name: Run Trip Quick Help jump regression suite
+        run: node scripts/validate-trip-quick-help-jump.mjs
