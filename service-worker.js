@@ -1,9 +1,11 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v180";
+const SHELL_CACHE_VERSION = "sakura-shell-v181";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
 const READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v10";
 const QUIZ_CONTENT_CACHE_VERSION = "sakura-quiz-content-v4";
+const TOKYO_RAIL_BASE_URL = "./data/rail/tokyo.json?v=6";
+const TOKYO_RAIL_EXTENSION_URL = "./data/rail/tokyo-west-extension.json?v=1";
 
 const APP_SHELL = [
     "./index.html",
@@ -46,12 +48,74 @@ const APP_SHELL = [
     "./data/particles.json?v=1",
     "./data/grammar.json?v=2",
     "./data/etiquette.json?v=1",
+    TOKYO_RAIL_BASE_URL,
+    TOKYO_RAIL_EXTENSION_URL,
     "./avatar/sakura.png",
     "./manifest.webmanifest",
     "./icons/icon-180.png",
     "./icons/icon-192.png",
     "./icons/icon-512.png"
 ];
+
+async function cachedOrNetworkJson(requestOrUrl, fallbackUrls = []) {
+    const cache = await caches.open(SHELL_CACHE_VERSION);
+    let response = null;
+    try {
+        const request = requestOrUrl instanceof Request
+            ? new Request(requestOrUrl, { cache:"no-cache" })
+            : new Request(new URL(requestOrUrl, self.location.href), { cache:"no-cache" });
+        response = await fetch(request);
+        if (response.ok) await cache.put(requestOrUrl, response.clone());
+    }
+    catch (error) {
+        response = null;
+    }
+    if (response?.ok) return response;
+    for (const candidate of [requestOrUrl, ...fallbackUrls]) {
+        const cached = await cache.match(candidate);
+        if (cached) return cached;
+    }
+    return null;
+}
+
+async function mergedTokyoRailResponse(request) {
+    const baseResponse = await cachedOrNetworkJson(request, [TOKYO_RAIL_BASE_URL, "./data/rail/tokyo.json"]);
+    if (!baseResponse) throw new Error("Tokyo rail base data is unavailable.");
+
+    const extensionResponse = await cachedOrNetworkJson(TOKYO_RAIL_EXTENSION_URL);
+    if (!extensionResponse) return baseResponse;
+
+    try {
+        const [base, extension] = await Promise.all([
+            baseResponse.clone().json(),
+            extensionResponse.clone().json()
+        ]);
+        const existingLineIds = new Set((base.lines || []).map(line => line.id));
+        const extraLines = (extension.lines || []).filter(line => line?.id && !existingLineIds.has(line.id));
+        const operators = [...new Set([...(base.operators || []), ...(extension.operators || [])])];
+        const merged = {
+            ...base,
+            lines:[...(base.lines || []), ...extraLines],
+            operators,
+            extensions:[...(base.extensions || []), {
+                id:extension.id || "tokyo-west-extension",
+                verifiedOn:extension.verifiedOn || "",
+                sourceNote:extension.sourceNote || ""
+            }]
+        };
+        const response = new Response(JSON.stringify(merged), {
+            status:200,
+            headers:{ "Content-Type":"application/json; charset=utf-8", "Cache-Control":"no-store" }
+        });
+        const cache = await caches.open(SHELL_CACHE_VERSION);
+        await cache.put(request, response.clone());
+        return response;
+    }
+    catch (error) {
+        console.warn("Could not merge west Tokyo rail extension; using base Tokyo data.", error);
+        return baseResponse;
+    }
+}
 
 self.addEventListener(
     "install",
@@ -122,6 +186,12 @@ self.addEventListener(
         }
 
         if (requestUrl.origin === self.location.origin) {
+            const isTokyoRailData = requestUrl.pathname.endsWith("/data/rail/tokyo.json");
+            if (isTokyoRailData) {
+                event.respondWith(mergedTokyoRailResponse(request));
+                return;
+            }
+
             const isKanjiContent = requestUrl.pathname.includes("/data/kanji/") && requestUrl.pathname.endsWith(".json");
             const isTravelContent = requestUrl.pathname.includes("/data/travel/") && requestUrl.pathname.endsWith(".json");
             const isVocabularyContent = requestUrl.pathname.includes("/data/vocabulary/") && requestUrl.pathname.endsWith(".json");
