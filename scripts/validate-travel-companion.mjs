@@ -119,6 +119,6 @@ assert.ok(camera.includes('literal-visible-v2'),'Camera Japanese must request th
 assert.ok(camera.includes('returnContext')&&camera.includes('SakuraTripCompanion?.open'),'Camera Japanese must restore Trip Companion context');
 const stabilizer=read('features/sakura-trip-companion-stabilize-v2.js');
 assert.ok(stabilizer.includes('Full day timeline'));assert.ok(stabilizer.includes('Useful workbook tabs'));assert.ok(stabilizer.includes('Japan offline readiness'));
-const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v180'));assert.ok(sw.includes('sakura-trip-transit-bridge.'));assert.ok(sw.includes('sakura-trip-rail-runtime-guard.'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
+const sw=read('service-worker.js');assert.ok(sw.includes('sakura-shell-v181'));assert.ok(sw.includes('sakura-trip-transit-bridge.'));assert.ok(sw.includes('sakura-trip-rail-runtime-guard.'));assert.ok(sw.includes('sakura-trip-companion-stabilize-v2.'));
 
 console.log('Travel Companion QA: all regression checks passed.');

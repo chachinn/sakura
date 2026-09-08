@@ -5,22 +5,27 @@ on:
     paths:
       - 'features/sakura-trip-**'
       - 'features/sakura-camera-japanese-v2.js'
+      - 'data/rail/tokyo-west-extension.json'
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
       - 'scripts/validate-trip-rail-entry.mjs'
       - 'scripts/validate-trip-quick-help-jump.mjs'
+      - 'scripts/validate-tokyo-west-rail-extension.mjs'
       - '.github/workflows/validate-travel-companion.yml'
   push:
     branches: [main]
     paths:
       - 'features/sakura-trip-**'
       - 'features/sakura-camera-japanese-v2.js'
+      - 'data/rail/tokyo-west-extension.json'
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
       - 'scripts/validate-trip-rail-entry.mjs'
       - 'scripts/validate-trip-quick-help-jump.mjs'
+      - 'scripts/validate-tokyo-west-rail-extension.mjs'
+      - '.github/workflows/validate-travel-companion.yml'
 
 permissions:
   contents: read
@@ -45,6 +50,7 @@ jobs:
           node --check features/sakura-trip-transit-bridge.js
           node --check features/sakura-trip-quick-help-jump.js
           node --check features/sakura-trip-companion.js
+          node --check service-worker.js
       - name: Run Travel Companion regression suite
         run: node scripts/validate-travel-companion.mjs
       - name: Run Trip return-state regression suite
@@ -53,3 +59,5 @@ jobs:
         run: node scripts/validate-trip-rail-entry.mjs
       - name: Run Trip Quick Help jump regression suite
         run: node scripts/validate-trip-quick-help-jump.mjs
+      - name: Run west Tokyo rail extension validation
+        run: node scripts/validate-tokyo-west-rail-extension.mjs
