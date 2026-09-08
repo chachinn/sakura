@@ -16,7 +16,7 @@ assert.ok(loaderSource.includes('__sakuraTripCompanionLoadingV27'),'Trip Compani
 assert.ok(loaderSource.includes('sakura-trip-transit-bridge.js?v=3'),'Loader must request Transit bridge v3');
 assert.ok(loaderSource.indexOf('sakura-trip-transit-bridge.js')<loaderSource.indexOf('sakura-trip-companion-stabilize-v2.js'),'Transit bridge must load before timeline Railway controls are installed');
 assert.ok(loaderSource.indexOf('sakura-trip-companion-stabilize-v2.js')<loaderSource.indexOf('sakura-trip-return-state.js'),'Established exact-position return layer must remain after the timeline stabilizer');
-assert.ok(swSource.includes('sakura-shell-v180'),'PWA shell must advance for the rail-entry release');
+assert.ok(swSource.includes('sakura-shell-v181'),'PWA shell must advance for the west Tokyo rail data release');
 
 const clickListeners=[];
 let pinnedOpens=0;
