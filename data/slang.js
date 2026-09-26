@@ -71,7 +71,18 @@ const SAKURA_SLANG_CATEGORY_MAP = {
     "Anime versus real life": ["Anime / Otaku"],
     "Gaming": ["Gaming"],
     "Texting": ["Texting / LINE / DMs"],
-    "Reactions": ["Memes / Reactions", "Fillers / Reaction Words"]
+    "Reactions": ["Memes / Reactions", "Fillers / Reaction Words"],
+    "SNS / Social Media": ["SNS / Social Media"],
+    "Youth": ["Youth"],
+    "Casual Spoken": ["Casual Spoken"],
+    "Oshi / Fandom": ["Oshi / Fandom"],
+    "Gen Z / Reiwa": ["Gen Z / Reiwa"],
+    "Heisei / Retro": ["Heisei / Retro"],
+    "Memes / Reactions": ["Memes / Reactions"],
+    "Texting / LINE / DMs": ["Texting / LINE / DMs"],
+    "Regional Dialects": ["Regional Dialects"],
+    "Strong Language / Insults": ["Strong Language / Insults"],
+    "Abbreviations": ["Abbreviations"]
 };
 const SAKURA_OSHI_TERMS = new Set(["尊い", "沼る", "推し", "推せる", "認知", "古参", "新規", "同担", "同担拒否", "箱推し", "推し回", "尊死"]);
 const SAKURA_ABBREVIATIONS = new Set(["とりま", "りょ", "おけ", "あり", "なし", "フォロバ", "リムる", "ブロ解", "個チャ", "グルチャ", "ボイメ", "スタ連", "リア充", "ROM専", "TL", "リプ", "引リツ", "空リプ", "鍵リプ", "ふぁぼ", "GRWM", "Vlog", "POV"]);
