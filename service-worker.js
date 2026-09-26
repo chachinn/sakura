@@ -1,16 +1,16 @@
-const SHELL_CACHE_VERSION = "sakura-shell-v181";
+const SHELL_CACHE_VERSION = "sakura-shell-v182";
 const KANJI_CONTENT_CACHE_VERSION = "sakura-kanji-content-v7";
 const TRAVEL_CONTENT_CACHE_VERSION = "sakura-travel-content-v1";
 const VOCABULARY_CONTENT_CACHE_VERSION = "sakura-vocabulary-content-v8";
 const READING_CONTENT_CACHE_VERSION = "sakura-reading-content-v10";
 const QUIZ_CONTENT_CACHE_VERSION = "sakura-quiz-content-v4";
-const TOKYO_RAIL_BASE_URL = "./data/rail/tokyo.json?v=6";
-const TOKYO_RAIL_EXTENSION_URL = "./data/rail/tokyo-west-extension.json?v=1";
+const TOKYO_RAIL_BASE_URL = "./data/rail/tokyo.json?v=7";
+const TOKYO_RAIL_EXTENSION_URL = "./data/rail/tokyo-west-extension.json?v=2";
 
 const APP_SHELL = [
     "./index.html",
     "./style.css?v=73",
-    "./app.js?v=92",
+    "./app.js?v=93",
     "./study-suite.js?v=1",
     "./reading-garden.js?v=8",
     "./features/sakura-reading-quality.js?v=4",
