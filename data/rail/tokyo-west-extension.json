@@ -233,7 +233,8 @@
             "Keio Hachioji"
           ]
         }
-      ]
+      ],
+      "variableStops": true
     },
     {
       "id": "odakyu-odawara-core",
@@ -432,7 +433,8 @@
             "Odakyu Enoshima Line"
           ]
         }
-      ]
+      ],
+      "variableStops": true
     },
     {
       "id": "keio-inokashira",
@@ -551,7 +553,8 @@
           ],
           "nearby": "Inokashira Park · Harmonica Yokocho"
         }
-      ]
+      ],
+      "variableStops": true
     },
     {
       "id": "seibu-shinjuku-itinerary",
@@ -714,7 +717,8 @@
           "jp": "狭山市",
           "nearby": "Miyanoen tea-picking access via east-exit bus"
         }
-      ]
+      ],
+      "variableStops": true
     },
     {
       "id": "odakyu-enoshima",
@@ -835,7 +839,8 @@
           ],
           "nearby": "Enoshima Island · Enoshima Aquarium"
         }
-      ]
+      ],
+      "variableStops": true
     },
     {
       "id": "odakyu-romancecar-enoshima-itinerary",
