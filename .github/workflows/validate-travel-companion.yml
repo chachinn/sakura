@@ -5,7 +5,9 @@ on:
     paths:
       - 'features/sakura-trip-**'
       - 'features/sakura-camera-japanese-v2.js'
+      - 'data/rail/tokyo.json'
       - 'data/rail/tokyo-west-extension.json'
+      - 'app.js'
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
@@ -18,7 +20,9 @@ on:
     paths:
       - 'features/sakura-trip-**'
       - 'features/sakura-camera-japanese-v2.js'
+      - 'data/rail/tokyo.json'
       - 'data/rail/tokyo-west-extension.json'
+      - 'app.js'
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
@@ -40,6 +44,7 @@ jobs:
           node-version: 22
       - name: Syntax check Travel modules
         run: |
+          node --check app.js
           node --check features/sakura-trip-core.js
           node --check features/sakura-trip-store-upgrade.js
           node --check features/sakura-trip-workbook-extras.js
@@ -59,5 +64,5 @@ jobs:
         run: node scripts/validate-trip-rail-entry.mjs
       - name: Run Trip Quick Help jump regression suite
         run: node scripts/validate-trip-quick-help-jump.mjs
-      - name: Run west Tokyo rail extension validation
+      - name: Run October itinerary rail coverage validation
         run: node scripts/validate-tokyo-west-rail-extension.mjs
