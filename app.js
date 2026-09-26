@@ -2879,8 +2879,11 @@ function buildRailNetworkGraph() {
         for (let index = 0; index < stations.length - 1; index += 1) {
             const a = railNetworkNodeId(line.id, stations[index].code);
             const b = railNetworkNodeId(line.id, stations[index + 1].code);
-            addEdge(a, b, { type:"ride", lineId:line.id, cost:1 });
-            addEdge(b, a, { type:"ride", lineId:line.id, cost:1 });
+            const rideCost = Number.isFinite(Number(line.networkCostPerEdge)) && Number(line.networkCostPerEdge) > 0
+                ? Number(line.networkCostPerEdge)
+                : 1;
+            addEdge(a, b, { type:"ride", lineId:line.id, cost:rideCost });
+            addEdge(b, a, { type:"ride", lineId:line.id, cost:rideCost });
         }
         if (line.loop && stations.length > 2) {
             const first = railNetworkNodeId(line.id, stations[0].code);
@@ -3161,6 +3164,8 @@ const RAIL_NETWORK_MINUTES_PER_STOP = Object.freeze({
 
 function railNetworkMinutesPerStop(line) {
     if (!line) return 2.3;
+    const dataMinutes = Number(line.minutesPerStop);
+    if (Number.isFinite(dataMinutes) && dataMinutes > 0) return dataMinutes;
     const explicit = RAIL_NETWORK_MINUTES_PER_STOP[line.id];
     if (Number.isFinite(explicit)) return explicit;
 
