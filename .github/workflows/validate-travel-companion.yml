@@ -5,7 +5,11 @@ on:
     paths:
       - 'features/sakura-trip-**'
       - 'features/sakura-camera-japanese-v2.js'
+      - 'data/rail/tokyo.json'
+      - 'data/rail/tokyo.json'
       - 'data/rail/tokyo-west-extension.json'
+      - 'app.js'
+      - 'app.js'
       - 'service-worker.js'
       - 'scripts/validate-travel-companion.mjs'
       - 'scripts/validate-trip-return-state.mjs'
@@ -50,6 +54,7 @@ jobs:
           node --check features/sakura-trip-transit-bridge.js
           node --check features/sakura-trip-quick-help-jump.js
           node --check features/sakura-trip-companion.js
+          node --check app.js
           node --check service-worker.js
       - name: Run Travel Companion regression suite
         run: node scripts/validate-travel-companion.mjs
