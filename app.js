@@ -2313,7 +2313,7 @@ function browseNative(direction = 1, random = false) {
 
 
 const RAIL_CITY_FILES = {
-    tokyo: "./data/rail/tokyo.json?v=6",
+    tokyo: "./data/rail/tokyo.json?v=7",
     osaka: "./data/rail/osaka.json?v=4",
     kyoto: "./data/rail/kyoto.json?v=4"
 };
@@ -2577,12 +2577,14 @@ function railNetworkHubs() {
                     name: station.name || station.jp || station.code,
                     jp: station.jp || "",
                     occurrences: [],
+                    aliases: new Set(),
                     searchParts: new Set()
                 });
             }
             const hub = hubs.get(key);
             if (!hub.jp && station.jp) hub.jp = station.jp;
             hub.occurrences.push({ line, station });
+            (station.aliases || []).filter(Boolean).forEach(value => hub.aliases.add(String(value)));
             [
                 station.name, station.jp, station.code,
                 ...(station.aliases || []), ...(station.connections || []),
@@ -2607,9 +2609,10 @@ function railNetworkHubSearchScore(query, hub) {
     const name = normalizeRailSearchText(hub.name);
     const jp = normalizeRailSearchText(hub.jp);
     const codes = hub.codes.map(normalizeRailSearchText);
-    if (name === normalized || jp === normalized || codes.includes(normalized)) return 200;
-    if (name.startsWith(normalized) || codes.some(code => code.startsWith(normalized))) return 170;
-    if (name.includes(normalized) || jp.includes(normalized)) return 145;
+    const aliases = [...(hub.aliases || [])].map(normalizeRailSearchText);
+    if (name === normalized || jp === normalized || codes.includes(normalized) || aliases.includes(normalized)) return 200;
+    if (name.startsWith(normalized) || codes.some(code => code.startsWith(normalized)) || aliases.some(alias => alias.startsWith(normalized))) return 170;
+    if (name.includes(normalized) || jp.includes(normalized) || aliases.some(alias => alias.includes(normalized))) return 145;
     if (hub.searchText.includes(normalized)) return 90;
     return 0;
 }
@@ -3123,7 +3126,13 @@ const RAIL_NETWORK_MINUTES_PER_STOP = Object.freeze({
     "keihin-tohoku-core":2.5,
     "jr-yokosuka-kamakura":3.6,
     "jr-shonan-shinjuku-kamakura":4.2,
+    "jr-narita-express-shinjuku-itinerary":88,
     "enoden":2.8,
+    "keio-inokashira":2.0,
+    "seibu-shinjuku-itinerary":2.0,
+    "odakyu-odawara-core":2.6,
+    "odakyu-enoshima":2.7,
+    "odakyu-romancecar-enoshima-itinerary":69,
 
     "metro-ginza":2.1,
     "metro-marunouchi":2.0,
@@ -3232,23 +3241,29 @@ function railNetworkDisplayLineName(line) {
     return line.name || "";
 }
 function railNetworkRideHasVariableStops(step) {
-    return Boolean(step?.type === "ride" && step.line?.id === "jr-shonan-shinjuku-kamakura");
+    return Boolean(step?.type === "ride" && (
+        step.line?.id === "jr-shonan-shinjuku-kamakura" ||
+        step.line?.variableStops ||
+        step.line?.majorStopsOnly
+    ));
 }
 function railNetworkRouteHasVariableStops(route) {
     return railNetworkRouteSteps(route).some(railNetworkRideHasVariableStops);
 }
 function railNetworkShonanDirectYokosukaDestination(step) {
-    if (!railNetworkRideHasVariableStops(step)) return "";
+    if (step?.line?.id !== "jr-shonan-shinjuku-kamakura") return "";
     const destination = step.stations?.[step.stations.length - 1]?.name || "";
     return ["Kita-Kamakura", "Kamakura", "Zushi"].includes(destination) ? destination : "";
 }
 function railNetworkRideServiceMessage(step) {
     if (!railNetworkRideHasVariableStops(step)) return "";
-    const directDestination = railNetworkShonanDirectYokosukaDestination(step);
-    if (directDestination) {
-        return `Board a Zushi-bound train for a direct ride to ${directDestination}. Other Shonan-Shinjuku services may require a transfer at Ofuna.`;
+    if (step.line?.id === "jr-shonan-shinjuku-kamakura") {
+        const directDestination = railNetworkShonanDirectYokosukaDestination(step);
+        if (directDestination) {
+            return `Board a Zushi-bound train for a direct ride to ${directDestination}. Other Shonan-Shinjuku services may require a transfer at Ofuna.`;
+        }
     }
-    return "Stops vary by train service. Confirm that your train stops at your destination.";
+    return step.line?.serviceNote || "Stops vary by train service. Confirm that your train stops at your destination.";
 }
 function railNetworkDisplayDirection(step, direction) {
     if (!direction) return "";
