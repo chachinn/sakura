@@ -2,9 +2,9 @@
   "city": "tokyo",
   "cityName": "Tokyo",
   "operator": "Multiple operators",
-  "verifiedOn": "2026-08-11",
-  "sourceNote": "Static offline reference using official JR East, Tokyo Metro, Toei Subway, and Enoshima Electric Railway station/service information. Kamakura day-trip corridors (JR Yokosuka, Shonan-Shinjuku to Zushi, and the full Enoden line) were rechecked against official operator information on 2026-08-11. Not live timetable data.",
-  "notice": "Offline orientation guide only. Train destinations, through-services, stopping patterns, platforms, delays and temporary changes can vary. For Kamakura, confirm the current JR destination before boarding and use current station signs; Enoden is represented as a separate local line.",
+  "verifiedOn": "2026-09-26",
+  "sourceNote": "Static offline reference using official JR East, Tokyo Metro, Toei Subway, and Enoshima Electric Railway station/service information. Kamakura day-trip corridors remain included; October 2026 itinerary coverage was rechecked for the Chuo Rapid corridor through Kokubunji and the Keihin-Tohoku・Negishi corridor through Ishikawacho. Not live timetable data.",
+  "notice": "Offline orientation guide only. Train destinations, through-services, stopping patterns, platforms, delays and temporary changes can vary. For Kamakura/Yokohama and western Tokyo, confirm the current train destination before boarding and use current station signs.",
   "lines": [
     {
       "id": "yamanote",
@@ -285,14 +285,14 @@
     },
     {
       "id": "chuo-rapid-core",
-      "name": "Chuo Line (Rapid) · Tokyo Core",
+      "name": "Chuo Line (Rapid) · Tokyo–Kokubunji",
       "jp": "中央線快速",
       "code": "JC",
       "accent": "#f15a24",
       "loop": false,
-      "directionForward": "toward Mitaka / western Tokyo",
+      "directionForward": "toward Kokubunji / western Tokyo",
       "directionReverse": "toward Tokyo",
-      "summary": "Fast east-west JR corridor from Tokyo through Shinjuku toward Kichijoji and Mitaka.",
+      "summary": "Fast east-west JR corridor from Tokyo through Shinjuku, Kichijoji and Mitaka to Musashi-Koganei and Kokubunji.",
       "serviceNote": "This guide shows station order. Rapid stopping patterns can vary by train and day.",
       "stations": [
         {
@@ -392,20 +392,49 @@
           "name": "Mitaka",
           "jp": "三鷹",
           "nearby": "Ghibli Museum area"
+        },
+        {
+          "code": "JC13",
+          "name": "Musashi-Sakai",
+          "jp": "武蔵境",
+          "connections": [
+            "Seibu Tamagawa Line"
+          ]
+        },
+        {
+          "code": "JC14",
+          "name": "Higashi-Koganei",
+          "jp": "東小金井"
+        },
+        {
+          "code": "JC15",
+          "name": "Musashi-Koganei",
+          "jp": "武蔵小金井",
+          "nearby": "Koganei Park · Edo-Tokyo Open Air Architectural Museum access"
+        },
+        {
+          "code": "JC16",
+          "name": "Kokubunji",
+          "jp": "国分寺",
+          "connections": [
+            "Seibu Kokubunji Line",
+            "Seibu Tamako Line"
+          ],
+          "nearby": "Tonogayato Garden · Otaka-no-Michi"
         }
       ],
       "operator": "JR East"
     },
     {
       "id": "keihin-tohoku-core",
-      "name": "Keihin-Tohoku Line · Tokyo–Yokohama Core",
+      "name": "Keihin-Tohoku・Negishi Line · Tokyo–Ishikawacho Core",
       "jp": "京浜東北線",
       "code": "JK",
       "accent": "#00a7db",
       "loop": false,
-      "directionForward": "toward Yokohama",
+      "directionForward": "toward Yokohama / Ofuna",
       "directionReverse": "toward Ueno / Omiya",
-      "summary": "Useful north-south JR corridor sharing many central Tokyo stations before continuing to Kawasaki and Yokohama.",
+      "summary": "Useful north-south JR corridor through central Tokyo, Shinagawa and Yokohama, continuing on the Negishi Line to Sakuragicho, Kannai and Ishikawacho.",
       "serviceNote": "Some daytime services operate as Rapid through central Tokyo. Always check the train display.",
       "stations": [
         {
@@ -576,6 +605,30 @@
             "Yokohama Municipal Subway"
           ],
           "nearby": "Major Yokohama hub"
+        },
+        {
+          "code": "JK11",
+          "name": "Sakuragicho",
+          "jp": "桜木町",
+          "connections": [
+            "Yokohama Municipal Subway Blue Line"
+          ],
+          "nearby": "Noge · Minato Mirai"
+        },
+        {
+          "code": "JK10",
+          "name": "Kannai",
+          "jp": "関内",
+          "connections": [
+            "Yokohama Municipal Subway Blue Line"
+          ],
+          "nearby": "Yokohama Stadium · Chinatown area"
+        },
+        {
+          "code": "JK09",
+          "name": "Ishikawacho",
+          "jp": "石川町",
+          "nearby": "Motomachi · Yamate"
         }
       ],
       "operator": "JR East"
